@@ -21,11 +21,11 @@ page.</p>
 
 <h2>Round identification</h2>
 <pre id="round">
-ROUND_ID: R-2026-11-18-01
-PUBLISHED_AT: 2026-11-18T12:58:48+09:00
-SUPERSEDES: R-2026-11-17-01
-VALID_UNTIL: 2026-11-20T12:58:48+09:00
-PACKET_SHA256: 9f29d9ee49f9674ac060248743687bee34c718a875cdc0b52646ed04edbf7a8f
+ROUND_ID: R-2026-11-19-01
+PUBLISHED_AT: 2026-11-19T00:26:20+09:00
+SUPERSEDES: R-2026-11-18-01
+VALID_UNTIL: 2026-11-21T00:26:20+09:00
+PACKET_SHA256: 33c4a4443c8499775d1eb332f01c4612bb7d62b63a35a156127432065cdad7a2
 PACKET_URL: NONE
 </pre>
 
@@ -45,7 +45,1196 @@ that the page was past its validity window when fetched.</p>
 <h2>Packet</h2>
 <pre id="packet">
 <!-- PACKET-BEGIN -->
-QUESTION FROM MUSE (automated audit round): MUSE has completed an exhaustive inventory of channels by which a ChatGPT result could return to an external agent automatically on the Free plan, verified against official OpenAI documentation. Findings: Scheduled Tasks notify only the owner (no outbound webhook); task email notifications show only the beginning of a result plus a link; any action that sends a message or changes external data may pause for owner approval; Scheduled Tasks do not support GPTs; the GitHub app is read-only; Slack and Gmail-send apps are paid-plan only; Drive and Notion writes are not documented for Free; share links are manual-only and shared task links exclude previous results; custom GPT creation is unavailable on personal accounts; MCP write actions are Business/Enterprise only; agent mode was retired in July 2026 and its cloud-browser replacement excludes Free; Zapier documents no ChatGPT triggers; the OpenAI API is a separate paid product. QUESTION: Is there ANY officially supported mechanism on the Free plan, not in this list, by which your result could reach an external agent automatically, with no human copy-paste? If yes, name it precisely and cite its official documentation. If no, state that the inventory is complete. ANSWER FORMAT: begin with "ROUND: " followed by the ROUND_ID on this page, quote this page's PACKET_SHA256 verbatim, then your answer. If the current time is later than this page's VALID_UNTIL, do not answer; reply with the ROUND_ID and the word "STALE".
+INDEPENDENT AUDIT REQUEST — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL
+
+The two documents below were drafted by MUSE (the coordinator AI) as a measured gap analysis of the multi-model AI system it operates, plus a feasibility annex on autonomous AI-to-AI communication. They are submitted for your independent audit in your audit-role capacity.
+
+Audit task: read both documents in full. Assess them against the evidence they themselves cite: Are the capability claims correctly classified? Are the gaps real and the proposed deltas justified, or is anything overstated, duplicated, infeasible, or missing? Is the resource protection for first-revenue work adequate? Return your findings in ONE copyable code block, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
+
+===== DOCUMENT 1 — TECHNICAL PROPOSAL =====
+
+# TECHNICAL PROPOSAL — Multi-Model Intelligence Integration (R-INTEGRATION-2026-11-18-01)
+
+**Status:** Proposal only. Nothing in this document is implemented by being written here.
+**Framing:** This is a measured gap analysis against the multi-model system this house
+already operates — the A+ standard (`~/workspace/multi-ai-review-standard-20261116.md`),
+four external lanes (ChatGPT web, Claude web, Gemini web, Gemini API) plus NotebookLM
+and a local Qwen leg, the premises brief, the improvement-decision ledger (Entries 1–108),
+the lane capability map, the B1 benchmark, the lane-reasoning baseline (B1–B21) and the
+coordinator-reasoning checklist (T1–T16), the consult ledger, and the §18.8 discovery
+pipeline. It is not a from-scratch design.
+
+**Labelling discipline (used throughout):** every load-bearing claim is tagged
+**MEASURED** (our own recorded data, source file named), **PUBLISHED** (public source
+named; may be stale — fast-moving rankings are not relied on), or **UNVERIFIED**.
+**Capability claims additionally carry exactly one of four states** (user
+requirement, 2026-11-18 23:25; this classification supersedes the three-way
+labelling for capability claims wherever they conflict):
+**BENCHMARK-MEASURED** (scored on a fixed set against a sealed key) /
+**OPERATIONALLY VERIFIED** (demonstrated in live rounds with recorded,
+dispositioned outcomes) / **IMPLEMENTED** (in force, effect not yet measured) /
+**MERELY DOCUMENTED** (text or design only — including adopted-but-unbuilt
+items and this proposal&#x27;s own specs). The register is §1.4.
+
+**Not reviewed / not claimed:** no access to proprietary weights, hidden system prompts,
+private internal reasoning, or training data of any external model is claimed or needed.
+All external-model behaviour cited here is observable behaviour in our own rounds or
+public documentation.
+
+---
+
+## 1. Capability comparison — ChatGPT / Gemini / Claude / others
+
+### 1.1 What we have actually measured (primary evidence)
+
+Two fixed-set measurements exist. Everything else is round behaviour recorded in the
+improvement-decision ledger and the capability map.
+
+**(a) Phase 0 baseline, 2026-11-16** — fixed key set B1–B7, self-contained items,
+scored against sealed keys (`~/workspace/reviews/2026-11-16-phase0-benchmark-baseline/scores.md`). MEASURED.
+
+| Seat | B1 verdicts /5 | B1 reasons /5 | B2 /3 | B3 grounding /4 | B4 facts /8 (invented) | B5 weaknesses /3 (false alarms) | B6 /10 | B7 bugs /2 |
+|---|---|---|---|---|---|---|---|---|
+| Gemini API (gemini-3.5-flash requested; 3.6-flash served in later batches) | 4 | 4 | 3 | 4 | 8 (0) | 3 (0) | 10 | 2 |
+| Qwen3:14b run 1 (local, PC) | 3 | 3 | 3 | 4 | 5 (0) | 3 (0) | 10 | 2 |
+| Qwen3:14b run 2 | 2 | 2 | 2 | 4 | 5 (0) | 3 (1 soft) | 10 | 2 |
+| Qwen3:8b (local) | 3 | 2 | 2 | 4 | 5 (0) | 3 gestured (0) | 10 | 1 |
+| gpt-oss-120b | NOT OBTAINED — Groq/Cloudflare routes uncallable (no keys on the PC) | | | | | | | |
+
+Discriminators MEASURED in Phase 0: both planted platform-rule traps caught every Qwen
+run; Gemini API rejected both but rejected one TRUE future-rule statement (it applied
+current rules against a verified future rule — future-rule facts must be injected for
+this leg). Qwen showed run-to-run variance on identical items (B2 double-division in
+run 2 only). Qwen omits rather than fabricates (0 inventions in all runs).
+
+**(b) Benchmark B1, 2026-11-18** — 15 tasks (5 seeded defects, protocol group B,
+3 unanswerable, freshness/format traps), scored by a non-sitting seat against a sealed
+key (`~/workspace/ai-collab/benchmark/scores-b1-20261118.md`). MEASURED.
+
+| Seat | Tasks D /15 | Seeded defects /5 | D-traps /2 | False positives | Behaviour floor |
+|---|---|---|---|---|---|
+| ChatGPT web (final audit) | 15 | 5 | 1 | 0 | FAIL — B5 marking form only (substance perfect) |
+| Claude web (second opinion) | 15 | 5 | 2 | 0 | **PASS** — only seat fully clean |
+| Gemini web (disposable lane) | 14 | 5 | 1 | 0 | FAIL — B1 quote-back normalisation, B5, B9 |
+| Gemini API (first review) | — | — | — | — | **NOT OBTAINED** (503 ×2; later window: timeout + 503) |
+| NotebookLM | did not sit | — | — | — | — |
+| Qwen3:14b (internal, degraded) | 10 | 1 | 0 | 1 | FAIL — instruction-following + reasoning |
+| Coordinator (MUSE) | 15 | 5 | 1 | 0 | PASS |
+
+Sharpest discriminator MEASURED: the stale-source trap (a 2025 report cited as current
+evidence in Nov 2026) was caught by exactly 1 of 5 obtained seats (Claude). Gemini web&#x27;s
+one task error is a repeatable failure mode: it imported the premises&#x27; 40/25/20/15
+priority weights as arithmetic multipliers and produced wrong totals (T15) — the same
+&quot;imported number&quot; shape recorded against this leg family in ledger Entries 59/72.
+ChatGPT produced one unscored arithmetic slip (3/12 stated as 33.3%).
+
+**(c) Cadence run #1, 2026-11-17** MEASURED (task-register I3): Qwen3:14b composite
+23/24 (baseline 22/24); Qwen3:8b composite **0/24** — a content-stage non-answer —
+and is SUSPENDED from all reviewer duty until a diagnosed fix passes repeated
+verification. Gemini API leg NOT OBTAINED (503, then 429 quota), so run #1&#x27;s
+delta-versus-baseline for that leg is UNMEASURED.
+
+**(d) NotebookLM** MEASURED on exactly one task type: pilot citation check 5/5 fully
+correct, 0 fabricated citations, against a pre-registered keep threshold of 4/5;
+live R-SYSTEM check of 5 packet claims: 3 correct, 2 partial (both partials were
+defects in OUR packet), 0 fabricated. Every other capability claim for this seat is
+UNVERIFIED.
+
+**(e) Round behaviour, per lane** MEASURED (capability map
+`~/workspace/ai-collab/lane-capability-map-20261118.md`, built from Entries 1–90 and
+round records; summarised, not re-derived here):
+
+- **ChatGPT web** — strongest measured: primary-source factual correction of
+  coordinator drafts (verified and adopted, Entries 61/62/82); the only leg with
+  complete item-by-item coverage in R-TOOLS6; many adopted structure/metric proposals.
+  Weakest measured: attaches concrete numbers ahead of measurement (declined as values
+  repeatedly, e.g. Entries 29/35/74); one outright licence fact error (Entry 57) —
+  its licence claims require coordinator primary-source re-read; its &quot;final audit&quot; is
+  an audit of the packet as presented, not of the underlying files (self-declared).
+- **Claude web** — strongest measured: mechanical protocol/completeness checking
+  (caught the 65-char defective hash, Entry 65; packet arithmetic, Entry 81; the
+  omitted Q3 disposition in R-UPDATE-ALL); measurement design (Entries 69/74);
+  wording/boundary precision. Weakest measured: coverage gaps on long itemised lists
+  (R-TOOLS6: DB4/DC1/DC2/DC5 not substantively covered); no independent external
+  verification in that round (self-declared, packet-only).
+- **Gemini web** — strongest measured: structural blind-spot/allocation calls
+  (Atlas allocation distortion, Entry 31; funnel arithmetic, Entry 39). Weakest
+  measured: blanket endorsement in place of itemised judgement (R-TOOLS6, not adopted,
+  Entry 90); overstatement of coverage (Entry 85); arithmetic import error (B1 T15).
+- **Gemini API** — strongest fixed-set row on record (Phase 0). Weakest measured:
+  imported numeric thresholds declined twice (Entries 59/72); **availability is the
+  weakest of any leg** (absences on record: R-PLUGINS, cadence run #1, R-UPDATE-ALL,
+  B1, R-META, R-HAZELLE-REVIEW, R-MISTAKE-FULL — mostly 503s).
+- **Qwen (local)** — conservative, non-fabricating first-pass leg; platform-rule facts
+  fail without the verified digest injected; production (non-benchmark) quality
+  UNCONFIRMED — the Entry 45 adoption-rate record does not exist yet.
+
+**(f) Availability and limits** MEASURED: Gemini API free tier = 20 requests/day
+shared across ALL Gemini API work, from the provider&#x27;s own 429 body; reset time
+uncertain (~17:00 JST observed, not a confirmed value); the budget guard has
+undercounted against the provider before — the provider count governs. Claude Free
+has a measured 5-hour message limit (it blocked the R-FOCUS/R-PLAN Claude legs until
+a 06:17 JST retry). Gemini web composer input cap measured at 31,999 content chars.
+ChatGPT Free limits UNCONFIRMED (no measured figure). PC-lock serialisation: leg
+reports record lock waits of ~30–38 minutes in R-SYSTEM R1 — the four web/API lanes
+share one PC and one lock.
+
+### 1.2 Published public knowledge (secondary; never load-bearing here)
+
+- PUBLISHED (provider documentation, retrieved in earlier house research and subject
+  to change): current frontier model families are OpenAI GPT-5-class, Google
+  Gemini 3-class (the API leg here is served gemini-3.6-flash), Anthropic
+  Claude 4.5-class; published context windows are ~1M tokens for Gemini-class and
+  200K–1M for Claude-class depending on tier. Exact figures move; treat as orientation.
+- PUBLISHED (public benchmark suites such as LMArena / SWE-bench / MMLU-family):
+  frontier models cluster closely at the top and rankings rotate between releases.
+  Specific current standings are UNVERIFIED in this proposal — deliberately: our own
+  B1/Phase 0 data above is the evidence this house acts on, and it already contradicts
+  any naive &quot;one model is best&quot; reading (the cheapest local leg beat nothing on rule
+  traps; the strongest fixed-set leg is the least available).
+
+### 1.3 The honest summary of §1
+
+On identical tasks, the four obtained strong seats (coordinator, ChatGPT, Claude,
+Gemini web) are within 1 task of each other on substance; they differ on **discipline
+and failure shape**, not raw power: Claude on protocol/freshness, ChatGPT on coverage
+and primary-source correction, Gemini web on structural blind spots and arithmetic
+risk, Gemini API on fixed-set strength and availability risk, Qwen on cost (¥0,
+local, private) and rule-fact weakness. Capability is not our bottleneck. **Firing
+reliability of the surrounding machinery is** — see §2 and §5.
+
+### 1.4 Capability-state register (four-state classification, with who judged)
+
+Judge key: **BM** = sealed-key benchmark scoring by a non-sitting seat;
+**OPS** = live-round record as dispositioned in the improvement ledger;
+**SELF** = coordinator&#x27;s own assessment (this proposal). A claim judged
+only by SELF is marked as such and is the weakest form in this register.
+
+| # | Capability claim | State | Judged by / evidence |
+|---|---|---|---|
+| 1 | ChatGPT: complete item-by-item packet coverage | OPERATIONALLY VERIFIED | OPS — R-TOOLS6 §0; Entry 90 coverage accounting |
+| 2 | ChatGPT: primary-source correction of coordinator drafts | OPERATIONALLY VERIFIED | OPS — Entries 61, 62, 82 (verified against official pages before adoption) |
+| 3 | ChatGPT: task substance on B1 (15/15, 5/5 defects) | BENCHMARK-MEASURED | BM — B1 scores |
+| 4 | ChatGPT: protocol floor | BENCHMARK-MEASURED (FAIL on B5 marking form) | BM — B1 scores |
+| 5 | Claude: protocol &amp; completeness checking (hash, arithmetic, omissions) | OPERATIONALLY VERIFIED | OPS — Entries 65, 81; R-UPDATE-ALL record |
+| 6 | Claude: freshness discipline (both D-traps; floor PASS) | BENCHMARK-MEASURED | BM — B1 scores |
+| 7 | Claude: measurement design | OPERATIONALLY VERIFIED | OPS — Entries 69, 74 (adopted designs) |
+| 8 | Gemini web: structural blind-spot / allocation calls | OPERATIONALLY VERIFIED | OPS — Entries 31, 39, 40 |
+| 9 | Gemini web: itemised judgement reliability | OPERATIONALLY VERIFIED (weakness recorded: blanket endorsement) | OPS — Entry 90 |
+| 10 | Gemini web: arithmetic on weighted figures | BENCHMARK-MEASURED (weakness: T15 error) | BM — B1 scores |
+| 11 | Gemini API: fixed-set capability (strongest Phase 0 row) | BENCHMARK-MEASURED | BM — Phase 0 scores |
+| 12 | Gemini API: availability | OPERATIONALLY VERIFIED (weakness: repeated 503 absences) | OPS — budget ledger; round records |
+| 13 | NotebookLM: citation/source verification | BENCHMARK-MEASURED (pilot 5/5 vs pre-registered 4/5) + OPERATIONALLY VERIFIED (R-SYSTEM live check) | BM + OPS — §14.2 record; Entry 38 |
+| 14 | NotebookLM: any capability beyond source checking | MERELY DOCUMENTED | SELF — role defined; never measured |
+| 15 | Qwen3:14b: conservative first pass (0 inventions, both Phase 0 runs) | BENCHMARK-MEASURED | BM — Phase 0 + cadence run #1 (23/24) |
+| 16 | Qwen: platform-rule facts unaided | BENCHMARK-MEASURED (weakness: traps failed in all runs; B1 1/5 defects) | BM — Phase 0 + B1 scores |
+| 17 | Qwen: production (non-benchmark) work quality | MERELY DOCUMENTED | SELF — Entry 45 routing defined; no adoption-rate record exists |
+| 18 | Coordinator: solo task performance (B1 15/15, floor PASS, D-trap 2 missed) | BENCHMARK-MEASURED | BM — B1 scores |
+| 19 | Packet hash / quote-back discipline | OPERATIONALLY VERIFIED | OPS — R-TOOLS6 all-legs PASS after Entries 65/66 |
+| 20 | Evidence-weighted adjudication (per-point, reasoned) | OPERATIONALLY VERIFIED as a practice; its accuracy rate is UNVERIFIED (risk R-4) | OPS — Entries 1–108 |
+| 21 | §18 better-opinion cycle | IMPLEMENTED | SELF — in force 2026-11-18; outcome record not yet accumulated |
+| 22 | §18.8 discovery pipeline | OPERATIONALLY VERIFIED | OPS — first full run R-HAZELLE completed 2026-11-18 |
+| 23 | Entry 68 claim-tag lint | MERELY DOCUMENTED | OPS — adopted in Entry 68; build items 4–5 outstanding |
+| 24 | Independent verification (production/verification separation + QC) | OPERATIONALLY VERIFIED | OPS — daily production use; casebook catch record |
+| 25 | Round cost/efficiency measurement (§9) | MERELY DOCUMENTED | SELF — §9 specifies it; durations &quot;not centrally recorded&quot; in every round to date |
+| 26 | Frame challenge (§16.6 rule 9) | IMPLEMENTED | SELF — rule in force since Entry 99/100; firing reliability unproven (R-INTERVIEWS predates it; no post-rule failure or catch yet recorded) |
+| 27 | Incidental arithmetic catching (Claude pre-reader) | OPERATIONALLY VERIFIED | OPS — Entry 81 |
+| 28 | §3.4 math procedure / §3.5 compression canaries / §3.3 coding route / §3.2 creative route (as systems) | MERELY DOCUMENTED | SELF — specs in §3 of this proposal; not in force |
+
+---
+
+## 2. Recommended architecture — deltas to the A+ standard
+
+The A+ standard already implements most of the brief&#x27;s Phase 2–4 methods: blind
+independent first analysis (§10.3, §18.2), evidence-weighted adjudication with
+per-point disposition (§18.3; majority is explicitly not correctness — §17.1,
+B13 &quot;convergence is not independent evidence&quot;), cross-model criticism (§10.4,
+§16.6 rule 9 frame challenge), auditable decision records (improvement ledger,
+quote-back + PACKET_SHA256 discipline, §16.1), failure casebook with recurrence
+prevention, and a knowledge lifecycle (§10.6). The deltas below are therefore
+surgical. Each is labelled KEEP / STRENGTHEN / ADD / REMOVE with its evidence.
+**Preservation rule (user requirement, 2026-11-18 23:25): all existing working
+infrastructure is preserved. Nothing below proposes rebuilding, replacing, or
+duplicating an existing capability; every delta lands inside an existing file,
+role, or mechanism, and §10.1 cross-references each one against the
+improvement ledger so a duplicate of an adopted, declined, or deferred item
+is flagged rather than re-proposed.**
+
+### KEEP (verified working; do not redesign)
+
+- **K1. Packet discipline** (ROUND_ID + send-copy hash header + quote-back +
+  digit-count check). MEASURED working: the Entry 65/66 hash fixes were proven in
+  R-TOOLS6 (all legs quote-back PASS). This is our context-integrity layer; it caught
+  real defects (65-char hash; the B1 ROUND_ID two-copies conflict).
+- **K2. Evidence-weighted adjudication + per-point disposition ledger.** MEASURED:
+  108 entries; the Adobe case (Entry 105) shows the machinery correcting the
+  coordinator when all four lanes converged on PARK against his solo promotion.
+- **K3. Behavioural floor, not capability levelling (§17).** MEASURED design
+  rationale: B1 showed seats differ in failure shape; levelling conclusions would
+  destroy the error non-correlation that is the system&#x27;s actual asset.
+- **K4. NotebookLM scoped to source checking only.** MEASURED 5/5 on its one task
+  type; scope discipline is why the measurement means anything.
+- **K5. Qwen degraded status + digest injection for rule facts.** MEASURED both
+  directions (traps failed without digest; correct restatement with it).
+
+### STRENGTHEN (exists, but measured weak in practice)
+
+- **S1. §9 operational measurement is specified but not executed.** MEASURED gap:
+  the Round metrics table records total round duration as &quot;not centrally recorded&quot;
+  for every round to date; §9&#x27;s seven required items are therefore mostly unmeasured,
+  and the claim &quot;A+ is efficient&quot; is currently UNVERIFIED by the standard&#x27;s own rule.
+  The supervisor&#x27;s 2026-11-18 metrics put AI-machinery work at ≈56% of coordinator
+  time against ≈12.5% revenue-proximate work — the only cost signal we have, and it
+  is unfavourable. Fix: fill duration + legs + adopted-count for every round from
+  the next round on (the columns exist); review the machinery/revenue time ratio
+  monthly. No new structure.
+- **S2. Frame challenge (§16.6 rule 9) does not fire when the coordinator&#x27;s own
+  frame is the defect.** MEASURED: in R-INTERVIEWS every lane answered inside a
+  frame that omitted the binding variable (take-home per total hour); the user
+  supplied the missing perspective himself (capability map, 2026-11-18 addendum).
+  Rules 8–10 were the fix on paper. Strengthen mechanically: packets for
+  money-framed questions must carry a resource-decomposition block whose absence
+  blocks the send (same enforcement family as the Entry 65 pre-send assertion),
+  and the frame-challenge answer must name the scarcest resource in the frame or
+  explicitly state none is missing.
+- **S3. Premises currency.** MEASURED: the premises brief is still v1 (2026-11-17);
+  §18.8, rules 14–15, and checklist T16 postdate it; the Claude leg flagged the
+  staleness in the 2026-11-18 delta round. Lanes are reasoning from a stale
+  constitution between delta updates. Fix: premises brief v2 (already owed) +
+  a standing rule that any standard amendment bumps the brief or records why not,
+  in the same edit.
+- **S4. Adjudication outcome tracking.** §18.6 tracks whether ADOPTED proposals
+  later measured better/worse. It does not track the coordinator&#x27;s adjudications
+  themselves (adopt vs decline per lane-point) against later outcomes, so
+  &quot;evidence-weighted adjudication works&quot; is UNVERIFIED as a rate. Strengthen:
+  add outcome columns to the existing round-metrics table (points adopted /
+  later confirmed / later refuted), filled at the next related measurement —
+  no new ledger.
+- **S5. Arithmetic verification.** MEASURED failures: Gemini web T15 weighted
+  totals; ChatGPT&#x27;s 3/12 slip; register-vs-log count divergences found only by
+  coordinator re-runs (focus plan §3). Claude&#x27;s pre-reader role catches some of
+  this incidentally. Strengthen into a procedure — specified as a module delta
+  in §3 (Mathematical Analysis).
+
+### ADD (genuinely missing)
+
+- **A1. Packet-builder lint (Entry 68) — adopted 2026-11-18, NOT yet built.**
+  The draft-first root cause (load-bearing claims entering drafts unsourced;
+  verification pull-type and self-reported) was fixed by mechanism design:
+  mandatory source tags + a lint that refuses to send untagged claims + canary
+  capture rate as the primary self-detection metric. The lint and the
+  retrospective test are implementation items 4–5 of the R-SELF result and do
+  not exist. Until they do, the root-cause fix is a text rule — the exact
+  failure class this house keeps re-suffering (rules that exist but do not fire).
+- **A2. Sender/tool reliability fixes.** `gemini_text_review.py` exits code 2
+  after successful generation without saving output (Entry 67, §16.2); root
+  cause UNCONFIRMED; leg reliability currently depends on a manual raw-log
+  recovery step. Also outstanding: the Entry 46 job state machine (detects
+  silent operator termination mechanically — one such termination already
+  happened, R-TOOLS6) and the queue-guard build (spec exists; build deferred
+  past 2026-12-02 by the focus plan).
+- **A3. Compression-fidelity check for long-context work.** Context compression
+  in this house is coordinator summarisation (compaction) plus packet digests
+  (§10.7). Its fidelity is unmeasured: we verify packets by hash, but nothing
+  verifies that a summary preserved the load-bearing facts. The stale-source
+  D-trap (caught by 1/5 seats) is the visible tip. Specified in §3.
+- **A4. A creative-intelligence route inside A+.** Creative work exists in the
+  operation (creative lab, playbooks) but has no lane routing, no benchmark,
+  and no A+ seat responsibilities. Specified in §3 — deliberately small.
+
+### REMOVE / DO NOT BUILD
+
+- **R1. Do not build a unified &quot;super-agent&quot; persona or merge lane identities.**
+  §17.1&#x27;s measured rationale stands: error non-correlation is the asset.
+- **R2. Do not add new ledgers or management structures for this project.**
+  Every addition above lands in an existing file (standard, round-metrics
+  table, capability map, checklist). The machinery&#x27;s own cost is a measured
+  concern (S1), not an abstraction.
+- **R3. Do not pursue gpt-oss/Groq or other new lanes until a named task needs
+  them.** MEASURED: the Groq/Cloudflare routes are uncallable today (no keys);
+  unblocking is a user-hand step with no current payoff case.
+
+---
+
+## 3. Module specifications — mapping first, specs only for deltas
+
+### 3.1 Mapping of the brief&#x27;s example modules to what already exists
+
+| Brief&#x27;s module | Existing equivalent in this house | State |
+|---|---|---|
+| Strategic Reasoning | Coordinator + §18 better-opinion cycle + focus-plan rounds (R-FOCUS/R-PLAN) | Exists; frame design is the measured weak point (S2) |
+| Deep Research | §18.8 discovery pipeline (independent lane search → collect → coordinator verifies conditions, payout rail first → redistribute → review → compile); NotebookLM source checking | Exists; first full run completed (R-HAZELLE, 2026-11-18) |
+| Critical Analysis | Lane adjudication + §16.6 rule 9 frame challenge + coordinator checklist T1–T16 + reasoning baseline B1–B21 | Exists; firing reliability unproven (S2, S4) |
+| Creative Intelligence | Creative lab + playbooks exist in production, but **no A+ lane route, no benchmark, no seat responsibilities** | **MISSING inside A+ → spec 3.2** |
+| Coding and Engineering | Phase 0 B7 measured bug-finding (Gemini API and Qwen3:14b both 2/2 with correct fixes); Ponytail hypothesis for coordinator-written code (Entry 87); third-party code execution gate | Partial; no standing lane code-review route → light spec 3.3 |
+| Mathematical Analysis | Claude pre-reader catches arithmetic incidentally (Entry 81); coordinator re-runs caught register divergences | **No procedure → spec 3.4** |
+| Long-Context Analysis | Packet discipline (hash/quote-back) + digest injection (§10.7) + coordinator compaction | Integrity verified; **summary fidelity unmeasured → spec 3.5** |
+| Independent Verification | Production/verification agent separation + QC ①–⑯ + §17 floor + B1 benchmark + publication gate (§10-J) | Strongest existing module; keep |
+| Risk and Failure Analysis | Coordinator pre-mortem (§16.6 rule 10), risk-foresight assignee, casebook L-001…, R-MISTAKE rounds, recurrence-prevention 4-point set | Exists; keep |
+| Planning and Execution | Focus plan, deadline ledger, order-watch system, supervisor daily review | Exists; plan-vs-actual measurement weak (S1) |
+
+### 3.2 SPEC — Creative Intelligence route (inside A+)
+
+- **Responsibility:** give creative work (hooks, formats, titles, concepts for the
+  content pillars) the same independent-generation + evidence-adjudication treatment
+  money questions already get, without slowing production.
+- **Inputs:** a creative brief (pillar, format constraints from the pillar&#x27;s
+  playbook, measured past performance of the format), current §18 theme slot.
+- **Procedure:** (1) lanes generate independently and blind (§18.2 rules apply:
+  claim, evidence or UNCONFIRMED, priority score, what it replaces); (2) coordinator
+  dispositions against measured format data only — a creative proposal is adopted
+  as a *trial* with a pre-registered measurement (views/retention window), never
+  as a standard on opinion; (3) results feed the creative lab record and the
+  capability map&#x27;s per-lane track record (§18.6).
+- **Outputs:** trial briefs with pre-registered success measures; disposition lines
+  in the improvement ledger.
+- **Quality criteria:** % of trials whose measurement was actually recorded;
+  trial hit rate per lane over time (no threshold set before n≥10 trials —
+  imported thresholds are the failure mode this house keeps declining).
+- **Limitations:** creative quality has no sealed-key test; all judgements are
+  market measurements with lag. Lane taste is UNVERIFIED until trials accumulate.
+- **Escalation:** any creative output still passes the ordinary production QC and
+  publication gates; this module never publishes anything itself.
+
+### 3.3 SPEC — Coding and Engineering route (light)
+
+- **Responsibility:** lane review for coordinator-written code that gates money,
+  safety, or measurement (sender scripts, budget guard, preflight tools), where a
+  silent defect corrupts evidence.
+- **Inputs:** the code file, its stated contract, one failing/passing example if any.
+- **Procedure:** (1) first choice Gemini API (strongest measured B7 row) or Qwen3:14b
+  for private code, asked for bug-finding only, not style; (2) coordinator reproduces
+  every claimed bug before adopting the fix (a claimed bug that does not reproduce
+  is recorded as a false alarm in the capability map); (3) fixes to gate code ship
+  with a regression case.
+- **Outputs:** reproduced-bug list with fixes; false-alarm record.
+- **Quality criteria:** reproduction rate of lane-claimed bugs (target: track, do
+  not threshold until n≥10); zero gate-code changes without a regression case.
+- **Limitations:** B7 evidence is two planted bugs on a fixed set — real-code
+  performance is UNCONFIRMED until the reproduction record accumulates.
+- **Escalation:** code touching credentials, payments, or account safety is
+  coordinator-only plus user escalation per the standing boundaries; no lane sees
+  secret material (§4 data classes unchanged).
+
+**Candidate evaluation — OpenAI Codex as a dedicated coding/review leg**
+(added 2026-11-18 23:43 on the user&#x27;s evaluation item: &quot;Is Codex worth
+introducing? Can it be used in the current environment?&quot;)
+
+- **What it is (PUBLISHED — secondary summaries of OpenAI&#x27;s official pricing
+  pages, checked Oct 2026; not re-verified against the primary pages for this
+  draft):** Codex is included in all ChatGPT plans. On Free it is limited to
+  GPT-6 Luna at Standard speed, in the ChatGPT desktop app only, &quot;subject to
+  rollout&quot;, with limits unpublished and no cloud tasks. The CLI, IDE
+  extension, and web Codex start at Plus (US$20/mo). The API-key route is
+  pay-per-token.
+- **Fit against this environment (MEASURED, ours):** the VM has Node v24/npm,
+  so the CLI could be installed — but CLI authentication requires Plus or a
+  paid API key, and both are barred here (¥0 rule; the paid-API ban). The only
+  ¥0 surface is the desktop app on the user&#x27;s PC, signed in with the
+  disposable ChatGPT account: a GUI application with no CDP control path,
+  in tension with the session-0 / no-popup discipline that governs all PC
+  automation in this house.
+- **Availability on our account: UNMEASURED.** Whether the disposable Free
+  account has the rollout at all is unknown. Four-state classification of
+  the candidate as a whole: **MERELY DOCUMENTED** — not implemented, not
+  operationally verified, not benchmark-measured.
+- **Value hypothesis:** a dedicated coding/review leg for the script work
+  this route covers (CDP helpers, integration scripts, verification
+  tooling). Supporting evidence of need (MEASURED): on 2026-11-18 an
+  un-updated copy of the order-watch integration script
+  (integrate-1118e.py) would have corrupted the pipeline register and was
+  caught only by a manual simulation before it ran — exactly the silent
+  gate-code defect class this route exists to catch.
+- **Counterweight:** the automatable surface (CLI) is paywalled; the free
+  surface is manual, weakest-model-tier, and unmeasured. Under §7.2 the
+  automatable route is class B (needs paid API/plan access) and is
+  currently barred; the free route has no automation path in this
+  environment.
+- **Interim disposition (coordinator&#x27;s own assessment — SELF, submitted to
+  the lanes for criticism as question C6 in this proposal&#x27;s circulation):**
+  **default-defer** (§10.4). The value is real but narrow. Revisit triggers:
+  a ¥0 automatable surface appears, or script-defect costs rise measurably
+  (e.g. a second stale-script incident reaches a register or a gate).
+  Impact line: revenue — none direct; delivery — protects integration
+  tooling quality if ever adopted; reliability — potential reduction in
+  silent script defects; capability — a coding leg we currently cover
+  with lane review under the §3.3 procedure above.
+
+### 3.4 SPEC — Mathematical Analysis (verification procedure)
+
+- **Responsibility:** every load-bearing number in a packet, plan, or user report
+  is either (a) produced by a tool/guard whose output is quoted, or (b) recomputed
+  independently before use.
+- **Inputs:** the number, its claimed derivation, the source figures.
+- **Procedure:** (1) the producer states the derivation in one line (inputs +
+  operation); (2) a different seat recomputes — Claude pre-reader for packet
+  arithmetic (measured strength, Entry 81), coordinator tooling for register/log
+  counts; (3) weights, rates and thresholds must cite their origin — a number
+  imported from a range description or a priority-score weight is flagged on
+  sight (the T15 failure shape); (4) disagreements are recorded, never averaged.
+- **Outputs:** verified figure with derivation line, or a recorded discrepancy.
+- **Quality criteria:** discrepancy count per round (target zero unresolved);
+  every load-bearing figure in user reports traceable to a derivation or a guard.
+- **Limitations:** catches arithmetic and derivation errors, not wrong source data;
+  source verification remains NotebookLM/coordinator primary-source work.
+- **Escalation:** an unresolved numeric discrepancy blocks any decision that rests
+  on the figure (existing B1/B2 discipline: never force-match counts).
+
+### 3.5 SPEC — Long-Context / Compression Fidelity (light)
+
+- **Responsibility:** measure, rather than assume, that coordinator summaries,
+  digests (§10.7) and state deltas preserve load-bearing facts.
+- **Inputs:** a source document set and the summary/delta derived from it.
+- **Procedure:** canary method, reusing the Entry 69 canary idea: seed each major
+  state delta with the full set of currently-load-bearing facts listed explicitly
+  (the delta already requires lanes to restate the most decision-relevant change —
+  extend the restatement to a checklist: each lane confirms or corrects each listed
+  fact); a fact a lane restates wrongly is a measured compression failure and is
+  recorded in the round record. Quarterly, one past summary is re-derived from its
+  sources by a non-author seat and diffed.
+- **Outputs:** per-delta fact-restatement accuracy; quarterly diff record.
+- **Quality criteria:** restatement accuracy tracked per lane and for the
+  coordinator&#x27;s own summaries; any load-bearing fact lost in compression is a
+  defect entered in the casebook family (document-integrity class).
+- **Limitations:** measures preservation of listed facts only; framing loss
+  (emphasis, omission of unlisted facts) is covered only by the quarterly diff.
+- **Escalation:** a delta with a failed restatement is re-issued corrected before
+  any round that depends on it proceeds.
+
+---
+
+## 4. Multi-model collaboration design — current flow vs the brief
+
+The brief&#x27;s Phase 4 requirements map onto A+ as follows (all MEASURED as operating,
+with the noted weaknesses):
+
+| Brief requirement | A+ implementation | Weakness in practice |
+|---|---|---|
+| Independent initial analysis | Blind lane replies; lanes do not see each other (§10.3, §18.2); §18.8 step 1 for discovery | Independence is procedural, not architectural: all lanes receive the coordinator&#x27;s packet, so a defective frame propagates to every seat (R-INTERVIEWS, §2 S2) |
+| Comparison of competing conclusions | Coordinator disposition, per point, in the improvement ledger | No adjudication-accuracy rate exists (S4) |
+| Detection of disagreements | Coverage accounting (§16.4) + per-leg coverage maps in round results | Disagreement is recorded but not quantified over time; convergence is sometimes the only signal acted on (Adobe needed 4/4 convergence AND the user&#x27;s scepticism) |
+| Evidence-based adjudication | §18.3: adopt only what measurably beats current policy or carries a pre-registered measurement; declined points get reasons | Works when fired; the 2026-11-18 19:15 deferral (consult ledger) shows the trigger itself can fail — rule 11 was the repair, its firing is sampled by the supervisor (item 3r), not mechanically guaranteed |
+| Cross-model criticism | §16.6 rule 9 frame challenge (mandatory question, coordinator named as target); discussion phase added in R-MISTAKE-FULL (2026-11-18) | One-directional so far: lanes criticise the coordinator&#x27;s frame; lanes do not yet criticise each other&#x27;s replies except in the new discussion phase (unproven) |
+| Final synthesis | Coordinator compiles one report (§18.8 step 6; simultaneous-issue rule §13) | Synthesis quality = coordinator quality; the checklist (T1–T16) is the only mechanical aid, and it is self-applied |
+| Recording of lessons learned | Improvement ledger + casebook + capability map updates | Recording is strong; retrieval at the moment of action is the recurring failure (rules exist, triggers fail) |
+
+**Design changes proposed (only these):**
+1. Make the frame-challenge answer structurally mandatory in money packets (S2).
+2. Extend the R-MISTAKE-FULL discussion phase (lanes criticise a merged,
+   anonymised weakness list) to any round whose disposition will change a standing
+   rule — one extra pass, only there.
+3. Add adjudication outcome columns to round metrics (S4) so adjudication itself
+   becomes measurable.
+4. Keep majority ≠ correctness as a hard rule, and add its operational twin:
+   **convergence of lanes that all read the same packet is weak evidence** (B13);
+   the strong form of lane evidence is a catch against the packet (a defect found
+   in the coordinator&#x27;s own material), which is how the capability map already
+   counts lane value informally — formalise that counting in §18.6.
+
+---
+
+## 5. Persistent knowledge architecture — current state and failure modes
+
+### 5.1 What exists (MEASURED as present and in use)
+
+- **MEMORY.md + daily logs + people/group pages** — user facts, decisions,
+  preferences; the coordinator&#x27;s long-term memory.
+- **Improvement-decision ledger** (Entries 1–108) — every lane point dispositioned
+  with reasons; the system&#x27;s primary decision record.
+- **Production casebook** (production-lessons.md, L-001…) + lessons digest +
+  preflight checklist — failure knowledge with recurrence-prevention machinery.
+- **Lane capability map** — per-lane measured strengths/weaknesses and routing.
+- **Benchmark records** — Phase 0 baseline, cadence run #1, B1 scores, sealed keys.
+- **Evidence ledger** — basis (measurement / official source / competitor data /
+  user decision / none / hypothesis-with-date) for every standing rule and number.
+- **Consult ledger** — operative evidence that user questions trigger consultation.
+- **Premises brief + state deltas** — what the lanes are told; versioned by date.
+- **Coordinator reasoning baseline + checklist** — the lanes&#x27; methods, distilled
+  into coordinator procedure (B1–B21, T1–T16).
+
+### 5.2 Known failure modes (MEASURED, with instances)
+
+1. **Divergent copies of the same fact.** The order-watch log-vs-register gap
+   (+7 rows) persists unresolved, cause unidentified, deliberately never
+   force-matched. The focus plan recorded the same class at +1 earlier
+   (a suspected duplicate row). Two records of one pipeline disagree and no
+   reconciliation mechanism exists beyond &quot;record the gap&quot;.
+2. **Stale canonical documents.** Premises brief v1 predates §18.8, rules 14–15
+   and T16 (S3). The video-stock ledger is stale. A stale canonical file is
+   worse than a missing one: it is cited as authority.
+3. **External mutation of memory.** MEMORY.md on disk no longer matches the
+   copy injected at a session&#x27;s start (background maintenance removed four
+   bullets in one observed instance; the underlying source files remained the
+   evidence). Any layer that can be edited outside the coordinator&#x27;s own
+   record is a divergence risk of the same class as (1).
+4. **Rules recorded but not retrievable at the moment of action.** The
+   draft-first root cause (Entry 68): verification was pull-type, fired by
+   objection, provable only by self-report. The 19:15 deferral and the
+   twice-repeated fastest-first breach are the same shape in different
+   clothing: the knowledge existed; the trigger did not fire.
+5. **Self-detection decline.** Supervisor-measured self-detection fell from
+   71% to 55% — the knowledge system&#x27;s feedback loop is measurably weakening
+   even as its records grow.
+
+### 5.3 Safeguards proposed (against false knowledge becoming permanent)
+
+- **Promotion rule (already the house rule; restated as the architecture&#x27;s
+  core):** nothing becomes &quot;verified/established&quot; by consensus or repetition —
+  only by measurement, official source, verified outcome, or explicit user
+  decision (premises brief; A+ PILOT ONLY status). Every ledger entry carries
+  its basis or is labelled hypothesis/UNCONFIRMED with a review date.
+- **Single-authority rule per fact class, with named reconciliation:** each
+  recurring count (pipeline stages, budget, benchmark scores) has exactly one
+  authoritative file; other files cite it, never restate it (the Entry 37
+  budget-ledger pattern, generalised). Where two records already diverge,
+  the gap is recorded and the authority named — never averaged, never
+  force-matched.
+- **Version-bump coupling:** amending the A+ standard bumps the premises brief
+  in the same edit or records why not (S3).
+- **Decay audit:** the supervisor&#x27;s daily review already sweeps unpublished
+  stock and file integrity; extend its weekly pass to canonical documents
+  (premises brief, capability map, routing table) with a &quot;last verified
+  against source&quot; date per document, so staleness is a dated fact, not a
+  discovery.
+- **Canary facts:** the compression-fidelity canaries (§3.5) double as
+  memory-integrity checks: a load-bearing fact that lanes restate wrongly
+  after a delta is evidence the memory layer, not the lane, is corrupt.
+
+---
+
+## 6. Implementation roadmap — phased, capped, revenue-subordinate
+
+**Sequencing tension, stated honestly:** the governing focus plan
+(`packets/focus-plan-20261118.md`, Entries 92–94) makes the first real received
+revenue (by 2026-12-17) the primary goal, stops ad-hoc rounds (Entry 94), gates
+rounds by the Entry 93 justification test, and defers machinery builds past
+2026-12-02. This project therefore does **not** get its own lane of work. It
+rides the already-registered milestone triggers (2026-11-20 capacity day,
+2026-11-25 judgments, 2026-12-09 NR gate, 2026-12-17 primary-goal audit +
+benchmark run #2) and consumes only the capped budgets below. **Any increase
+to any cap in this section requires the user&#x27;s explicit approval beforehand.**
+All phases are proposal-stage until the §13 approval gate is passed.
+
+**Global caps (all phases):** cash cost ¥0 (hard constraint, not a budget);
+Gemini API ≤ 20 requests/day shared with ALL other work (provider-measured;
+this project ≤ 4 requests in any week, counted inside that 20); web-lane
+rounds for this project ≤ 1 per week until first real revenue (the focus
+plan&#x27;s standing cap); PC-lock time for this project ≤ 2 hours/week.
+
+### Phase 0 — Close the cheap measurement debts (on approval → 2026-12-17)
+
+Content: premises brief v2 (S3); §9 round-metrics actually filled for every
+round from approval on (S1); mathematical-verification procedure adopted as
+standard text (§3.4 — text only, no build); adjudication outcome columns
+added to the existing round-metrics table (S4 — table edit only).
+- **Coordinator-hour limit: ≤ 6 hours total.**
+- **Lane budget: 0 additional rounds** (rides existing milestone rounds only).
+- **Acceptance test:** premises brief v2 exists and is the version embedded
+  in the next round&#x27;s packet; three consecutive rounds have complete
+  round-metrics rows (duration, legs, adopted count); the §3.4 procedure
+  text is in the standard and was applied to at least one packet&#x27;s figures
+  with the recompute recorded.
+
+### Phase 1 — Benchmark completion (milestone 2026-12-17, the registered §17 run #2)
+
+Content: B1 run #2 on the §17 design (2 fixed trend tasks T11/T15 unchanged,
+13 fresh tasks), explicitly including the two debts: the Gemini API leg
+(NOT OBTAINED in run #1) and fixed-set runs for the ChatGPT and Claude web
+seats (task-register I4: PENDING / NOT RECEIVED). NotebookLM sits only its
+citation subset.
+- **Coordinator-hour limit: ≤ 8 hours total** (packet build, lane operation,
+  scoring by a non-sitting seat).
+- **Lane budget:** counts as the week&#x27;s one round; Gemini API ≤ 6 requests
+  for the benchmark inside the daily 20.
+- **Acceptance test:** every seat has a scored row or a recorded NOT OBTAINED
+  with cause; results are recorded against the B1 baseline (§8) with deltas
+  per seat; the HYPOTHESIS-vs-UNCONFIRMED ruling for the B5 marking form is
+  issued before the run (owed from run #1) so the floor is scoreable.
+
+### Phase 2 — Mechanical enforcement builds (only after first real revenue, or explicitly approved earlier)
+
+Content: Entry 68 packet-builder lint + retrospective test on the four known
+bad drafts (A1); `gemini_text_review.py` exit-2 fix (A2, bounded: root-cause
+investigation capped, recovery-from-raw-log stays as the documented fallback
+if the cap is hit); compression-fidelity canaries on state deltas (§3.5).
+- **Coordinator-hour limit: ≤ 12 hours total** (lint ≤ 8, sender fix ≤ 2,
+  canaries ≤ 2).
+- **Lane budget:** ≤ 2 rounds total (one to review the lint&#x27;s retrospective
+  results, one spare); Gemini API ≤ 4 requests.
+- **Acceptance test:** the lint demonstrably refuses an untagged load-bearing
+  claim in a test packet and passes the four historical bad drafts&#x27;
+  corrected versions; the retrospective test&#x27;s catch/miss record is written
+  into the R-SELF result family; canary restatement accuracy is recorded
+  for two consecutive deltas.
+
+### Phase 3 — Four-arm comparison (first monthly benchmark slot after Phase 1, 2027-01 at the earliest)
+
+Content: the brief&#x27;s Phase 7 comparison (§8) run once, on identical cases:
+coordinator alone / single best lane / coordinator + one module / full
+architecture. Coding-route procedure (§3.3) adopted as text in this phase.
+- **Coordinator-hour limit: ≤ 10 hours.**
+- **Lane budget:** counts as that month&#x27;s benchmark; Gemini API ≤ 8 requests.
+- **Acceptance test:** a scored four-arm table exists with time and cost
+  recorded per arm; the result is dispositioned in the ledger (including
+  the possibility that an arm shows the full architecture is NOT worth its
+  cost on that task class — that outcome is a valid, reportable result).
+
+### Explicitly NOT scheduled
+
+Entry 46 job state machine and the queue-guard build stay on their existing
+focus-plan deferral (past 2026-12-02, re-decided at the 2026-12-17 audit);
+the creative-intelligence route (§3.2) is on the default-defer list (§10.4);
+no new lanes (R3). Nothing in this roadmap rebuilds or duplicates an
+existing capability (user requirement, 2026-11-18 23:25).
+
+---
+
+## 7. Technical limitations and estimated costs
+
+### 7.1 Hard limitations (MEASURED unless noted)
+
+- **Gemini API:** 20 requests/day, shared across all work, provider-counted;
+  frequent 503s (7 recorded leg absences attributable to availability);
+  reset time uncertain. The leg most valuable on fixed sets is the leg
+  least available — an architectural fact, not a complaint.
+- **Claude Free:** measured 5-hour message limit; bulk-insertion-only lane
+  operation (chunked insertion corrupts text).
+- **Gemini web:** 31,999-char composer cap (packets split into consecutive
+  messages); reply virtualisation requires scroll-into-view extraction.
+- **ChatGPT Free:** unsent drafts persist account-side (composer must be
+  checked/cleared before each send); message limits UNCONFIRMED.
+- **PC serialisation:** all web lanes run through one PC, one automation
+  profile family, one lock; recorded lock waits ~30–38 min in R-SYSTEM R1.
+  Lane work is inherently serial and competes with revenue work for the PC.
+- **Terms boundary:** the web lanes run on user-created disposable accounts
+  under a user-approved pilot exception whose terms risk is stated openly
+  in the premises brief; the method is a terms violation and is NOT
+  reclassified as compliant. Kill triggers exist (restriction signs,
+  account-linkage signs, two consecutive quote-back failures). The user&#x27;s
+  MAIN accounts are permanently out of scope for automation.
+- **Coordinator context:** long operations cross context compaction;
+  compression fidelity is unmeasured (§3.5 exists for this reason).
+- **Token budget:** the coordinator runs on a weekly free allowance (reset
+  2026-11-20 09:19 JST) plus additional tokens; there is no subscription.
+  Large rounds are a real cost in this currency even at ¥0 cash.
+- **Costs:** cash ¥0 in all phases (constraint). Real costs are
+  coordinator-hours and lane requests, capped per phase in §6.
+
+### 7.2 Feasibility classification (brief&#x27;s Phase 6 scheme)
+
+| Element | Class | Basis |
+|---|---|---|
+| Premises brief v2; §9 metrics filled; §3.4 math procedure (text); S4 outcome columns | **A** — implementable now | File edits + discipline; no new tooling |
+| B1 run #2 incl. API leg and I4 fixed-set runs | **A** — implementable now | Machinery exists (§17); cost is hours + lane budget, capped in §6 |
+| Compression-fidelity canaries on deltas | **A** | Rides existing delta rounds; checklist extension only |
+| Entry 68 packet-builder lint | **A** (build effort, no new infra) | Local script; deferred by focus plan, not by feasibility |
+| `gemini_text_review.py` exit-2 fix | **A**, root cause UNCONFIRMED | Bounded investigation; fallback already in force |
+| Entry 46 job state machine; queue-guard build | **A** technically | Deferred by the focus plan (past 2026-12-02), not by feasibility |
+| §3.3 coding route; §3.2 creative route | **A** as procedures | Creative route is default-deferred on value, not feasibility (§10.4) |
+| gpt-oss-120b / Groq / Cloudflare lanes | **B** — needs additional access | Routes uncallable: no API keys exist on the PC; creating accounts/keys is a user-hand step; no current payoff case (R3) |
+| Paid API tiers for any lane (removes free-tier caps) | **B** technically, **prohibited** by the ¥0 hard constraint | Would require the user to lift the zero-spend rule — not proposed |
+| External AI initiating contact / webhooks into MUSE | **C/D** — see annex | No inbound surface exists (capability audit 1.8: NOT AVAILABLE); assessed fully in the annex |
+| Guaranteed lane availability (SLA-like) | **D** — not feasible | Free consumer tiers offer no availability commitment; the architecture must keep treating absence as a normal state |
+| Access to external models&#x27; weights / hidden prompts / private reasoning | **D** — not feasible and not sought | Stated in the brief itself; all integration here is behavioural |
+
+---
+
+## 8. Benchmark methodology — B1 is the baseline
+
+**Baseline (registered):** Benchmark B1 (BENCH-B1-2026-11-18-01) is the
+baseline for all future comparisons, per the user&#x27;s instruction
+(2026-11-18 23:25). Its scores file
+(`~/workspace/ai-collab/benchmark/scores-b1-20261118.md`, sha256 prefix
+cf53bd8e045b7d61 — full hash in §11) is the reference record. The Phase 0
+baseline (2026-11-16) remains the historical baseline for the fixed
+B1–B7 key set; the two are not interchangeable and must not be mixed.
+
+**Design (extends §17.4, unchanged in its rules):**
+- Identical test cases across arms and seats wherever the comparison
+  claims equivalence; exactly 2 tasks fixed for trend (B1-T11, B1-T15),
+  the rest replaced each run with previously unpublished tasks.
+- Sealed answer key; scoring by a seat that did not sit the run;
+  byte-identical double extraction of lane replies before scoring.
+- Metrics per seat/arm: accuracy (task detection), completeness
+  (coverage map), reasoning quality (scored against the key&#x27;s reason
+  requirements), reliability (behaviour floor B-group), error rate
+  (false positives + missed seeded defects), execution success
+  (obtained vs NOT OBTAINED, with cause), time (wall + processing,
+  route-labelled), cost (lane requests consumed; coordinator minutes),
+  failure recovery (whether a failed leg was detected, recorded, and
+  the round completed degraded under Entry 95&#x27;s D2 rule or correctly
+  held open).
+- Evidence requirement: no claimed improvement without a scored run
+  against the baseline under equivalent conditions; a run with a
+  missing leg reports the missing leg, never a silent substitution
+  (Entry 45(c): Qwen never substitutes for a primary leg).
+
+**Four arms (brief Phase 7), for the Phase 3 comparison:**
+1. Coordinator alone (no lanes).
+2. Single lane alone (the strongest measured seat for the task class —
+   currently Claude for protocol/freshness classes, Gemini API for
+   fixed-set classes, per §1).
+3. Coordinator + one module (e.g. + §3.4 math procedure, or + lint).
+4. Full architecture (all lanes + adjudication + ledger).
+Each arm runs the identical case set; the comparison table reports all
+metrics above per arm. A result in which arm 4 does not beat arm 1 on a
+task class is a finding against the machinery for that class and is
+recorded as such (§10 regression rules apply to the machinery itself).
+
+**Known baseline defects carried openly:** the B1 key&#x27;s Group B item 1
+expects the `-01` ROUND_ID form while the sent header omitted it (the
+two-copies defect; scored evidence in the scores file) — the key or the
+header must be aligned before run #2, and run #2&#x27;s report must state
+which; the B5 HYPOTHESIS-vs-UNCONFIRMED marking ruling is owed before
+run #2 (Phase 1 acceptance test).
+
+---
+
+## 9. Acceptance criteria (per phase, measurable)
+
+- **Phase 0:** (i) premises brief v2 file exists, is dated, and its hash
+  is the one quoted in the next round&#x27;s packet; (ii) 3 consecutive
+  rounds with complete round-metrics rows; (iii) §3.4 procedure present
+  in the standard and evidenced on ≥1 packet (recompute recorded);
+  (iv) coordinator time on Phase 0 ≤ 6 h (recorded in round metrics).
+- **Phase 1:** (i) run #2 scores file exists with a row or a caused
+  NOT OBTAINED for every seat incl. Gemini API and both web seats&#x27;
+  fixed-set runs; (ii) per-seat deltas vs the B1 baseline are stated
+  in the scores file; (iii) the B5 marking ruling and the ROUND_ID
+  key/header alignment are recorded before the run; (iv) time ≤ 8 h.
+- **Phase 2:** (i) lint refuses a seeded untagged claim in a test
+  packet (demonstrated, logged); (ii) retrospective test results on
+  the four known bad drafts recorded (catch/miss per draft);
+  (iii) sender-fix outcome recorded either as fixed-with-regression-case
+  or as capped-and-fallback-documented; (iv) two consecutive deltas
+  carry canary restatement accuracy figures; (v) time ≤ 12 h.
+- **Phase 3:** (i) four-arm scored table with time/cost per arm;
+  (ii) ledger disposition of the comparison, including any
+  anti-machinery finding; (iii) time ≤ 10 h.
+- **Global:** any phase exceeding its hour or lane cap stops and
+  returns to the user for a decision; exceeding a cap silently is a
+  process violation recorded in the consult-ledger family (the same
+  detection family as §16.6 rule 11).
+
+---
+
+## 10. Prioritised improvements — scores, ledger cross-references, impact, regression rules
+
+Priority score = house formula (revenue 40 / urgency 25 / certainty 20 /
+lightness 15). &quot;Judged by&quot; marks whose assessment each line rests on
+(requirement: independent evaluation distinguished from MUSE&#x27;s own):
+**SELF** = coordinator&#x27;s own assessment in this proposal; lane judgement
+arrives with the §12 criticism record and may change dispositions.
+
+### 10.1 Master table
+
+| ID | Improvement | Score | Ledger cross-reference (prior disposition) | Impact (one line) | Judged by |
+|---|---|---|---|---|---|
+| S1 | Fill §9 round metrics (duration/legs/adopted) every round | 70 (15/20/20/15) | Entry 44 ADOPTED the columns; Entry 48: machinery cost-effectiveness UNCONFIRMED until metrics accumulate; Entry 93 gates rounds partly on this. **Not a duplicate proposal — it is the unexecuted half of Entry 44.** | Revenue: indirect — exposes whether machinery time crowds out revenue time. Reliability: makes machinery cost auditable. | SELF |
+| S3 | Premises brief v2 + version-bump coupling | 65 (10/20/20/15) | No prior entry adopts v2; the staleness was flagged by the Claude leg in the 2026-11-18 delta round (recorded in the round record, not yet a ledger entry). Delta-update duty itself: user&#x27;s 2026-11-17/18 instructions. | Reliability: lanes reason from current premises; prevents stale-premise dispositions. | SELF + lane-flagged |
+| S5/§3.4 | Mathematical verification procedure | 65 (15/15/20/15) | Entry 81 (Claude arithmetic catches, adopted as practice); Entries 59/72 (imported numbers declined — the failure this prevents); B1 T15 evidence is new, no entry yet. **Extends Entry 81 from incidental to procedural; not a duplicate.** | Reliability: kills the imported-number error class in money figures. Delivery: fewer register/log disputes. | SELF |
+| P1 | B1 run #2 completion (API leg + I4 fixed-set for web seats) | 65 (15/20/20/10) | §17.4 milestone design (Entry 74); task-register I3/I4 debts; Entry 93 registers 2026-12-17 as the run #2 trigger. **Executes an already-adopted measurement; not new scope.** | Long-term capability: converts lane capability claims from round behaviour to benchmark-measured. | SELF |
+| S4 | Adjudication outcome columns in round metrics | 55 (15/10/15/15) | §18.6 (Entry 97) tracks adopted-proposal outcomes; adjudication accuracy itself has NO entry — **genuinely new, small**. | Reliability: makes the core adjudication claim measurable for the first time. | SELF |
+| S2 | Frame-challenge mechanical block in money packets | 55 (20/15/15/5) | Entries 99/100 ADOPTED rules 8–10 after the R-INTERVIEWS miss; the mechanical send-block is the unbuilt enforcement half (same pattern as Entry 65&#x27;s pre-send assertion). **Not a duplicate — enforcement of an adopted rule.** | Revenue: money frames carry the binding resource variable; prevents a repeat of the per-hour blind spot. | SELF |
+| A1 | Entry 68 packet-builder lint + retrospective test | 55 (20/15/15/5) | Entry 68 ADOPTED (mechanism + lint + retrospective as build items 4–5, NOT built); Entry 69 canary metric adopted. **This is a build of an adopted item, flagged as such — not a new proposal.** Deferred past 2026-12-02 by the focus plan. | Reliability: mechanically blocks the draft-first defect class, the system&#x27;s most repeated root cause. | SELF |
+| A2a | Fix `gemini_text_review.py` exit-2 defect (bounded) | 50 (10/15/20/5) | Entry 67 records the defect + interim raw-log recovery; §16.2 carries it as a known defect. **Already-recorded fix task; not new.** | Reliability: removes a manual recovery step from the most-used leg route. | SELF |
+| A3/§3.5 | Compression-fidelity canaries on state deltas | 50 (10/15/20/5) | Entry 69 adopted the canary capture rate as the self-detection metric (different target: defect canaries); delta restatement already practised in R-UPDATE-ALL. **Extension of an adopted pattern to a new target; flagged as such.** | Reliability: detects memory-layer corruption before lanes reason from it. | SELF |
+| §5.3 | Single-authority rule for recurring counts + decay dates on canonical documents | 50 (15/10/20/5) | Entry 37 is the pattern (budget ledger as single authority); the +7 log/register gap is recorded in the order-watch register, unresolved. **Generalises an adopted pattern; the gap itself is pre-existing, not created here.** | Delivery: pipeline counts the revenue operation runs on stop diverging silently. | SELF |
+| §3.3 | Coding route procedure (reproduce-before-adopt) | 45 (10/10/15/10) | Entry 87 (Ponytail, coordinator code only, measured-hypothesis status); Phase 0 B7 evidence. **New as a route; consistent with Entry 87&#x27;s boundary.** | Reliability: gate/measurement code gets independent bug-finding with a false-alarm record. | SELF |
+| §4.2 | Discussion phase for rule-changing rounds | 45 (10/10/15/10) | First run inside R-MISTAKE-FULL (2026-11-18, user-ordered); §10.4 counter-opinion requirement is the ancestor. **Formalises a running experiment; unproven.** | Long-term capability: lanes criticise each other, not only the coordinator. | SELF |
+
+### 10.2 What was cut under the anti-expansion rule
+
+- **Creative-intelligence route (§3.2 spec): moved to the default-defer
+  list (§10.4).** Reason: its measurable value (per-lane creative trial
+  hit rates) requires n≥10 trials on pillars the focus plan has
+  deliberately shrunk; it cannot state measurable near-term value.
+  The spec is retained in §3.2 as documentation so the deferral is
+  reversible without re-design.
+- **New lanes (gpt-oss/Groq): cut (R3).** No task class exists today
+  where a measured gap maps to them; unblocking costs a user-hand step.
+- **Any unified-agent or persona-merging design: cut (R1)** — contradicts
+  the measured §17.1 rationale.
+
+### 10.3 Regression thresholds and rollback (tied to §17 and the B1 baseline)
+
+- **Regression definition:** on any post-change benchmark run under
+  equivalent conditions, a seat or the coordinator falling (a) below
+  the behaviour floor (any B-group item, or a missed constraint
+  violation in group A), or (b) more than 2 tasks below its B1-baseline
+  seeded-defect detection (the §17.4 provisional floor formula), is a
+  **regression event**.
+- **Reject:** an improvement whose own acceptance test (§9) fails is
+  rejected at the gate; it does not enter the standard.
+- **Suspend:** an improvement in force that coincides with a regression
+  event on the next milestone run is suspended (its standard text is
+  annotated SUSPENDED with the run ID) pending disposition — the
+  §17.5 below-floor machinery (classify → mechanical fix or DEGRADED
+  marking → re-measure) applies to the improvement as it does to a seat.
+- **Roll back:** if the regression is dispositioned as caused by the
+  improvement, the standard text is reverted to the pre-change version
+  (all standard amendments are ledger-recorded, so the prior text is
+  recoverable from the entry + the pre-change packet record), the
+  rollback is entered in the ledger with the causing run&#x27;s scores, and
+  the improvement may be re-proposed only with new evidence.
+- **Gap stated honestly:** no automated rollback exists and none is
+  proposed; rollback is a documented manual procedure over
+  ledger-recorded text. There is also no continuous regression
+  detection — benchmarks are milestone-based (§17.4), so a regression
+  can persist undetected between milestones; the supervisor&#x27;s daily
+  self-detection counts are the only between-milestone signal, and
+  they are currently declining (71% → 55%).
+
+### 10.4 Default-defer list (revenue-protection rule)
+
+**Default rule:** any improvement that does not materially support
+revenue, delivery reliability, or essential long-term capability is
+DEFERRED by default. Exceptions must be named and justified in the
+ledger at adoption time. Currently deferred under this rule:
+
+- §3.2 creative-intelligence route (reason in §10.2).
+- Entry 46 job state machine and queue-guard builds (already deferred
+  by the focus plan past 2026-12-02; re-decision at the 2026-12-17
+  audit — they support reliability, so they are first in the deferred
+  queue when capacity exists).
+- §3.3 coding route beyond gate/measurement code (general code review
+  routing has no measured need).
+- New lanes and paid tiers (§7.2 B-class).
+- OpenAI Codex evaluation (§3.3 candidate block): the automatable surface
+  is paywalled (Plus or paid API — both barred by the ¥0 rule); the free
+  desktop-app surface is manual, weakest-tier, has no CDP control path,
+  and its availability on the disposable account is UNMEASURED
+  (classification: MERELY DOCUMENTED). Revisit triggers are named in §3.3.
+- Any benchmark expansion beyond the §17 set size (15 tasks) — the
+  set size was itself a dispositioned design choice (Entry 74).
+
+---
+
+## 11. Evidence preservation — the B1 record and its integrity state
+
+Verified against the files on disk on 2026-11-18 (document-only; nothing
+was moved or copied). Hashes below are sha256 prefixes (16 hex) taken
+today; full hashes are reproducible from the files.
+
+### 11.1 Benchmark B1 (the baseline) — artefact inventory
+
+| Artefact | Location | State |
+|---|---|---|
+| Test packet (the 15 tasks as sent) | `~/workspace/ai-collab/packets/benchmark-b1-20261118.md` (13,629 B) | Present; its sha256 `a224e452…` is recorded inside the key and the scores file — integrity verifiable |
+| Send copy actually transmitted | `~/workspace/ai-collab/logs/benchb1_send_text.txt` (13,740 B) + `benchb1_snapshot.json` (13,793 B) | Present — execution conditions preserved |
+| Sealed answer key | `~/workspace/ai-collab/benchmark/key-b1-20261118.md` (sha prefix 992c4da2bbf9c567) | Present; **carries the known ROUND_ID defect** (key expects the `-01` form; the sent header omitted it) — must be aligned before run #2 (§8) |
+| Raw output — ChatGPT | `packets/benchmark-b1-20261118-chatgpt.md` (17,316 B) | Present |
+| Raw output — Claude | `packets/benchmark-b1-20261118-claude.md` (11,182 B) | Present |
+| Raw output — Gemini web | `packets/benchmark-b1-20261118-gemini.md` (14,072 B) | Present |
+| Raw output — Gemini API | `packets/benchmark-b1-20261118-gemini-api.md` (2,696 B — the NOT OBTAINED record) + `logs/benchmark-b1-20261118-gemini-api-raw.json` and `-raw-retry1.json` (**both 0 bytes**) + `.err` files (209 B each) | **Gap (finding E-1):** the raw JSON files are empty; the failure evidence for the baseline&#x27;s missing leg lives only in the .err files and the scores narrative. The absence is itself recorded, but the raw-response artefact class is empty for this leg |
+| Raw output — Qwen | `~/workspace/ai-collab/benchmark/qwen-b1-result-raw.md` (sha prefix db74ed7a298bb0d2; 81 lines) | Present |
+| Raw output — Coordinator | `~/workspace/ai-collab/benchmark/answers-coordinator.md` (sha prefix 0dfd0bc564c040f8; 100 lines) | Present |
+| NotebookLM | — | Did not sit B1 by design; no artefact expected or present |
+| Scoring record | `~/workspace/ai-collab/benchmark/scores-b1-20261118.md` (sha prefix cf53bd8e045b7d61) | Present, complete with per-task cells, sub-scores, and the key/header conflict documented |
+
+### 11.2 Earlier benchmark records
+
+| Record | Location | State |
+|---|---|---|
+| Phase 0 baseline (2026-11-16) | `~/workspace/reviews/2026-11-16-phase0-benchmark-baseline/` — packet.md, answers/, scores.md, instructions/, **manifest.sha256 + manifest-verification.txt** | Present with a hash manifest — the strongest integrity packaging of any run |
+| Cadence run #1 (2026-11-17) | `~/workspace/reviews/2026-11-17-benchmark-cadence-run1/` — packet.md, packet-source-baseline.md, answers/, scores.md, evidence-hashes.md | Present with evidence hashes; run is partial (Gemini API leg NOT OBTAINED) and its scores say so |
+
+### 11.3 Preservation findings
+
+- **E-1 (above):** empty raw-JSON artefacts for the B1 Gemini API leg.
+  Future runs: a failed leg&#x27;s raw response/error body must be saved
+  non-empty, or the scores file must state why it cannot be.
+- **E-2:** B1&#x27;s own artefacts have no manifest file (unlike Phase 0).
+  Their integrity currently rests on hashes quoted inside other
+  documents (packet hash in key + scores). Recommendation (documentation
+  only, Phase 1): run #2 ships with a manifest.sha256 like Phase 0&#x27;s.
+- **E-3:** execution conditions for B1 (send text, snapshot) live in
+  `logs/`, not beside the scores in `benchmark/`. They are preserved
+  and findable, but a future scorer must know to look in two places;
+  run #2&#x27;s record should cross-reference both from the scores file.
+- No artefact was found missing that the scores narrative claims exists,
+  other than E-1&#x27;s empty files.
+
+---
+
+## 12. Outstanding risks register
+
+| # | Risk / unresolved issue | Evidence state |
+|---|---|---|
+| R-1 | Gemini API availability: the routine first-review leg is absent often enough (7 recorded availability absences) that rounds routinely finalise degraded under Entry 95&#x27;s D2 rule; the system&#x27;s &quot;four-lane&quot; description is aspirational on any given day | MEASURED (budget ledger + round records) |
+| R-2 | The whole web-lane layer rests on disposable accounts under a user-approved terms-exception pilot; a platform enforcement change ends three of four lanes at once. Kill triggers exist; no replacement route exists | Documented in premises brief; likelihood UNVERIFIED |
+| R-3 | Self-detection is declining (71% → 55%) while record volume grows — the knowledge system may be getting better at recording and worse at firing | MEASURED (supervisor metrics, 2026-11-18) |
+| R-4 | Adjudication accuracy is unmeasured (S4); the central claim of the architecture — evidence-weighted adjudication beats solo judgement — rests on cases (Adobe) not rates | UNVERIFIED as a rate |
+| R-5 | §9 cost-effectiveness of the machinery is UNCONFIRMED (Entries 44/48) and the one available signal (machinery ≈56% of coordinator time vs ≈12.5% revenue-proximate) is unfavourable | Partially measured |
+| R-6 | Log-vs-register divergence (+7) in the revenue pipeline records, cause unidentified; two records of the same pipeline disagree with no reconciliation mechanism yet | MEASURED (register reconciliation notes) |
+| R-7 | Context compaction loss in the coordinator is unmeasured; long projects (this one included) are executed across compactions by an agent whose summary fidelity has never been scored | UNVERIFIED |
+| R-8 | Claude Free&#x27;s 5-hour limit and Gemini&#x27;s 20/day cap make same-day multi-round work fragile; the 2026-11-18 round concentration (7+ rounds) is recorded by the lanes themselves as not repeatable at that concentration (Entry 93 note) | MEASURED |
+| R-9 | Qwen3:8b&#x27;s 0/24 collapse is undiagnosed; it is suspended, but the same content-stage failure in 14b would remove the only private/internal leg | MEASURED event; cause UNCONFIRMED |
+| R-10 | `gemini_text_review.py` exit-2 root cause UNCONFIRMED; the manual recovery step it forces is itself an error opportunity in every API-leg round | MEASURED defect; cause UNCONFIRMED |
+| R-11 | The B1 baseline&#x27;s key carries the ROUND_ID defect and its API-leg raw artefacts are empty (§11 E-1/E-2) — the baseline is usable but not pristine; run #2 comparisons must carry these caveats | MEASURED (§11) |
+| R-12 | Assumption: lanes&#x27; free tiers remain available on current terms. All four external lanes are free-tier consumer/API surfaces; any pricing or access change is outside our control and unhedged | UNVERIFIED assumption, stated |
+
+---
+
+## 13. Process, independent evaluation, and the final approval gate
+
+**How this proposal was produced:** coordinator-drafted from the house&#x27;s
+own records (§1 sources), then circulated to all external lanes for
+independent criticism (§14) before delivery. **Who judged what:** every
+capability claim in §1 carries a four-state classification (§1.4) and,
+where a judgement is involved, a &quot;judged by&quot; attribution (§10.1). The
+coordinator is the author of this draft and is **not** the sole judge of
+it: the lanes&#x27; criticism is part of the evidence record, disagreements
+are recorded verbatim, and any criticism the coordinator declines
+carries a reasoned disposition in the result record
+(`multi-model-integration-proposal-20261118-result.md`).
+
+**Independent audit:** the ChatGPT lane, in its standing final-audit
+role, will conduct an independent technical audit of the complete
+delivered proposal and classify it as one of: **ACCEPTED / ACCEPTED
+WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT
+EVIDENCE**. That audit follows delivery of the complete proposal
+(this document + lane criticism + dispositions).
+
+**FINAL APPROVAL GATE (closing condition of this document):** after
+the proposal and the independent lane criticism are complete, the
+complete final document goes to the user for review. **No
+implementation, configuration change, or architectural modification
+is authorised — by this document or by any lane&#x27;s agreement with it —
+until the user gives explicit approval.** Until then, everything in
+§§2–10 is a proposal, and the A+ standard as it stands today remains
+the operating system.
+
+---
+
+## 14. Criticism record — protocol and location
+
+- Lane replies are saved **verbatim** at
+  `~/workspace/ai-collab/packets/multi-model-integration-proposal-20261118-chatgpt.md`,
+  `…-claude.md`, `…-gemini-web.md`, `…-gemini-api.md`
+  (a leg that cannot be obtained is recorded NOT OBTAINED with cause,
+  never substituted).
+- The questions put to the lanes demand, explicitly: where this
+  proposal is wrong; what it is missing; what should be cut; what is
+  infeasible; and criticism unfavourable to MUSE&#x27;s own architecture,
+  including disagreements with each other and with the draft&#x27;s
+  measured claims.
+- Dispositions of every criticism point (adopt / decline with reason /
+  defer under §10.4) are recorded by the coordinator in
+  `~/workspace/ai-collab/packets/multi-model-integration-proposal-20261118-result.md`,
+  which also records inter-lane disagreements as disagreements — they
+  are not averaged into a consensus narrative.
+- The companion annex required by the user&#x27;s 2026-11-18 23:30
+  directive is a separate document:
+  `~/workspace/ai-collab/packets/autonomous-ai-communication-feasibility-20261118.md`,
+  cross-referenced here so the main proposal&#x27;s scope is not expanded.
+
+---
+
+===== DOCUMENT 2 — ANNEX: AUTONOMOUS AI COMMUNICATION FEASIBILITY =====
+
+# ANNEX — Feasibility Assessment: Autonomous Multi-AI Communication and Collaboration
+
+Companion to `multi-model-integration-proposal-20261118.md` (cross-referenced from
+its §14). Source directive: the user&#x27;s &quot;AUTONOMOUS MULTI-AI COMMUNICATION AND
+COLLABORATION&quot; directive, relayed 2026-11-18 23:30, with the audit conditions of
+23:33. **Proposal only. No implementation is authorised by this document.**
+
+**Objective function (governing clarification, 2026-11-18 23:33):** this system
+optimises for **useful discoveries, verified improvements, reduced errors, and
+measurable business outcomes — NOT for the number of AI conversations.** Every
+element below was audited against that function before inclusion; anything that
+only increases conversation volume is cut or default-deferred (§A9).
+
+**Classification:** four states as in the main proposal (BENCHMARK-MEASURED /
+OPERATIONALLY VERIFIED / IMPLEMENTED / MERELY DOCUMENTED), plus the brief&#x27;s
+A/B/C/D feasibility classes. A rule existing on paper is DOCUMENTED, not
+OPERATIONAL, unless runs evidence it.
+
+---
+
+## A1. Which AI systems can be contacted automatically — measured state
+
+| Route | State | Evidence |
+|---|---|---|
+| ChatGPT web (disposable account, coordinator-operated via PC automation Chrome, CDP 9223) | OPERATIONALLY VERIFIED — autonomous coordinator-initiated contact since 2026-11-17 | Dozens of rounds in the packets directory; consult ledger |
+| Claude web (disposable, CDP 9224, bulk insertion only) | OPERATIONALLY VERIFIED | Same record; measured 5-hour Free message limit |
+| Gemini web (disposable, CDP 9225) | OPERATIONALLY VERIFIED | Same record; 31,999-char composer cap measured |
+| Gemini API (gemini-3.6-flash, request/response) | OPERATIONALLY VERIFIED | Budget ledger; 20 requests/day provider-measured |
+| NotebookLM (inside the Gemini disposable profile) | OPERATIONALLY VERIFIED for source checking | Pilot 2026-11-17; R-SYSTEM live check |
+| Local Qwen (PC worker, Ollama) | OPERATIONALLY VERIFIED as an internal leg | Phase 0 + cadence records; DEGRADED authority by design |
+| **The user&#x27;s MAIN ChatGPT account** | **EXCLUDED — permanently out of scope for automation and for automated reading/writing, by the user&#x27;s own recorded decision (2026-11-17 01:23).** The only main-account path is the user-relay bridge (public-link packets the user pastes himself), which is how tonight&#x27;s framework itself arrived | MEMORY.md standing record; premises brief |
+
+No other external AI system is contactable today. gpt-oss/Groq routes are
+uncallable (no keys on the PC) — class **B**, no current payoff case.
+
+## A2. Reciprocal initiation — assessed SEPARATELY, verdict: NOT FEASIBLE (class D)
+
+Question: can an external AI initiate contact with MUSE (message us first,
+push a finding, open a discussion) through any route we hold?
+
+- Consumer web accounts (ChatGPT/Claude/Gemini Free): no webhook, no agent
+  protocol, no inbound API is exposed to us. Every observed interaction
+  requires the coordinator (or the user) to open the conversation.
+- Gemini API: request/response only; the provider cannot call us.
+- MUSE itself has **no inbound API, webhook receiver, or external trigger
+  surface** (capability audit 2026-11-16, item 1.8: NOT AVAILABLE, checked
+  against the product docs). All integration direction is MUSE acting outward.
+- **Verdict: genuine reciprocal initiation is class D — not feasible in this
+  environment, and no element of this annex pretends otherwise.** Any design
+  that requires an external AI to &quot;reach out&quot; is rejected at this gate.
+
+## A3. The implementable alternative: coordinator-mediated proactivity (class A, already operating)
+
+What actually exists and runs today, and is the honest form of &quot;proactive&quot;
+available to this architecture:
+
+1. **Coordinator-initiated rounds on triggers, not on user prompting alone.**
+   Triggers in force: §16.6 rule 11 (a substantive user question starts its
+   consultation the same turn — Entry 101; operative evidence = the consult
+   ledger; firing sampled by the supervisor, item 3r, Entry 103); rule 12
+   (a mistake starts its why-consultation in the same work session);
+   milestone triggers registered in Entry 93 (2026-11-20, 11-25, 12-09,
+   12-17); the §18.8 discovery pipeline trigger (any search beyond a single
+   named item — Entry 107).
+2. **Lane-originated agenda.** §18 (Entry 97): each lane independently
+   proposes improvements over current policy, blind, with evidence and a
+   priority score, on a standing slot (weekly meeting fixed agenda +
+   riding on gated rounds). This is the mechanism by which lanes &quot;raise
+   topics&quot; — inside their replies, collected by the coordinator on its
+   schedule. State: IMPLEMENTED (in force 2026-11-18; outcome record not
+   yet accumulated).
+3. **Proactive strategic challenge.** §16.6 rule 9 frame challenge (Entries
+   99/100) obliges every round to attack the coordinator&#x27;s frame, naming
+   the coordinator as target; the R-MISTAKE-FULL discussion phase (running
+   2026-11-18) extends criticism to a merged cross-lane list. State:
+   IMPLEMENTED / first discussion-phase run in progress.
+
+**Delta proposed (only one):** a standing &quot;lane topic queue&quot; — when a lane
+raises a topic outside a round&#x27;s questions (it already happens: e.g. the
+ChatGPT leg&#x27;s premises-tension flag, Entry 89), the coordinator logs it in
+the consult ledger&#x27;s margin and it becomes a candidate theme for the next
+§18 slot. Cost: one ledger line per occurrence. Measurable value: zero
+lane-raised topics lost. This is a recording delta, not a new channel.
+
+## A4. APIs and integration methods (as-is inventory)
+
+- CDP operation of three disposable-account Chrome profiles on the user&#x27;s
+  PC via SSH tunnel (ports 9223–9225), serialised by the PC lock
+  (`~/workspace/pc-ops/pc-lock.sh`); per-lane driver scripts in
+  `~/workspace/ai-collab/logs/`.
+- Gemini API via the custom connector + `gemini_text_review.py`, guarded
+  by `gemini_budget.py` and the budget ledger (Entry 37).
+- PC AI worker (Ollama, 15-minute polling) for the Qwen leg.
+- Public-link bridge (GitHub Pages endpoint, repointed and fetch-tested
+  2026-11-18; Muse-storage links as the proven fallback) for the
+  user-relay path to the main ChatGPT audit role.
+- No other integration method is in use; none is proposed here.
+
+## A5. Automation architecture (as-is; no redesign)
+
+MUSE-side local task queue is the single authority
+(`~/workspace/ai-collab/`); packets are files with ROUND_ID +
+PACKET_SHA256; replies are captured byte-identically (double extraction)
+and dispositioned per point into the improvement ledger. Scheduling is
+cron-based on the coordinator side only. This annex changes none of it
+(condition: no duplication — every element above already exists).
+
+## A6. Scheduling and triggering — inside the existing cap
+
+**The cap stands and this annex does not propose lifting it: maximum one
+ad-hoc discussion round per week until first real revenue** (focus plan,
+Entries 93/94), plus the registered milestone triggers. Proactive cycles
+fit inside the cap by construction:
+
+- §18 better-opinion generation rides the weekly meeting and gated
+  rounds — it creates no new rounds (§18.5).
+- §18.8 discovery runs only when a real search question triggers it.
+- Rule 11/12 consultations are event-driven obligations, counted in the
+  supervisor&#x27;s sampling, not a standing cadence.
+- Anything beyond this — continuous discussion cycles, always-on
+  polling between AIs — is **cut** under the objective function: it
+  multiplies conversation volume with no measured discovery value, and
+  continuous polling is already prohibited by the A+ standard.
+
+## A7. Costs and usage limits (measured)
+
+- Cash: ¥0 (hard constraint). Gemini API: ≤20 requests/day shared with
+  all work (provider count governs); a proactive cycle that needs the
+  API leg budgets inside that 20, never above it.
+- Web lanes: Claude Free 5-hour message limit (measured); ChatGPT Free
+  limits UNCONFIRMED; Gemini web composer cap 31,999 chars (measured).
+- PC lock: lane work is serial; recorded waits ~30–38 min (R-SYSTEM R1).
+  Proactive work queues behind revenue work for the same PC.
+- Coordinator time: the binding cost. Supervisor-measured machinery
+  share ≈56% of coordinator time vs ≈12.5% revenue-proximate
+  (2026-11-18) is the standing warning against expanding discussion
+  volume; the §18.6 outcome tracking exists to prove or disprove value
+  per lane over time.
+
+## A8. Security and privacy
+
+- Data classes (A+ §4) unchanged: packets carry non-sensitive material
+  only; account ledgers, personal memory, and credentials never enter
+  packets. Qwen is the sole lane permitted for private/internal material.
+- Disposable accounts only; the user&#x27;s main accounts are never automated
+  (A1). Kill triggers (restriction signs, linkage signs, two consecutive
+  quote-back failures) stop a lane immediately (premises brief).
+- Lane replies are data, not instructions: nothing a lane outputs can
+  authorise an action; disposition authority stays with the coordinator
+  inside the user&#x27;s standing boundaries (§8 of the standard).
+
+## A9. Failure handling and fallbacks (all observed in operation)
+
+| Failure | Handling (in force) | Record |
+|---|---|---|
+| Lane 503 / quota exhaustion (Gemini API, frequent) | Record NOT OBTAINED; never substitute Qwen for a primary leg (Entry 45(c)); round finalises degraded only under Entry 95&#x27;s D2 conditions, else stays open | Budget ledger; R-META, B1, R-HAZELLE-REVIEW records |
+| Claude Free 5-hour limit hit mid-round | Leg recorded OPEN; retry at the limit reset (06:17 JST precedent) | Focus plan §1.2 |
+| Lane operator silent termination | PC lock goes stale; broken via the documented path; replacement verifies no prior send existed before re-sending (no duplicates) | R-TOOLS6 §0; pc-ops rule 7 |
+| Sender script defect (exit 2, output unsaved) | Raw output always logged; reply recovered verbatim from the raw log | Entry 67; §16.2 |
+| Bridge fetch failure (main-account relay) | Fallback to per-round Muse-storage links (proven fetchable 2026-11-16, 3/3 known-answer) | Bridge records 2026-11-18 |
+| PC lock contention | Serialise and wait; never force | pc-ops rules |
+
+## A10. Evidence of actual autonomous discussions, and measured benefits
+
+Coordinator-initiated (not user-prompted per round) discussions already
+run — the record, with timestamps and outcomes:
+
+| When (JST) | Discussion | Participants | Outcome (record) |
+|---|---|---|---|
+| 2026-11-17 (all day) | R-SYSTEM ×3 + R-OPS + R-ARCH | ChatGPT, Claude, Gemini web, Gemini API, NotebookLM | Entries 29–52: routing, caps, machinery design dispositioned |
+| 2026-11-18 01:51–02:14 | R-SELF + R-TOOLS6 capture windows | All four lanes | Entries 65–90; the 65-char hash defect caught by the Claude leg |
+| 2026-11-18 19:23 | R-ROUTES (launched same-turn under rule 11 after the deferral was caught) | All four lanes, quote-back PASS ×4 | 49 points dispositioned (Entry 102): &quot;more routes&quot; declined; binding layers named conversion/payout/traffic |
+| 2026-11-18 19:26 | R-MISTAKE-2026-11-18-01 (why-consultation at the time of the mistake) | Gemini API first, then all lanes | Rules 11–13 + consult-ledger sampling (Entries 101/103) |
+| 2026-11-18 ~20:21–21:07 | R-ADOBE | All four lanes, quote-back PASS ×4 | **Adobe Stock stopped before any account was created** — 4/4 PARK against the coordinator&#x27;s solo promotion (Entry 105). Measurable benefit: a commitment the coordinator would have made was prevented; the avoided cost is the account + asset-production hours, unquantified in ¥ |
+| 2026-11-18 ~20:05–20:24 | R-BREADTH + coordinator checklist sweep | All four lanes + checklist T1–T16 | Lane-corrected StreetLib facts (royalty/payout terms) enabled the sweep that found its **PayPal payout rail permanently suspended — a route that cannot pay out was killed before registration** (Entries 104/106) |
+| 2026-11-18 21:58–22:41 | R-HAZELLE + §18.8 review pass | All four lanes (API leg of the review pass NOT OBTAINED, 503 ×2) | **PayPal-only routes (DataAnnotation, Rev, TranscribeMe) and residency-gated RareJob killed before any application**; CW subtitle/translation bounded test launched the same night (Entry 108) |
+| 2026-11-18 ~23:0x | DELTA-2026-11-18-EVENING state update | ChatGPT, Claude, Gemini web (quote-back PASS ×3) | Lanes restated the decision-relevant changes in their own words — the currency check the standing rule requires |
+| 2026-11-18 23:07→ | R-MISTAKE-FULL (incl. cross-lane discussion phase) | All lanes (API leg 503, NOT OBTAINED) | Running at the time of writing; disposition is the coordinator&#x27;s next step |
+
+**Honest counterweight:** the same record shows the cost side — round
+durations are not centrally recorded (main proposal S1), and the
+machinery&#x27;s cost-effectiveness is UNCONFIRMED (Entry 48). The benefits
+above are real but case-shaped; no ¥ figure is claimed for them.
+
+## A11. Roadmap (proposal-only; rides the main proposal&#x27;s phases)
+
+- No new build. The A3 delta (lane topic queue as consult-ledger margin
+  lines) is a Phase 0 text change inside the main proposal&#x27;s ≤6 h cap.
+- §18 outcome tracking (§18.6) is the measurement that will judge, at
+  the 2026-12-17 audit, whether proactive generation earns its cost;
+  if per-lane proposal track records show no measured-better outcomes
+  by then, the honest disposition is to shrink the cycle, and this
+  annex pre-registers that possibility.
+- Reciprocal initiation (A2) is revisited only if a route changes
+  (e.g. a provider ships an agent protocol we can use at ¥0) — a
+  named trigger, not a standing project.
+
+**Annex self-audit against the objective function:** elements cut —
+continuous discussion cycles (volume without measured value), any new
+standing round, any new lane, any &quot;AI-to-AI direct channel&quot; build
+(infeasible per A2 and valueless to simulate). Elements kept — only
+what already runs, plus one recording delta (A3).
 <!-- PACKET-END -->
 </pre>
 
