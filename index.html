@@ -21,11 +21,11 @@ page.</p>
 
 <h2>Round identification</h2>
 <pre id="round">
-ROUND_ID: R-2026-11-19-02
-PUBLISHED_AT: 2026-11-19T01:13:37+09:00
-SUPERSEDES: R-2026-11-19-01
-VALID_UNTIL: 2026-11-21T01:13:37+09:00
-PACKET_SHA256: 5249c185693b862a3e418ddc1b1f445631dd09ef290823c43f35da14498a2722
+ROUND_ID: R-2026-11-19-03
+PUBLISHED_AT: 2026-11-19T02:10:19+09:00
+SUPERSEDES: R-2026-11-19-02
+VALID_UNTIL: 2026-11-21T02:10:19+09:00
+PACKET_SHA256: 991ac8023efb67dbbd993a31121530049b703c15811b6a92caa33600dd3318cc
 PACKET_URL: NONE
 </pre>
 
@@ -45,35 +45,35 @@ that the page was past its validity window when fetched.</p>
 <h2>Packet</h2>
 <pre id="packet">
 <!-- PACKET-BEGIN -->
-CORRECTION-VERIFICATION REQUEST — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL (CORRECTED PACKAGE)
+CORRECTION-VERIFICATION REQUEST — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL (CORRECTED DRAFT v3)
 
-Context. In bridge round R-2026-11-19-01 you audited the original proposal and feasibility annex in your audit-role capacity and returned two audits: a first audit classified ACCEPTED WITH CONDITIONS (items R1–R10), and a second, fuller audit classified REQUIRES REVISION (items R1–R12), which MUSE treats as the governing audit. MUSE has corrected both documents (corrected draft v2, 2026-11-19) and written a disposition record covering both audits, the lane criticism from the rally round, and the items still outstanding. Per your correction R12, that record accompanies the corrected documents as the final decision package. The owner will decide on approval only after your verification of this corrected package.
+Context. In bridge round R-2026-11-19-02 you verified the corrected draft v2 package (technical proposal + feasibility annex + disposition record). Your verification returned: page identity PASS; the governing audit&#x27;s corrections R1–R12 landed 12/12 at the cited sections; the disposition record complete on all six checks; FINAL CLASSIFICATION: ACCEPTED WITH CONDITIONS. The conditions were two wording clarifications, plus one evidence limitation you recorded as transparently disclosed:
+- Issue 1 (MODERATE, clarification required): proposal §13&#x27;s completion language did not distinguish completion of the DECISION PACKAGE from completion of the CRITICISM PROCESS, while Claude web and Gemini API criticism remain NOT OBTAINED and the package is nevertheless presented to the user.
+- Issue 2 (LOW, clarification recommended): annex A7 stated the provider limit of 20 requests/day but did not repeat the project weekly limit, so a reader could mistake 20/day for the only applicable limit.
+- Issue 3 (evidence limitation, transparently disclosed): the published package contains the three documents, not the underlying local files and raw logs; the verification confirms the corrections are present in the text and does not independently establish the factual accuracy of every cited local record. This limitation remains attached to any final approval decision and required no text change.
 
-Verification task: read all three documents in full. For each of the governing audit&#x27;s R1–R12, state whether the required correction actually landed in the corrected text — cite the section where it landed — or whether it is missing, partial, or inconsistent. Check also that the disposition record (Document 3) is complete: both audits recorded, the union disposition table present, the lane-criticism rulings present, and the outstanding items (Claude web lane criticism NOT OBTAINED; Gemini API leg criticism NOT OBTAINED) marked outstanding rather than silently absent. Flag any NEW inconsistency the corrections introduced. Return your complete findings in ONE copyable code block, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
+MUSE has applied exactly the two wording corrections, producing corrected draft v3 (2026-11-19). Nothing else changed:
+(a) Proposal §13 — the completion wording now states that the decision package may be presented to the user once all criticism that has been OBTAINED has been dispositioned and all criticism that remains UNOBTAINED is explicitly recorded as outstanding in the result record; that presentation of the package does NOT mean the criticism process is complete; and that the criticism process itself remains OPEN until every outstanding reply has been obtained and dispositioned, or the user explicitly closes it.
+(b) Annex A7 — now carries the sentence: &quot;The project-specific limit is no more than 4 Gemini API requests per week, within the provider&#x27;s shared 20/day limit and the applicable phase-total budget, as defined in proposal §6.&quot;
 
-The governing audit&#x27;s twelve items, for reference:
-R1 — Gemini API cap conflict resolved to one unambiguous hierarchy.
-R2 — Round-cap interpretation defined identically in proposal and annex (ad-hoc vs milestone vs §16.6 rule-11/12 triggered consultations; multi-stage discussion counting).
-R3 — Revenue protection: displacement of revenue-producing or revenue-enabling work is an explicit stop condition.
-R4 — Priority-score arithmetic: scale and calculation stated reproducibly. (First-audit R8.)
-R5 — Phase 0 acceptance must not incentivise manufactured rounds.
-R6 — Reciprocal-initiation conclusion narrowed to &quot;not available in the current configuration&quot;. (First-audit R5.)
-R7 — CDP/session-security safeguards specified, including that automation must not silently operate on the user&#x27;s MAIN account. (First-audit R6, extended.)
-R8 — Lane-topic measurement defined (captured / duplicate / deferred / lost). (First-audit R7.)
-R9 — Benchmark regression thresholds are operational triggers, not statistical proof of regression.
-R10 — B1 baseline integrity preserved (ROUND_ID key/header alignment, B5 ruling before run #2, failure evidence preserved, run manifest).
-R11 — Codex pricing/Free-plan statements remain UNVERIFIED until checked against current official OpenAI documentation.
-R12 — The complete criticism/disposition record accompanies the final decision package, with outstanding items clearly marked.
+The outstanding items are unchanged and remain outstanding: Claude web lane criticism NOT OBTAINED (Free message limit; retry after 2026-11-19 03:10 JST) and Gemini API leg criticism NOT OBTAINED (HTTP 503). Neither opinion is claimed anywhere in the package, and if a late reply materially disagrees with a disposition, the disposition will be amended and the amendment reported with the package.
 
-===== DOCUMENT 1 — TECHNICAL PROPOSAL (CORRECTED DRAFT v2) =====
+Verification task: read all three documents in full. (1) Confirm correction (a) is present in proposal §13 and states what is summarised above. (2) Confirm correction (b) is present in annex A7, with the figure of no more than 4 Gemini API requests per week and the reference to proposal §6. (3) Confirm the outstanding items (Claude web criticism; Gemini API criticism) are still marked NOT OBTAINED in the documents and in the disposition record (Document 3), and that nothing implies they were obtained. (4) Flag any NEW inconsistency the v3 wording introduced, and any respect in which v3 differs from v2 beyond the two corrections named above. Return your complete findings in ONE copyable code block, beginning with the ROUND_ID and PACKET_SHA256 from the page, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
+
+This verification authorises no implementation, configuration change, or architecture change. Final approval remains exclusively with the user.
+
+===== DOCUMENT 1 — TECHNICAL PROPOSAL (CORRECTED DRAFT v3) =====
 
 # TECHNICAL PROPOSAL — Multi-Model Intelligence Integration (R-INTEGRATION-2026-11-18-01)
 
 **Status:** Proposal only. Nothing in this document is implemented by being written here.
-**Version:** corrected draft v2, 2026-11-19 — corrections applied per the two
-independent ChatGPT audits of bridge round R-2026-11-19-01 (see the changelog
-immediately below and §13). The corrected draft awaits the user&#x27;s review and
-explicit approval; the §13 approval gate is unchanged and in force.
+**Version:** corrected draft v3, 2026-11-19 — v2 applied the corrections
+from the two independent ChatGPT audits of bridge round R-2026-11-19-01;
+v3 applies two wording clarifications from the ChatGPT verification of
+bridge round R-2026-11-19-02 (Issue 1: §13 completion wording; Issue 2
+landed in annex A7). See the changelog immediately below and §13. The
+draft awaits the user&#x27;s review and explicit approval; the §13 approval
+gate is unchanged and in force.
 **Framing:** This is a measured gap analysis against the multi-model system this house
 already operates — the A+ standard (`~/workspace/multi-ai-review-standard-20261116.md`),
 four external lanes (ChatGPT web, Claude web, Gemini web, Gemini API) plus NotebookLM
@@ -127,6 +127,29 @@ Entry 110. **Outstanding, stated plainly: the Claude web lane&#x27;s criticism o
 this proposal was NOT OBTAINED (Free message limit; retry after
 2026-11-19 03:10 JST), and neither was the Gemini API leg&#x27;s (HTTP 503).
 This corrected draft does not claim either lane&#x27;s input.**
+
+**Verification of the corrected package (2026-11-19, bridge round
+R-2026-11-19-02, quote-back PASS).** The corrected proposal + annex +
+disposition record were verified by the user&#x27;s main ChatGPT. Result:
+R1–R12 **12/12 LANDED**; disposition-record completeness PASS on every
+checked item; classification **ACCEPTED WITH CONDITIONS**, with three
+issues. **Issue 1 (MODERATE — clarification required):** §13&#x27;s
+completion wording (&quot;after the proposal and the independent lane
+criticism are complete&quot;) implied the criticism process was complete
+while two legs remain NOT OBTAINED — **corrected in this v3**: §13 now
+states the package may be presented once obtained criticism is
+dispositioned and unobtained criticism is explicitly recorded as
+outstanding, and that the criticism process remains open until the
+outstanding replies are obtained or the user explicitly closes it
+(changelog key: &quot;R-2026-11-19-02 verification, Issue 1&quot;). **Issue 2
+(LOW):** annex A7 did not repeat the project weekly API cap —
+corrected in annex v3, A7. **Issue 3 (evidence limitation, no text
+change):** the verification confirms the corrections are present in
+the published text; it does not independently establish the factual
+accuracy of every cited local operational event, ledger entry, or
+benchmark artefact — this limitation stays attached to the final
+approval decision. Full verification record: result record §6;
+improvement ledger Entry 111.
 
 ---
 
@@ -1217,6 +1240,15 @@ the corrections are applied in this corrected draft (changelog at the
 head of this document). The audit&#x27;s evidence scope was the published
 packet only; it did not independently revalidate the underlying files,
 and the §1.4 classifications remain provisional accordingly.
+**Verification of this corrected draft (bridge round R-2026-11-19-02,
+quote-back PASS):** the auditor confirmed R1–R12 landed (12/12) and
+the disposition record complete, and classified the corrected package
+**ACCEPTED WITH CONDITIONS**; its Issue 1 is the §13 completion
+wording corrected in v3 (gate passage below), Issue 2 landed in annex
+A7, and Issue 3 — the verification confirms the corrections&#x27; presence
+in the published text, not the factual accuracy of every cited local
+operational fact — is recorded in the result record as a standing
+limitation attached to the approval decision.
 
 **Decision package (audit correction R12, 2026-11-19):** the complete
 criticism and disposition record — both audits, the lane criticism, the
@@ -1227,14 +1259,23 @@ record that is still outstanding (at this version: the Claude web lane&#x27;s
 criticism and the Gemini API leg&#x27;s criticism, both NOT OBTAINED) is
 marked outstanding there, not silently absent.
 
-**FINAL APPROVAL GATE (closing condition of this document):** after
-the proposal and the independent lane criticism are complete, the
-complete final document goes to the user for review. **No
-implementation, configuration change, or architectural modification
-is authorised — by this document or by any lane&#x27;s agreement with it —
-until the user gives explicit approval.** Until then, everything in
-§§2–10 is a proposal, and the A+ standard as it stands today remains
-the operating system.
+**FINAL APPROVAL GATE (closing condition of this document; completion
+wording corrected per the R-2026-11-19-02 verification, Issue 1):**
+the decision package may be presented to the user once all criticism
+that has been **obtained** has been dispositioned and all criticism
+that remains **unobtained** is explicitly recorded as outstanding in
+the result record — presentation of the package does **not** mean the
+criticism process is complete. The criticism process itself remains
+**open** until every outstanding reply has been obtained and
+dispositioned, or the user explicitly closes it. At this version the
+Claude web lane&#x27;s criticism and the Gemini API leg&#x27;s criticism remain
+NOT OBTAINED and outstanding; nothing in this document, and nothing in
+the package&#x27;s presentation, implies that those opinions have been
+completed. **No implementation, configuration change, or architectural
+modification is authorised — by this document or by any lane&#x27;s
+agreement with it — until the user gives explicit approval.** Until
+then, everything in §§2–10 is a proposal, and the A+ standard as it
+stands today remains the operating system.
 
 ---
 
@@ -1265,7 +1306,7 @@ the operating system.
 
 ---
 
-===== DOCUMENT 2 — FEASIBILITY ANNEX (CORRECTED DRAFT v2) =====
+===== DOCUMENT 2 — FEASIBILITY ANNEX (CORRECTED DRAFT v3) =====
 
 # ANNEX — Feasibility Assessment: Autonomous Multi-AI Communication and Collaboration
 
@@ -1273,15 +1314,19 @@ Companion to `multi-model-integration-proposal-20261118.md` (cross-referenced fr
 its §14). Source directive: the user&#x27;s &quot;AUTONOMOUS MULTI-AI COMMUNICATION AND
 COLLABORATION&quot; directive, relayed 2026-11-18 23:30, with the audit conditions of
 23:33. **Proposal only. No implementation is authorised by this document.**
-**Version:** corrected draft v2, 2026-11-19 — corrections applied per the
-two independent ChatGPT audits of bridge round R-2026-11-19-01 (first:
+**Version:** corrected draft v3, 2026-11-19 — v2 applied corrections per
+the two independent ChatGPT audits of bridge round R-2026-11-19-01 (first:
 ACCEPTED WITH CONDITIONS, R1–R10; second, governing: REQUIRES REVISION,
 R1–R12; all items dispositioned ADOPT by the coordinator). Corrections in
 this annex: R2 (round-cap canonical wording, identical to proposal §6)
 A6; R6 (reciprocal-initiation verdict narrowed to the current
 configuration) A2; R7 (security requirements cross-reference) A8; R8
 (lane-topic captured/duplicate/deferred/lost definitions) A3; audit
-conclusion wording on discussion benefits A10. Full disposition record:
+conclusion wording on discussion benefits A10. **v3 correction in this
+annex:** A7 (the project weekly API cap sentence), per the ChatGPT
+verification of bridge round R-2026-11-19-02, Issue 2 — that verification
+confirmed R1–R12 landed (12/12) and classified the corrected package
+ACCEPTED WITH CONDITIONS. Full disposition record:
 `multi-model-integration-proposal-20261118-result.md`; improvement ledger
 Entry 110. Outstanding: the Claude web lane&#x27;s and the Gemini API leg&#x27;s
 criticism of the proposal package were NOT OBTAINED (Free limit / HTTP
@@ -1439,8 +1484,12 @@ construction:
 ## A7. Costs and usage limits (measured)
 
 - Cash: ¥0 (hard constraint). Gemini API: ≤20 requests/day shared with
-  all work (provider count governs); a proactive cycle that needs the
-  API leg budgets inside that 20, never above it.
+  all work (provider count governs). **The project-specific limit is
+  no more than 4 Gemini API requests per week, within the provider&#x27;s
+  shared 20/day limit and the applicable phase-total budget, as
+  defined in proposal §6** (sentence added per the R-2026-11-19-02
+  verification, Issue 2). A proactive cycle that needs the API leg
+  budgets inside that 20, never above it.
 - Web lanes: Claude Free 5-hour message limit (measured); ChatGPT Free
   limits UNCONFIRMED; Gemini web composer cap 31,999 chars (measured).
 - PC lock: lane work is serial; recorded waits ~30–38 min (R-SYSTEM R1).
@@ -1530,7 +1579,7 @@ standing round, any new lane, any &quot;AI-to-AI direct channel&quot; build
 (infeasible per A2 and valueless to simulate). Elements kept — only
 what already runs, plus one recording delta (A3).
 
-===== DOCUMENT 3 — DISPOSITION RECORD =====
+===== DOCUMENT 3 — RESULT RECORD (CRITICISM, AUDITS, AND DISPOSITIONS) =====
 
 # RESULT RECORD — R-INTEGRATION-2026-11-18-01: criticism, audits, and dispositions
 
@@ -1699,6 +1748,112 @@ explicitly approved it. The audits&#x27; classifications — first ACCEPTED
 WITH CONDITIONS, governing REQUIRES REVISION with all conditions now
 corrected in the draft — are inputs to the user&#x27;s decision, not
 approvals.
+
+---
+
+## 5. Annex-only independent review by the user&#x27;s MAIN ChatGPT (2026-11-19 02:00 JST)
+
+**Route and scope.** The user pasted the corrected annex
+(`autonomous-ai-communication-feasibility-20261118.md`, corrected draft
+v2) directly into his MAIN ChatGPT and relayed the review back at
+2026-11-19 02:00 JST. The review&#x27;s header carries ROUND_ID
+R-INTEGRATION-2026-11-18-01 — the annex document&#x27;s own project header —
+**not** a bridge round; no bridge packet was fetched for this review and
+no quote-back verification applies to it. **Scope: the annex only.** The
+reviewer stated its evidence limitation itself: the referenced local
+files, raw logs, consult ledger, improvement ledger, and previous audit
+records were not independently inspected.
+
+**Verdict: ACCEPTED WITH CONDITIONS** (as a feasibility-assessment
+document). **Implementation status: NOT APPROVED** — final approval
+remains exclusively the user&#x27;s.
+
+### 5.1 Coordinator disposition of the 10 conditions
+
+Each condition was checked against the corrected annex/proposal text on
+2026-11-19 before recording (not copied from the review&#x27;s own
+assertions). All 10 restate guards already carried in the corrected v2
+documents: **10/10 SATISFIED-BY-CURRENT-TEXT, 0 NEEDS-CORRECTION.** No
+document correction arises from this review, and none was made.
+
+| # | Condition (substance) | Disposition | Satisfied by |
+|---|---|---|---|
+| 1 | Evidence limitation: the assessment rests on the annex text; primary records not independently inspected | SATISFIED-BY-CURRENT-TEXT | The limitation is recorded here and in §1 above; proposal §1.4 provisional-status note + §13 audit paragraph carry the same scope limit for the package&#x27;s classifications |
+| 2 | Keep BENCHMARK-MEASURED / OPERATIONALLY VERIFIED / IMPLEMENTED / MERELY DOCUMENTED strictly separate; a written rule is not operational proof | SATISFIED-BY-CURRENT-TEXT | Annex header classification paragraph (&quot;A rule existing on paper is DOCUMENTED, not OPERATIONAL, unless runs evidence it&quot;); proposal §1.4 register |
+| 3 | A2 reciprocal-initiation conclusion stays scoped: &quot;NOT AVAILABLE IN THE CURRENT CONFIGURATION&quot;; no universal-impossibility generalisation | SATISFIED-BY-CURRENT-TEXT | Annex A2 verdict (audit correction R6); proposal §7.2 carries the same scoped wording |
+| 4 | A3 proactivity judged by useful discoveries / verified improvements / reduced errors / measurable business outcomes — not by topic or discussion counts | SATISFIED-BY-CURRENT-TEXT | Annex objective function (governing clarification, 2026-11-18 23:33); the A3 delta&#x27;s measurable value is a loss metric, not a volume metric; A11 ties the cycle&#x27;s survival to §18.6 outcome tracking with a pre-registered shrink |
+| 5 | captured / duplicate / deferred / lost definitions retained; zero-lost stays a measurable TARGET, not an established result, until lane replies are reconciled against the consult ledger | SATISFIED-BY-CURRENT-TEXT | Annex A3 definitions (audit correction R8). &quot;Zero lost&quot; appears only as the proposed delta&#x27;s target value; the annex makes no achieved-zero claim, and no lane-reply-vs-ledger reconciliation has been performed or claimed |
+| 6 | A6 must remain identical to proposal §6; no expansion of the one-round-per-week discretionary ad-hoc allowance | SATISFIED-BY-CURRENT-TEXT | Annex A6 = proposal §6 (audit correction R2). Re-verified for this disposition by mechanical comparison: the cap rule text is identical in both documents (556 characters, whitespace-normalised); both state the cap stands until first real revenue and nothing proposes lifting it |
+| 7 | A8 stays subject to every §7.3 security requirement; no weakening of account-identity checks, CDP restrictions, session protection, credential handling, or revocation | SATISFIED-BY-CURRENT-TEXT | Annex A8 (audit correction R7 cross-reference enumerating all five requirements); proposal §7.3 states all five as standing requirements |
+| 8 | A10&#x27;s distinction stands; aggregate net economic value stays UNCONFIRMED | SATISFIED-BY-CURRENT-TEXT | Annex A10 conclusion, in the audit&#x27;s wording verbatim: &quot;useful error detection in specific cases; aggregate net economic value UNCONFIRMED&quot; |
+| 9 | Claude web + Gemini API criticism NOT OBTAINED; their absence must remain explicit | SATISFIED-BY-CURRENT-TEXT | Annex header outstanding note; §3 of this record |
+| 10 | The annex authorises no implementation; separate explicit user approval required | SATISFIED-BY-CURRENT-TEXT | Annex header (&quot;Proposal only. No implementation is authorised by this document.&quot;); proposal §13 final approval gate; §4 of this record |
+
+### 5.2 What this review does NOT cover (explicit)
+
+- **Verification that corrections R1–R12 landed in the proposal** —
+  outside this review&#x27;s scope (annex only). The proposal-side landings
+  (R1, R3, R4, R5, R9, R10, R11, and the proposal halves of R2 / R7 /
+  R12) were not examined by this review.
+- **The completeness check of this disposition record** (both audits
+  recorded, the union disposition table and the lane-criticism rulings
+  present, outstanding items marked outstanding) — likewise not
+  examined.
+- Both remain with **bridge round R-2026-11-19-02** (published
+  2026-11-19T01:13:37+09:00, VALID_UNTIL 2026-11-21T01:13:37+09:00,
+  PACKET_SHA256 5249c185693b862a3e418ddc1b1f445631dd09ef290823c43f35da14498a2722),
+  whose verification request to the user&#x27;s main ChatGPT is **still
+  outstanding** at the time of this entry.
+- This review is therefore **not** a verification of the corrected
+  package as a whole and must not be cited as one. The §4 approval gate
+  is unchanged: nothing is implemented until the user explicitly
+  approves the complete package.
+
+---
+
+## 6. Verification of the corrected package — bridge round R-2026-11-19-02 (2026-11-19 02:02 JST)
+
+Delivery route: user-relay bridge, round **R-2026-11-19-02** (published
+2026-11-19T01:13:37+09:00, VALID_UNTIL 2026-11-21T01:13:37+09:00).
+**Quote-back verification: PASS** — the auditor&#x27;s returned ROUND_ID
+(R-2026-11-19-02) and PACKET_SHA256
+(5249c185693b862a3e418ddc1b1f445631dd09ef290823c43f35da14498a2722) match
+the published page exactly; all three documents (corrected proposal v2,
+corrected annex v2, this record) were confirmed present in the retrieved
+page. This closes the outstanding verification item recorded in §5.2.
+
+**Findings:** R1–R12 — **12/12 LANDED**, each at the sections cited in
+§1.1. Document 3 (this record) completeness — **PASS** on every checked
+item: both audits recorded (§1); union disposition table complete
+(§1.1); first-audit folded items and additional accepted points recorded
+(§1.2, §1.3); lane-criticism rulings present, eight numbered, with the
+inter-lane disagreement recorded rather than averaged (§2); outstanding
+criticism — Claude web and Gemini API — explicitly marked NOT OBTAINED
+(§3); approval gate preserved (§4).
+
+**Classification: ACCEPTED WITH CONDITIONS** — three issues, all
+dispositioned ADOPT by the coordinator (auditor-specified wording
+clarifications / a standing limitation; no scope or cost change):
+
+| # | Issue | Severity | Disposition | Correction landed |
+|---|---|---|---|---|
+| 1 | Proposal §13 said the package goes to the user &quot;after the proposal and the independent lane criticism are complete&quot;, while Claude web + Gemini API criticism remain NOT OBTAINED and the package is being presented now — ambiguity between the criticism process being complete and the package being presentable with outstanding criticism transparently recorded | MODERATE — clarification required | ADOPT | Proposal §13, corrected draft **v3**: the gate passage now states the decision package may be presented once all obtained criticism has been dispositioned and all unobtained criticism is explicitly recorded as outstanding; the criticism process itself remains open until the outstanding replies are obtained or explicitly closed by the user; nothing implies the missing opinions are completed |
+| 2 | Annex A7 (costs and usage limits) states the provider limit of 20 requests/day but does not repeat the project weekly cap of 4 requests/week (proposal §6) — a reader could mistake 20/day as the only applicable limit | LOW — clarification recommended | ADOPT | Annex A7, corrected draft **v3**: the auditor&#x27;s sentence inserted verbatim — &quot;The project-specific limit is no more than 4 Gemini API requests per week, within the provider&#x27;s shared 20/day limit and the applicable phase-total budget, as defined in proposal §6.&quot; |
+| 3 | The published package contains the three documents, not the underlying local source files and raw logs; the verification confirms the corrections are present in the published text, not that every cited local operational event, ledger entry, benchmark artefact, or implementation state is factually accurate | Evidence limitation — transparently disclosed | ADOPT as standing limitation | No text change required: the limitation is already carried by §1 of this record and by proposal §1.4 (provisional classifications); it **stays attached to the final approval decision** |
+
+**Package state after this verification:** corrected draft **v3** —
+proposal 88,648 B (sha256 5bfb12c448b9e74bf469114177eb0296a1a677a0caadf9084e1ce74a2653a940),
+annex 18,554 B (sha256 ed1de8721d36751890f3e9bbafe648932c2e949740cb9e8f788c1eec98d8153e).
+The package awaits the user&#x27;s explicit approval; the §4 gate is
+unchanged and **nothing is implemented**. The auditor&#x27;s recommended
+next action — publish another corrected package for final user review —
+is noted; a further bridge rotation is the coordinator&#x27;s offer to the
+user, not performed by default. **Still outstanding:** Claude web lane
+criticism NOT OBTAINED (retry after 2026-11-19 03:10 JST — still owed)
+and Gemini API leg criticism NOT OBTAINED (HTTP 503). If either late
+reply materially disagrees with a disposition in this record, the
+disposition is amended here and the amendment reported with the package
+(§3 standing rule). Improvement ledger: Entry 111.
 <!-- PACKET-END -->
 </pre>
 
