@@ -21,11 +21,11 @@ page.</p>
 
 <h2>Round identification</h2>
 <pre id="round">
-ROUND_ID: R-2026-11-19-03
-PUBLISHED_AT: 2026-11-19T02:10:19+09:00
-SUPERSEDES: R-2026-11-19-02
-VALID_UNTIL: 2026-11-21T02:10:19+09:00
-PACKET_SHA256: 991ac8023efb67dbbd993a31121530049b703c15811b6a92caa33600dd3318cc
+ROUND_ID: R-2026-11-19-04
+PUBLISHED_AT: 2026-11-19T02:16:51+09:00
+SUPERSEDES: R-2026-11-19-03
+VALID_UNTIL: 2026-11-21T02:16:51+09:00
+PACKET_SHA256: e0ba4543be410786965a1af560783b792a63ba1c377d3d2026858af0c394a464
 PACKET_URL: NONE
 </pre>
 
@@ -45,20 +45,21 @@ that the page was past its validity window when fetched.</p>
 <h2>Packet</h2>
 <pre id="packet">
 <!-- PACKET-BEGIN -->
-CORRECTION-VERIFICATION REQUEST — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL (CORRECTED DRAFT v3)
+FINAL-PACKAGE VERIFICATION REQUEST — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL (CORRECTED DRAFT v3, FINAL PACKAGE)
 
-Context. In bridge round R-2026-11-19-02 you verified the corrected draft v2 package (technical proposal + feasibility annex + disposition record). Your verification returned: page identity PASS; the governing audit&#x27;s corrections R1–R12 landed 12/12 at the cited sections; the disposition record complete on all six checks; FINAL CLASSIFICATION: ACCEPTED WITH CONDITIONS. The conditions were two wording clarifications, plus one evidence limitation you recorded as transparently disclosed:
-- Issue 1 (MODERATE, clarification required): proposal §13&#x27;s completion language did not distinguish completion of the DECISION PACKAGE from completion of the CRITICISM PROCESS, while Claude web and Gemini API criticism remain NOT OBTAINED and the package is nevertheless presented to the user.
-- Issue 2 (LOW, clarification recommended): annex A7 stated the provider limit of 20 requests/day but did not repeat the project weekly limit, so a reader could mistake 20/day for the only applicable limit.
-- Issue 3 (evidence limitation, transparently disclosed): the published package contains the three documents, not the underlying local files and raw logs; the verification confirms the corrections are present in the text and does not independently establish the factual accuracy of every cited local record. This limitation remains attached to any final approval decision and required no text change.
+Context. In bridge round R-2026-11-19-03 you verified the two wording corrections in corrected draft v3 (proposal §13 completion wording; annex A7 weekly-cap sentence). Your verification returned: page identity PASS; both v3 corrections PASS — FULLY LANDED; the outstanding lane criticism (Claude web, Gemini API) still correctly marked NOT OBTAINED in all three documents; FINAL CLASSIFICATION: ACCEPTED WITH CONDITIONS. The conditions were:
+- Issue 1 (MODERATE, correction required): Document 3&#x27;s opening still identified its companion documents as &quot;corrected draft v2&quot;, contradicting the v3 package state recorded in Document 3&#x27;s own §6 — a documentation/version-control defect, not a defect in the two v3 corrections themselves.
+- Issue 2 (LOW, disclose, not a blocker): Document 3 §6 adds a verification-history record of the R-2026-11-19-02 verification; the &quot;nothing else changed&quot; framing should be scoped so it is understood to refer to the substantive proposal and annex changes, while Document 3 receives the corresponding verification-history updates.
+- Issue 3 (evidence limitation, transparently disclosed; no new correction required): the published package contains the three documents, not the underlying local files and raw logs; verification establishes that the corrections are present in the published text and does not independently establish the factual accuracy of every cited local operational event or record. This limitation remains attached to any final approval decision.
 
-MUSE has applied exactly the two wording corrections, producing corrected draft v3 (2026-11-19). Nothing else changed:
-(a) Proposal §13 — the completion wording now states that the decision package may be presented to the user once all criticism that has been OBTAINED has been dispositioned and all criticism that remains UNOBTAINED is explicitly recorded as outstanding in the result record; that presentation of the package does NOT mean the criticism process is complete; and that the criticism process itself remains OPEN until every outstanding reply has been obtained and dispositioned, or the user explicitly closes it.
-(b) Annex A7 — now carries the sentence: &quot;The project-specific limit is no more than 4 Gemini API requests per week, within the provider&#x27;s shared 20/day limit and the applicable phase-total budget, as defined in proposal §6.&quot;
+MUSE has applied the metadata correction and the clarification, producing the FINAL package:
+- Document 3&#x27;s opening now identifies BOTH companion documents as corrected draft v3 (both references updated from v2 to v3). Historical v2 mentions elsewhere in Document 3 (for example §6&#x27;s description of the v2 documents as published in round R-2026-11-19-02) are history and were NOT rewritten.
+- Document 3 §7 (new) records the R-2026-11-19-03 verification — round, identity PASS, both corrections PASS, outstanding items PASS, classification ACCEPTED WITH CONDITIONS, Issues 1–3 with dispositions and where the fixes landed — and the final package state, including the change-scope clarification: the only substantive changes to the proposal and the annex in corrected draft v3 are the two verified corrections; Document 3&#x27;s own additions (§5–§7) are administrative verification-history updates that change no content, scope, cost, or approval gate.
+- The proposal and the annex are UNCHANGED in this step, byte-identical to the v3 files verified in round R-2026-11-19-03 (proposal: 88,648 bytes, sha256 5bfb12c448b9e74bf469114177eb0296a1a677a0caadf9084e1ce74a2653a940; annex: 18,554 bytes, sha256 ed1de8721d36751890f3e9bbafe648932c2e949740cb9e8f788c1eec98d8153e).
 
-The outstanding items are unchanged and remain outstanding: Claude web lane criticism NOT OBTAINED (Free message limit; retry after 2026-11-19 03:10 JST) and Gemini API leg criticism NOT OBTAINED (HTTP 503). Neither opinion is claimed anywhere in the package, and if a late reply materially disagrees with a disposition, the disposition will be amended and the amendment reported with the package.
+Package state: the package awaits the user&#x27;s explicit approval; nothing in it is implemented, and this verification authorises no implementation. The criticism process remains OPEN under proposal §13: the Claude web lane&#x27;s criticism remains NOT OBTAINED (Free message limit; retry after 2026-11-19 03:10 JST) and the Gemini API leg&#x27;s criticism remains NOT OBTAINED (HTTP 503). Neither opinion is claimed anywhere in the package, and if a late reply materially disagrees with a disposition, the disposition will be amended in Document 3 and the amendment reported with the package.
 
-Verification task: read all three documents in full. (1) Confirm correction (a) is present in proposal §13 and states what is summarised above. (2) Confirm correction (b) is present in annex A7, with the figure of no more than 4 Gemini API requests per week and the reference to proposal §6. (3) Confirm the outstanding items (Claude web criticism; Gemini API criticism) are still marked NOT OBTAINED in the documents and in the disposition record (Document 3), and that nothing implies they were obtained. (4) Flag any NEW inconsistency the v3 wording introduced, and any respect in which v3 differs from v2 beyond the two corrections named above. Return your complete findings in ONE copyable code block, beginning with the ROUND_ID and PACKET_SHA256 from the page, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
+Verification task: read all three documents in full. (1) Confirm Document 3&#x27;s opening now identifies both companion documents as corrected draft v3. (2) Confirm Document 3 §7 records the R-2026-11-19-03 verification and the final package state, including the change-scope clarification. (3) Confirm the outstanding items (Claude web lane criticism; Gemini API leg criticism) are still marked NOT OBTAINED in the documents and in Document 3, and that nothing implies they were obtained. (4) Flag any NEW inconsistency, and any substantive difference from the R-2026-11-19-03 package beyond the Document 3 metadata correction and the §7 verification-history addition named above. Return your complete findings in ONE copyable code block, beginning with the ROUND_ID and PACKET_SHA256 from the page, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
 
 This verification authorises no implementation, configuration change, or architecture change. Final approval remains exclusively with the user.
 
@@ -1584,8 +1585,8 @@ what already runs, plus one recording delta (A3).
 # RESULT RECORD — R-INTEGRATION-2026-11-18-01: criticism, audits, and dispositions
 
 Companion to `multi-model-integration-proposal-20261118.md` (corrected draft
-v2, 2026-11-19) and `autonomous-ai-communication-feasibility-20261118.md`
-(corrected draft v2). Per audit correction R12, this record **accompanies
+v3, 2026-11-19) and `autonomous-ai-communication-feasibility-20261118.md`
+(corrected draft v3). Per audit correction R12, this record **accompanies
 the final decision package** to the user&#x27;s review; anything outstanding is
 marked outstanding here, not silently absent. Improvement ledger: Entry 110.
 
@@ -1854,6 +1855,72 @@ and Gemini API leg criticism NOT OBTAINED (HTTP 503). If either late
 reply materially disagrees with a disposition in this record, the
 disposition is amended here and the amendment reported with the package
 (§3 standing rule). Improvement ledger: Entry 111.
+
+---
+
+## 7. Verification of the v3 corrections — bridge round R-2026-11-19-03 (2026-11-19 02:13 JST)
+
+Delivery route: user-relay bridge, round **R-2026-11-19-03** (published
+2026-11-19T02:10:19+09:00, VALID_UNTIL 2026-11-21T02:10:19+09:00).
+**Quote-back verification: PASS** — the auditor&#x27;s returned ROUND_ID
+(R-2026-11-19-03) and PACKET_SHA256
+(991ac8023efb67dbbd993a31121530049b703c15811b6a92caa33600dd3318cc) match
+the published page exactly; all three documents (corrected proposal v3,
+corrected annex v3, this record through §6) were confirmed present in
+the retrieved page.
+
+**Findings:** v3 correction 1 (proposal §13 completion wording) —
+**PASS, FULLY LANDED**: the gate passage establishes all required
+distinctions (package presentable once obtained criticism is
+dispositioned and unobtained criticism is explicitly recorded as
+outstanding; presentation does not complete the criticism process; the
+process remains open until the outstanding replies are obtained or the
+user explicitly closes it; no implementation authorised without the
+user&#x27;s explicit approval). V3 correction 2 (annex A7 weekly-cap
+sentence) — **PASS, FULLY LANDED**, verbatim, with the §6
+cross-reference and no contradictory allowance. Outstanding lane
+criticism — **PASS**: Claude web and Gemini API criticism remain marked
+NOT OBTAINED in all three documents, the §3 late-reply amendment rule is
+preserved, and neither missing opinion is represented as obtained. The
+auditor also confirmed no evidence that v3 authorises implementation,
+changes the approval gate, increases any budget or cap, adds a lane,
+changes the security requirements, or removes the outstanding-criticism
+requirements.
+
+**Classification: ACCEPTED WITH CONDITIONS** — three issues, all
+dispositioned by the coordinator:
+
+| # | Issue | Severity | Disposition | Fix landed |
+|---|---|---|---|---|
+| 1 | This record&#x27;s opening still identified its companion documents as &quot;corrected draft v2&quot;, contradicting the v3 package state recorded in §6 — a documentation/version-control defect, not a defect in the two v3 corrections | MODERATE — correction required | ADOPT | This record&#x27;s opening (above): both companion-document references updated to &quot;corrected draft v3&quot;. Historical v2 mentions elsewhere in this record (e.g. §6&#x27;s description of the v2 documents as published in round R-2026-11-19-02) are history and are **not** rewritten |
+| 2 | This record&#x27;s §6 verification-history addition is an administrative audit-trail update beyond the two wording corrections; any &quot;nothing else changed&quot; framing of the v3 package must be scoped accordingly | LOW — disclose, not a blocker | ADOPT | Scoping clarification stated in the final package state below; the proposal and annex headers were checked and carry no whole-package &quot;nothing else changed&quot; claim (the proposal header scopes v3 to its two wording clarifications, the annex header to its A7 correction), so no header edit was required |
+| 3 | Evidence limitation: the published package does not include the underlying local files, raw logs, or ledger contents; the verification establishes the corrections&#x27; presence in the published text and the internal visibility of the recorded audit history, not the factual accuracy of every cited local operational event or record | Disclosed limitation | Standing limitation (unchanged) | No new correction: already carried by §1 of this record and proposal §1.4; it **stays attached to the final approval decision** |
+
+**Change-scope clarification (Issue 2):** the only **substantive**
+changes to the proposal and the annex in corrected draft v3 are the two
+corrections verified in this round (§13 completion wording; A7
+weekly-cap sentence). This record&#x27;s own additions (§5, §6, and this §7)
+are the corresponding **administrative** verification-history updates to
+Document 3, made so the audit trail stays complete; they change no
+proposal or annex content, scope, cost, or gate. Any &quot;nothing else
+changed&quot; statement about the v3 package is to be read with that scope.
+
+**Final package state:** corrected draft **v3** plus the Issue 1
+metadata fix in this record&#x27;s opening — proposal 88,648 B (sha256
+5bfb12c448b9e74bf469114177eb0296a1a677a0caadf9084e1ce74a2653a940,
+unchanged in this round, re-verified), annex 18,554 B (sha256
+ed1de8721d36751890f3e9bbafe648932c2e949740cb9e8f788c1eec98d8153e,
+unchanged in this round, re-verified). Per the auditor&#x27;s closing, after
+this metadata correction the package can be presented for **final user
+review without another substantive technical revision**. The package
+awaits the user&#x27;s explicit approval decision; the §4 gate is unchanged
+and **nothing is implemented**. The criticism process itself remains
+**OPEN** per proposal §13: Claude web lane criticism NOT OBTAINED
+(retry after 2026-11-19 03:10 JST — still owed) and Gemini API leg
+criticism NOT OBTAINED (HTTP 503). If either late reply materially
+disagrees with a disposition in this record, the disposition is amended
+here and the amendment reported with the package (§3 standing rule).
+Improvement ledger: Entry 112.
 <!-- PACKET-END -->
 </pre>
 
