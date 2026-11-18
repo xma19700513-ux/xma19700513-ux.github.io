@@ -21,11 +21,11 @@ page.</p>
 
 <h2>Round identification</h2>
 <pre id="round">
-ROUND_ID: R-2026-11-19-01
-PUBLISHED_AT: 2026-11-19T00:26:20+09:00
-SUPERSEDES: R-2026-11-18-01
-VALID_UNTIL: 2026-11-21T00:26:20+09:00
-PACKET_SHA256: 33c4a4443c8499775d1eb332f01c4612bb7d62b63a35a156127432065cdad7a2
+ROUND_ID: R-2026-11-19-02
+PUBLISHED_AT: 2026-11-19T01:13:37+09:00
+SUPERSEDES: R-2026-11-19-01
+VALID_UNTIL: 2026-11-21T01:13:37+09:00
+PACKET_SHA256: 5249c185693b862a3e418ddc1b1f445631dd09ef290823c43f35da14498a2722
 PACKET_URL: NONE
 </pre>
 
@@ -45,17 +45,35 @@ that the page was past its validity window when fetched.</p>
 <h2>Packet</h2>
 <pre id="packet">
 <!-- PACKET-BEGIN -->
-INDEPENDENT AUDIT REQUEST — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL
+CORRECTION-VERIFICATION REQUEST — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL (CORRECTED PACKAGE)
 
-The two documents below were drafted by MUSE (the coordinator AI) as a measured gap analysis of the multi-model AI system it operates, plus a feasibility annex on autonomous AI-to-AI communication. They are submitted for your independent audit in your audit-role capacity.
+Context. In bridge round R-2026-11-19-01 you audited the original proposal and feasibility annex in your audit-role capacity and returned two audits: a first audit classified ACCEPTED WITH CONDITIONS (items R1–R10), and a second, fuller audit classified REQUIRES REVISION (items R1–R12), which MUSE treats as the governing audit. MUSE has corrected both documents (corrected draft v2, 2026-11-19) and written a disposition record covering both audits, the lane criticism from the rally round, and the items still outstanding. Per your correction R12, that record accompanies the corrected documents as the final decision package. The owner will decide on approval only after your verification of this corrected package.
 
-Audit task: read both documents in full. Assess them against the evidence they themselves cite: Are the capability claims correctly classified? Are the gaps real and the proposed deltas justified, or is anything overstated, duplicated, infeasible, or missing? Is the resource protection for first-revenue work adequate? Return your findings in ONE copyable code block, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
+Verification task: read all three documents in full. For each of the governing audit&#x27;s R1–R12, state whether the required correction actually landed in the corrected text — cite the section where it landed — or whether it is missing, partial, or inconsistent. Check also that the disposition record (Document 3) is complete: both audits recorded, the union disposition table present, the lane-criticism rulings present, and the outstanding items (Claude web lane criticism NOT OBTAINED; Gemini API leg criticism NOT OBTAINED) marked outstanding rather than silently absent. Flag any NEW inconsistency the corrections introduced. Return your complete findings in ONE copyable code block, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
 
-===== DOCUMENT 1 — TECHNICAL PROPOSAL =====
+The governing audit&#x27;s twelve items, for reference:
+R1 — Gemini API cap conflict resolved to one unambiguous hierarchy.
+R2 — Round-cap interpretation defined identically in proposal and annex (ad-hoc vs milestone vs §16.6 rule-11/12 triggered consultations; multi-stage discussion counting).
+R3 — Revenue protection: displacement of revenue-producing or revenue-enabling work is an explicit stop condition.
+R4 — Priority-score arithmetic: scale and calculation stated reproducibly. (First-audit R8.)
+R5 — Phase 0 acceptance must not incentivise manufactured rounds.
+R6 — Reciprocal-initiation conclusion narrowed to &quot;not available in the current configuration&quot;. (First-audit R5.)
+R7 — CDP/session-security safeguards specified, including that automation must not silently operate on the user&#x27;s MAIN account. (First-audit R6, extended.)
+R8 — Lane-topic measurement defined (captured / duplicate / deferred / lost). (First-audit R7.)
+R9 — Benchmark regression thresholds are operational triggers, not statistical proof of regression.
+R10 — B1 baseline integrity preserved (ROUND_ID key/header alignment, B5 ruling before run #2, failure evidence preserved, run manifest).
+R11 — Codex pricing/Free-plan statements remain UNVERIFIED until checked against current official OpenAI documentation.
+R12 — The complete criticism/disposition record accompanies the final decision package, with outstanding items clearly marked.
+
+===== DOCUMENT 1 — TECHNICAL PROPOSAL (CORRECTED DRAFT v2) =====
 
 # TECHNICAL PROPOSAL — Multi-Model Intelligence Integration (R-INTEGRATION-2026-11-18-01)
 
 **Status:** Proposal only. Nothing in this document is implemented by being written here.
+**Version:** corrected draft v2, 2026-11-19 — corrections applied per the two
+independent ChatGPT audits of bridge round R-2026-11-19-01 (see the changelog
+immediately below and §13). The corrected draft awaits the user&#x27;s review and
+explicit approval; the §13 approval gate is unchanged and in force.
 **Framing:** This is a measured gap analysis against the multi-model system this house
 already operates — the A+ standard (`~/workspace/multi-ai-review-standard-20261116.md`),
 four external lanes (ChatGPT web, Claude web, Gemini web, Gemini API) plus NotebookLM
@@ -80,6 +98,35 @@ items and this proposal&#x27;s own specs). The register is §1.4.
 private internal reasoning, or training data of any external model is claimed or needed.
 All external-model behaviour cited here is observable behaviour in our own rounds or
 public documentation.
+
+**Corrections applied per the ChatGPT audits (2026-11-19).** The complete
+proposal + annex were audited by the user&#x27;s main ChatGPT (independent audit
+role, bridge round R-2026-11-19-01, quote-back PASS). First audit:
+**ACCEPTED WITH CONDITIONS** (R1–R10). Second, fuller audit — governing:
+**REQUIRES REVISION** (R1–R12, subsuming the first list with renumbering,
+plus new items R5, R9, R11, R12). The coordinator dispositioned the union:
+**all items ADOPTED**; corrections land as follows — R1 (API-cap hierarchy)
+§6; R2 (round-cap interpretation, identical wording) §6 + annex A6; R3
+(revenue-first stop rule + weekly machinery/revenue reporting) §6 + §2 S1;
+R4 (priority-score scale + worked calculation) §10; R5 (Phase 0 may remain
+incomplete; no manufactured rounds) §6 Phase 0 + §9; R6 (reciprocal
+initiation narrowed to the current configuration) annex A2 + §7.2; R7
+(CDP/session security requirements, incl. the main-account check) new §7.3
++ annex A8; R8 (lane-topic definitions) annex A3; R9 (regression thresholds
+are operational triggers, not statistical proof) §10.3; R10 (B1 run-#2
+integrity preconditions) §8 + §9; R11 (Codex pricing/Free-plan statements
+stay UNVERIFIED) §3.3 + §10.4; R12 (criticism/disposition record accompanies
+the decision package) §13 + §14. Body recommendations also adopted:
+benchmark-claim metadata (§8), provisional four-state classifications
+(§1.4), duplication-taxonomy tags (§10.1), compression-canary omitted-fact
+duty (§3.5), §3.4 source-figure preservation (§3.4), §5 record-volume vs
+firing-metrics visibility (§5.3), queue-wait vs processing time recorded
+separately (§2 S1). Full disposition record:
+`multi-model-integration-proposal-20261118-result.md`; improvement ledger
+Entry 110. **Outstanding, stated plainly: the Claude web lane&#x27;s criticism of
+this proposal was NOT OBTAINED (Free message limit; retry after
+2026-11-19 03:10 JST), and neither was the Gemini API leg&#x27;s (HTTP 503).
+This corrected draft does not claim either lane&#x27;s input.**
 
 ---
 
@@ -210,6 +257,15 @@ Judge key: **BM** = sealed-key benchmark scoring by a non-sitting seat;
 **SELF** = coordinator&#x27;s own assessment (this proposal). A claim judged
 only by SELF is marked as such and is the weakest form in this register.
 
+**Provisional status (audit correction, 2026-11-19):** every classification
+in this register is **provisional**. The 2026-11-19 independent ChatGPT
+audit did not independently revalidate them — its evidence scope was the
+published packet only, not the underlying files — and no other external
+reviewer has re-derived them from the raw records. BENCHMARK-MEASURED
+additionally means performance on that fixed test set only; it is not a
+claim of general superiority across real tasks (§8 carries the metadata
+each benchmark claim must travel with).
+
 | # | Capability claim | State | Judged by / evidence |
 |---|---|---|---|
 | 1 | ChatGPT: complete item-by-item packet coverage | OPERATIONALLY VERIFIED | OPS — R-TOOLS6 §0; Entry 90 coverage accounting |
@@ -287,7 +343,15 @@ is flagged rather than re-proposed.**
   time against ≈12.5% revenue-proximate work — the only cost signal we have, and it
   is unfavourable. Fix: fill duration + legs + adopted-count for every round from
   the next round on (the columns exist); review the machinery/revenue time ratio
-  monthly. No new structure.
+  monthly. No new structure. Two recording refinements (audit corrections,
+  2026-11-19): (i) round duration is recorded as **queue-wait time (PC-lock
+  wait) and processing time separately** — the two have different causes and
+  different fixes, and a single blended figure hides both; (ii) the same
+  existing metrics mechanism carries a **weekly line: total coordinator
+  hours, revenue-proximate hours, machinery hours, revenue outcomes, and
+  whether any machinery work displaced a revenue task that week** (the
+  §6 revenue-first stop rule&#x27;s evidence feed). No new ledger is created
+  for either.
 - **S2. Frame challenge (§16.6 rule 9) does not fire when the coordinator&#x27;s own
   frame is the defect.** MEASURED: in R-INTERVIEWS every lane answered inside a
   frame that omitted the binding variable (take-home per total hour); the user
@@ -420,13 +484,15 @@ is flagged rather than re-proposed.**
 (added 2026-11-18 23:43 on the user&#x27;s evaluation item: &quot;Is Codex worth
 introducing? Can it be used in the current environment?&quot;)
 
-- **What it is (PUBLISHED — secondary summaries of OpenAI&#x27;s official pricing
-  pages, checked Oct 2026; not re-verified against the primary pages for this
-  draft):** Codex is included in all ChatGPT plans. On Free it is limited to
-  GPT-6 Luna at Standard speed, in the ChatGPT desktop app only, &quot;subject to
-  rollout&quot;, with limits unpublished and no cloud tasks. The CLI, IDE
-  extension, and web Codex start at Plus (US$20/mo). The API-key route is
-  pay-per-token.
+- **What it is (UNVERIFIED — audit correction R11, 2026-11-19):** the
+  following statements rest on secondary summaries of OpenAI&#x27;s pricing
+  pages (checked Oct 2026) and have **not** been checked against current
+  official OpenAI documentation; they remain classified UNVERIFIED and
+  must not be promoted anywhere until that check is done: Codex is
+  included in all ChatGPT plans; on Free it is limited to GPT-6 Luna at
+  Standard speed, in the ChatGPT desktop app only, &quot;subject to rollout&quot;,
+  with limits unpublished and no cloud tasks; the CLI, IDE extension, and
+  web Codex start at Plus (US$20/mo); the API-key route is pay-per-token.
 - **Fit against this environment (MEASURED, ours):** the VM has Node v24/npm,
   so the CLI could be installed — but CLI authentication requires Plus or a
   paid API key, and both are barred here (¥0 rule; the paid-API ban). The only
@@ -471,7 +537,12 @@ introducing? Can it be used in the current environment?&quot;)
   arithmetic (measured strength, Entry 81), coordinator tooling for register/log
   counts; (3) weights, rates and thresholds must cite their origin — a number
   imported from a range description or a priority-score weight is flagged on
-  sight (the T15 failure shape); (4) disagreements are recorded, never averaged.
+  sight (the T15 failure shape); (4) disagreements are recorded, never averaged;
+  (5) for load-bearing calculations, preserve alongside the result the original
+  source figures, the formula, and the units, and verify the source of any
+  material input — independent recomputation catches arithmetic errors, it does
+  not validate the inputs, and two seats recomputing from the same wrong source
+  figure is not independence (audit correction, 2026-11-19).
 - **Outputs:** verified figure with derivation line, or a recorded discrepancy.
 - **Quality criteria:** discrepancy count per round (target zero unresolved);
   every load-bearing figure in user reports traceable to a derivation or a guard.
@@ -491,7 +562,14 @@ introducing? Can it be used in the current environment?&quot;)
   extend the restatement to a checklist: each lane confirms or corrects each listed
   fact); a fact a lane restates wrongly is a measured compression failure and is
   recorded in the round record. Quarterly, one past summary is re-derived from its
-  sources by a non-author seat and diffed.
+  sources by a non-author seat and diffed. **Known blind spot, stated openly
+  (audit correction, 2026-11-19):** the canary list is chosen by the coordinator,
+  so canaries detect loss only among facts already identified; they cannot detect
+  an important fact omitted from the list, or a summary that preserves facts but
+  changes their relationship. Mitigation, riding the existing §16.6 rule 9 frame
+  challenge (no new machinery): for high-impact decisions, the reviewer must name
+  at least one potentially important omitted fact — or state explicitly that they
+  looked and found none — rather than merely confirming the supplied list.
 - **Outputs:** per-delta fact-restatement accuracy; quarterly diff record.
 - **Quality criteria:** restatement accuracy tracked per lane and for the
   coordinator&#x27;s own summaries; any load-bearing fact lost in compression is a
@@ -599,6 +677,14 @@ with the noted weaknesses):
 - **Canary facts:** the compression-fidelity canaries (§3.5) double as
   memory-integrity checks: a load-bearing fact that lanes restate wrongly
   after a delta is evidence the memory layer, not the lane, is corrupt.
+- **Volume is not reliability (audit correction, 2026-11-19):** a larger
+  ledger is not evidence of a more reliable system. Wherever record volume
+  is reported (entries written, rounds held, cases recorded), the firing
+  metrics must be reported alongside it in the same view: the
+  self-detection rate (71% → 55%, §5.2 item 5) and retrieval-at-the-moment-
+  of-action measures (rules that existed but did not fire). A growth in
+  records with a decline in firing metrics is reported as a decline, not
+  as progress.
 
 ---
 
@@ -616,10 +702,42 @@ to any cap in this section requires the user&#x27;s explicit approval beforehand
 All phases are proposal-stage until the §13 approval gate is passed.
 
 **Global caps (all phases):** cash cost ¥0 (hard constraint, not a budget);
-Gemini API ≤ 20 requests/day shared with ALL other work (provider-measured;
-this project ≤ 4 requests in any week, counted inside that 20); web-lane
-rounds for this project ≤ 1 per week until first real revenue (the focus
-plan&#x27;s standing cap); PC-lock time for this project ≤ 2 hours/week.
+PC-lock time for this project ≤ 2 hours/week.
+
+**Gemini API cap hierarchy (audit correction R1, 2026-11-19 — one
+hierarchy, no conflicting numbers):** (1) provider hard limit: 20
+requests/day, shared across ALL Gemini API work, provider count governs;
+(2) project weekly cap: this project ≤ 4 requests in any week, counted
+inside that 20; (3) phase figures in the phase budgets below are **phase
+totals**, consumed across weeks **within** the weekly cap — they are
+never a per-week allowance and never an exception to it. The maximum
+permitted project usage at any moment is therefore min(provider
+remaining, 4 this week, phase total remaining).
+
+**Round cap (audit correction R2, 2026-11-19 — canonical wording,
+identical in annex A6):** the one-round-per-week cap binds **discretionary ad-hoc discussion rounds only**. Registered milestone rounds (2026-11-20,
+2026-11-25, 2026-12-09, 2026-12-17) and consultations triggered under
+§16.6 rules 11/12 are separate authorised events, not charged against the
+cap; each is individually recorded in the consult ledger. One continuous
+discussion on one packet counts as one round; follow-up sub-rounds on the
+same packet count within that round, not as new rounds. The cap stands
+until first real revenue; nothing in this document proposes lifting it.
+
+**Revenue-first stop rule (audit correction R3, 2026-11-19):** machinery
+work under this roadmap is **postponed whenever it would displace an
+active revenue-producing or revenue-enabling task**; if the first-revenue
+target is at risk, a phase&#x27;s work is reduced, postponed, or cancelled
+rather than automatically consuming its allocation. Phase caps are
+ceilings, not targets. Unused hours do not transfer between phases. No
+phase may expand its cap by coordinator discretion; any increase to any
+cap requires the user&#x27;s explicit approval beforehand (unchanged).
+**Combined size, stated for the first time (lane criticism, adopted
+2026-11-19):** the four phase ceilings sum to a combined maximum of
+**36 coordinator hours** (6 + 8 + 12 + 10), of which 14 hours (Phases
+0–1) could fall before the 2026-12-17 first-revenue audit. The draft as
+first written never assessed that combined figure; it is the true size
+of the commitment, and the stop rule above governs the whole of it, not
+each phase separately.
 
 ### Phase 0 — Close the cheap measurement debts (on approval → 2026-12-17)
 
@@ -633,7 +751,11 @@ added to the existing round-metrics table (S4 — table edit only).
   in the next round&#x27;s packet; three consecutive rounds have complete
   round-metrics rows (duration, legs, adopted count); the §3.4 procedure
   text is in the standard and was applied to at least one packet&#x27;s figures
-  with the recompute recorded.
+  with the recompute recorded. **Qualification (audit correction R5,
+  2026-11-19):** the three-rounds test is satisfied only by rounds that
+  occur for their own registered reasons. If qualifying rounds do not
+  occur, Phase 0 remains **INCOMPLETE** and is reported as such; rounds
+  must not be manufactured, split, or re-labelled to satisfy the metric.
 
 ### Phase 1 — Benchmark completion (milestone 2026-12-17, the registered §17 run #2)
 
@@ -644,8 +766,11 @@ seats (task-register I4: PENDING / NOT RECEIVED). NotebookLM sits only its
 citation subset.
 - **Coordinator-hour limit: ≤ 8 hours total** (packet build, lane operation,
   scoring by a non-sitting seat).
-- **Lane budget:** counts as the week&#x27;s one round; Gemini API ≤ 6 requests
-  for the benchmark inside the daily 20.
+- **Lane budget:** runs on the registered 2026-12-17 milestone round (not
+  charged against the discretionary cap, per the §6 round-cap wording);
+  Gemini API ≤ 6 requests **as a phase total** for the benchmark, consumed
+  within the project weekly cap of 4 and the provider&#x27;s daily 20 (R1
+  hierarchy).
 - **Acceptance test:** every seat has a scored row or a recorded NOT OBTAINED
   with cause; results are recorded against the B1 baseline (§8) with deltas
   per seat; the HYPOTHESIS-vs-UNCONFIRMED ruling for the B5 marking form is
@@ -660,7 +785,9 @@ if the cap is hit); compression-fidelity canaries on state deltas (§3.5).
 - **Coordinator-hour limit: ≤ 12 hours total** (lint ≤ 8, sender fix ≤ 2,
   canaries ≤ 2).
 - **Lane budget:** ≤ 2 rounds total (one to review the lint&#x27;s retrospective
-  results, one spare); Gemini API ≤ 4 requests.
+  results, one spare), charged against the discretionary weekly cap when
+  they occur; Gemini API ≤ 4 requests **as a phase total**, within the
+  weekly cap of 4 (R1 hierarchy).
 - **Acceptance test:** the lint demonstrably refuses an untagged load-bearing
   claim in a test packet and passes the four historical bad drafts&#x27;
   corrected versions; the retrospective test&#x27;s catch/miss record is written
@@ -673,7 +800,9 @@ Content: the brief&#x27;s Phase 7 comparison (§8) run once, on identical cases:
 coordinator alone / single best lane / coordinator + one module / full
 architecture. Coding-route procedure (§3.3) adopted as text in this phase.
 - **Coordinator-hour limit: ≤ 10 hours.**
-- **Lane budget:** counts as that month&#x27;s benchmark; Gemini API ≤ 8 requests.
+- **Lane budget:** counts as that month&#x27;s benchmark; Gemini API ≤ 8 requests
+  **as a phase total**, consumed across weeks within the project weekly
+  cap of 4 and the provider&#x27;s daily 20 (R1 hierarchy).
 - **Acceptance test:** a scored four-arm table exists with time and cost
   recorded per arm; the result is dispositioned in the ledger (including
   the possibility that an arm shows the full architecture is NOT worth its
@@ -733,9 +862,45 @@ existing capability (user requirement, 2026-11-18 23:25).
 | §3.3 coding route; §3.2 creative route | **A** as procedures | Creative route is default-deferred on value, not feasibility (§10.4) |
 | gpt-oss-120b / Groq / Cloudflare lanes | **B** — needs additional access | Routes uncallable: no API keys exist on the PC; creating accounts/keys is a user-hand step; no current payoff case (R3) |
 | Paid API tiers for any lane (removes free-tier caps) | **B** technically, **prohibited** by the ¥0 hard constraint | Would require the user to lift the zero-spend rule — not proposed |
-| External AI initiating contact / webhooks into MUSE | **C/D** — see annex | No inbound surface exists (capability audit 1.8: NOT AVAILABLE); assessed fully in the annex |
+| External AI initiating contact / webhooks into MUSE | **D within the current configuration** — see annex A2 | NOT AVAILABLE IN THE CURRENT CONFIGURATION — no supported inbound route identified in the mechanisms examined (capability audit 1.8); the class-D label is scoped to this environment, not a universal impossibility claim |
 | Guaranteed lane availability (SLA-like) | **D** — not feasible | Free consumer tiers offer no availability commitment; the architecture must keep treating absence as a normal state |
 | Access to external models&#x27; weights / hidden prompts / private reasoning | **D** — not feasible and not sought | Stated in the brief itself; all integration here is behavioural |
+
+### 7.3 Security requirements — lanes, sessions, and debugging ports (audit correction R7, 2026-11-19)
+
+The CDP browser automation and the disposable-account session profiles
+are sensitive operational surfaces. The following are standing
+requirements, not aspirations:
+
+- **Debugging ports are local-only.** Chrome remote-debugging ports
+  (9222–9226) bind to 127.0.0.1 on the user&#x27;s PC and are reached from
+  the VM only through the SSH tunnel. They are never exposed to a public
+  or LAN interface; any change to that binding stops all lane work until
+  reviewed.
+- **Session profiles and cookies are protected material.** The
+  automation profiles live only on the user&#x27;s PC; their contents
+  (cookies, session state) are never copied into packets, logs, or the
+  VM, and are never read beyond the presence/metadata checks the
+  standing rules already permit.
+- **No credentials in packets or logs.** Passwords, tokens, and codes
+  never enter a packet, a round record, or a log file; credential values
+  move only through the approved secure store (standing rule, restated
+  here because lane tooling writes logs by default).
+- **Main-account check before every lane run.** Automation runs only in
+  the dedicated disposable-account profiles. Before a lane&#x27;s first send
+  in any session, the operator verifies the signed-in account identity
+  in that profile is the disposable account for that lane. The user&#x27;s
+  MAIN accounts are never signed into an automation profile, and
+  automation must not be able to silently operate on a main account: if
+  the identity check shows anything other than the expected disposable
+  account, the lane stops and the discrepancy is reported before any
+  send.
+- **Session revocation on compromise.** If a profile or session is
+  suspected compromised: stop the lane immediately, close its browser,
+  delete the affected profile&#x27;s session state, and re-authenticate only
+  through the user-hand step (the user signs in himself); the incident
+  and the revocation are recorded in the consult ledger. A revoked
+  session is never silently reused.
 
 ---
 
@@ -768,6 +933,13 @@ B1–B7 key set; the two are not interchangeable and must not be mixed.
   against the baseline under equivalent conditions; a run with a
   missing leg reports the missing leg, never a silent substitution
   (Entry 45(c): Qwen never substitutes for a primary leg).
+- **Claim metadata (audit correction, 2026-11-19):** every benchmark
+  claim, wherever it is stated or summarised, carries: test-set size and
+  composition; number of independent runs; scoring method; evaluator
+  identity (who scored, and whether they sat the run); known limitations;
+  and its generalisation scope — what task class the result does and does
+  not speak to. A benchmark result demonstrates performance on its test
+  set, not broad superiority; summaries must preserve that scope.
 
 **Four arms (brief Phase 7), for the Phase 3 comparison:**
 1. Coordinator alone (no lanes).
@@ -788,20 +960,36 @@ header must be aligned before run #2, and run #2&#x27;s report must state
 which; the B5 HYPOTHESIS-vs-UNCONFIRMED marking ruling is owed before
 run #2 (Phase 1 acceptance test).
 
+**Preconditions for B1 run #2 (audit correction R10, 2026-11-19 — all
+four must be closed before the run starts, and run #2&#x27;s report must
+evidence each):** (1) the ROUND_ID key/header conflict is aligned (key
+or header corrected, and which one is stated); (2) the B5
+HYPOTHESIS-vs-UNCONFIRMED marking ruling is issued, so the behaviour
+floor is scoreable; (3) failure evidence is preserved — a failed leg&#x27;s
+raw response/error body is saved non-empty, or an explicit failure
+record stands in place of the empty raw JSONs (§11 finding E-1); (4)
+run #2 ships with a manifest (manifest.sha256, as the Phase 0 record
+has; §11 finding E-2), and its scores file cross-references the
+execution-condition artefacts wherever they live (§11 finding E-3).
+
 ---
 
 ## 9. Acceptance criteria (per phase, measurable)
 
 - **Phase 0:** (i) premises brief v2 file exists, is dated, and its hash
   is the one quoted in the next round&#x27;s packet; (ii) 3 consecutive
-  rounds with complete round-metrics rows; (iii) §3.4 procedure present
+  rounds with complete round-metrics rows — **counting only rounds that
+  occur for their own registered reasons; if they do not occur, Phase 0
+  remains INCOMPLETE and is reported as such (R5)**; (iii) §3.4 procedure present
   in the standard and evidenced on ≥1 packet (recompute recorded);
   (iv) coordinator time on Phase 0 ≤ 6 h (recorded in round metrics).
 - **Phase 1:** (i) run #2 scores file exists with a row or a caused
   NOT OBTAINED for every seat incl. Gemini API and both web seats&#x27;
   fixed-set runs; (ii) per-seat deltas vs the B1 baseline are stated
-  in the scores file; (iii) the B5 marking ruling and the ROUND_ID
-  key/header alignment are recorded before the run; (iv) time ≤ 8 h.
+  in the scores file; (iii) all four §8 run-#2 preconditions (ROUND_ID
+  key/header alignment, B5 marking ruling, preserved failure evidence,
+  run manifest) are closed and recorded before the run (R10);
+  (iv) time ≤ 8 h.
 - **Phase 2:** (i) lint refuses a seeded untagged claim in a test
   packet (demonstrated, logged); (ii) retrospective test results on
   the four known bad drafts recorded (catch/miss per draft);
@@ -820,28 +1008,41 @@ run #2 (Phase 1 acceptance test).
 
 ## 10. Prioritised improvements — scores, ledger cross-references, impact, regression rules
 
-Priority score = house formula (revenue 40 / urgency 25 / certainty 20 /
-lightness 15). &quot;Judged by&quot; marks whose assessment each line rests on
+Priority score = house formula. **Scale (audit correction R4,
+2026-11-19):** each component is a **raw score out of its own maximum** —
+revenue /40, urgency /25, certainty /20, lightness /15 — and the total
+is their plain sum (maximum 100); the components are not weighted
+contributions and must not be read as the weights themselves. Worked
+example from the table below: S1 = revenue 15 + urgency 20 + certainty
+20 + lightness 15 = **70**, written &quot;70 (15/20/20/15)&quot; in that component
+order. &quot;Judged by&quot; marks whose assessment each line rests on
 (requirement: independent evaluation distinguished from MUSE&#x27;s own):
 **SELF** = coordinator&#x27;s own assessment in this proposal; lane judgement
 arrives with the §12 criticism record and may change dispositions.
 
 ### 10.1 Master table
 
+**Duplication taxonomy (audit correction, 2026-11-19):** each row&#x27;s ID
+carries a kind tag — **NEW** (new capability) / **IMPL** (implementation
+of an already-adopted capability) / **ENF** (enforcement of an existing
+rule) / **MEAS** (measurement of an existing capability) — so the reader
+can see how much of this table is genuinely new machinery versus
+finishing what was already decided. Most of it is the latter.
+
 | ID | Improvement | Score | Ledger cross-reference (prior disposition) | Impact (one line) | Judged by |
 |---|---|---|---|---|---|
-| S1 | Fill §9 round metrics (duration/legs/adopted) every round | 70 (15/20/20/15) | Entry 44 ADOPTED the columns; Entry 48: machinery cost-effectiveness UNCONFIRMED until metrics accumulate; Entry 93 gates rounds partly on this. **Not a duplicate proposal — it is the unexecuted half of Entry 44.** | Revenue: indirect — exposes whether machinery time crowds out revenue time. Reliability: makes machinery cost auditable. | SELF |
-| S3 | Premises brief v2 + version-bump coupling | 65 (10/20/20/15) | No prior entry adopts v2; the staleness was flagged by the Claude leg in the 2026-11-18 delta round (recorded in the round record, not yet a ledger entry). Delta-update duty itself: user&#x27;s 2026-11-17/18 instructions. | Reliability: lanes reason from current premises; prevents stale-premise dispositions. | SELF + lane-flagged |
-| S5/§3.4 | Mathematical verification procedure | 65 (15/15/20/15) | Entry 81 (Claude arithmetic catches, adopted as practice); Entries 59/72 (imported numbers declined — the failure this prevents); B1 T15 evidence is new, no entry yet. **Extends Entry 81 from incidental to procedural; not a duplicate.** | Reliability: kills the imported-number error class in money figures. Delivery: fewer register/log disputes. | SELF |
-| P1 | B1 run #2 completion (API leg + I4 fixed-set for web seats) | 65 (15/20/20/10) | §17.4 milestone design (Entry 74); task-register I3/I4 debts; Entry 93 registers 2026-12-17 as the run #2 trigger. **Executes an already-adopted measurement; not new scope.** | Long-term capability: converts lane capability claims from round behaviour to benchmark-measured. | SELF |
-| S4 | Adjudication outcome columns in round metrics | 55 (15/10/15/15) | §18.6 (Entry 97) tracks adopted-proposal outcomes; adjudication accuracy itself has NO entry — **genuinely new, small**. | Reliability: makes the core adjudication claim measurable for the first time. | SELF |
-| S2 | Frame-challenge mechanical block in money packets | 55 (20/15/15/5) | Entries 99/100 ADOPTED rules 8–10 after the R-INTERVIEWS miss; the mechanical send-block is the unbuilt enforcement half (same pattern as Entry 65&#x27;s pre-send assertion). **Not a duplicate — enforcement of an adopted rule.** | Revenue: money frames carry the binding resource variable; prevents a repeat of the per-hour blind spot. | SELF |
-| A1 | Entry 68 packet-builder lint + retrospective test | 55 (20/15/15/5) | Entry 68 ADOPTED (mechanism + lint + retrospective as build items 4–5, NOT built); Entry 69 canary metric adopted. **This is a build of an adopted item, flagged as such — not a new proposal.** Deferred past 2026-12-02 by the focus plan. | Reliability: mechanically blocks the draft-first defect class, the system&#x27;s most repeated root cause. | SELF |
-| A2a | Fix `gemini_text_review.py` exit-2 defect (bounded) | 50 (10/15/20/5) | Entry 67 records the defect + interim raw-log recovery; §16.2 carries it as a known defect. **Already-recorded fix task; not new.** | Reliability: removes a manual recovery step from the most-used leg route. | SELF |
-| A3/§3.5 | Compression-fidelity canaries on state deltas | 50 (10/15/20/5) | Entry 69 adopted the canary capture rate as the self-detection metric (different target: defect canaries); delta restatement already practised in R-UPDATE-ALL. **Extension of an adopted pattern to a new target; flagged as such.** | Reliability: detects memory-layer corruption before lanes reason from it. | SELF |
-| §5.3 | Single-authority rule for recurring counts + decay dates on canonical documents | 50 (15/10/20/5) | Entry 37 is the pattern (budget ledger as single authority); the +7 log/register gap is recorded in the order-watch register, unresolved. **Generalises an adopted pattern; the gap itself is pre-existing, not created here.** | Delivery: pipeline counts the revenue operation runs on stop diverging silently. | SELF |
-| §3.3 | Coding route procedure (reproduce-before-adopt) | 45 (10/10/15/10) | Entry 87 (Ponytail, coordinator code only, measured-hypothesis status); Phase 0 B7 evidence. **New as a route; consistent with Entry 87&#x27;s boundary.** | Reliability: gate/measurement code gets independent bug-finding with a false-alarm record. | SELF |
-| §4.2 | Discussion phase for rule-changing rounds | 45 (10/10/15/10) | First run inside R-MISTAKE-FULL (2026-11-18, user-ordered); §10.4 counter-opinion requirement is the ancestor. **Formalises a running experiment; unproven.** | Long-term capability: lanes criticise each other, not only the coordinator. | SELF |
+| S1 · MEAS | Fill §9 round metrics (duration/legs/adopted) every round | 70 (15/20/20/15) | Entry 44 ADOPTED the columns; Entry 48: machinery cost-effectiveness UNCONFIRMED until metrics accumulate; Entry 93 gates rounds partly on this. **Not a duplicate proposal — it is the unexecuted half of Entry 44.** | Revenue: indirect — exposes whether machinery time crowds out revenue time. Reliability: makes machinery cost auditable. | SELF |
+| S3 · IMPL | Premises brief v2 + version-bump coupling | 65 (10/20/20/15) | No prior entry adopts v2; the staleness was flagged by the Claude leg in the 2026-11-18 delta round (recorded in the round record, not yet a ledger entry). Delta-update duty itself: user&#x27;s 2026-11-17/18 instructions. | Reliability: lanes reason from current premises; prevents stale-premise dispositions. | SELF + lane-flagged |
+| S5/§3.4 · ENF | Mathematical verification procedure | 65 (15/15/20/15) | Entry 81 (Claude arithmetic catches, adopted as practice); Entries 59/72 (imported numbers declined — the failure this prevents); B1 T15 evidence is new, no entry yet. **Extends Entry 81 from incidental to procedural; not a duplicate.** | Reliability: kills the imported-number error class in money figures. Delivery: fewer register/log disputes. | SELF |
+| P1 · MEAS | B1 run #2 completion (API leg + I4 fixed-set for web seats) | 65 (15/20/20/10) | §17.4 milestone design (Entry 74); task-register I3/I4 debts; Entry 93 registers 2026-12-17 as the run #2 trigger. **Executes an already-adopted measurement; not new scope.** | Long-term capability: converts lane capability claims from round behaviour to benchmark-measured. | SELF |
+| S4 · NEW | Adjudication outcome columns in round metrics | 55 (15/10/15/15) | §18.6 (Entry 97) tracks adopted-proposal outcomes; adjudication accuracy itself has NO entry — **genuinely new, small**. | Reliability: makes the core adjudication claim measurable for the first time. | SELF |
+| S2 · ENF | Frame-challenge mechanical block in money packets | 55 (20/15/15/5) | Entries 99/100 ADOPTED rules 8–10 after the R-INTERVIEWS miss; the mechanical send-block is the unbuilt enforcement half (same pattern as Entry 65&#x27;s pre-send assertion). **Not a duplicate — enforcement of an adopted rule.** | Revenue: money frames carry the binding resource variable; prevents a repeat of the per-hour blind spot. | SELF |
+| A1 · IMPL | Entry 68 packet-builder lint + retrospective test | 55 (20/15/15/5) | Entry 68 ADOPTED (mechanism + lint + retrospective as build items 4–5, NOT built); Entry 69 canary metric adopted. **This is a build of an adopted item, flagged as such — not a new proposal.** Deferred past 2026-12-02 by the focus plan. | Reliability: mechanically blocks the draft-first defect class, the system&#x27;s most repeated root cause. | SELF |
+| A2a · IMPL | Fix `gemini_text_review.py` exit-2 defect (bounded) | 50 (10/15/20/5) | Entry 67 records the defect + interim raw-log recovery; §16.2 carries it as a known defect. **Already-recorded fix task; not new.** | Reliability: removes a manual recovery step from the most-used leg route. | SELF |
+| A3/§3.5 · IMPL | Compression-fidelity canaries on state deltas | 50 (10/15/20/5) | Entry 69 adopted the canary capture rate as the self-detection metric (different target: defect canaries); delta restatement already practised in R-UPDATE-ALL. **Extension of an adopted pattern to a new target; flagged as such.** | Reliability: detects memory-layer corruption before lanes reason from it. | SELF |
+| §5.3 · IMPL | Single-authority rule for recurring counts + decay dates on canonical documents | 50 (15/10/20/5) | Entry 37 is the pattern (budget ledger as single authority); the +7 log/register gap is recorded in the order-watch register, unresolved. **Generalises an adopted pattern; the gap itself is pre-existing, not created here.** | Delivery: pipeline counts the revenue operation runs on stop diverging silently. | SELF |
+| §3.3 · NEW | Coding route procedure (reproduce-before-adopt) | 45 (10/10/15/10) | Entry 87 (Ponytail, coordinator code only, measured-hypothesis status); Phase 0 B7 evidence. **New as a route; consistent with Entry 87&#x27;s boundary.** | Reliability: gate/measurement code gets independent bug-finding with a false-alarm record. | SELF |
+| §4.2 · IMPL | Discussion phase for rule-changing rounds | 45 (10/10/15/10) | First run inside R-MISTAKE-FULL (2026-11-18, user-ordered); §10.4 counter-opinion requirement is the ancestor. **Formalises a running experiment; unproven.** | Long-term capability: lanes criticise each other, not only the coordinator. | SELF |
 
 ### 10.2 What was cut under the anti-expansion rule
 
@@ -864,6 +1065,17 @@ arrives with the §12 criticism record and may change dispositions.
   violation in group A), or (b) more than 2 tasks below its B1-baseline
   seeded-defect detection (the §17.4 provisional floor formula), is a
   **regression event**.
+- **Interpretation (audit correction R9, 2026-11-19):** these thresholds
+  are **operational triggers, not statistical proof of regression**. A
+  15-task run cannot statistically establish that a change caused a
+  decline. Before any regression event is attributed to a specific
+  improvement (the Suspend / Roll back steps below), the record must
+  show: the task-level failures identified individually, and an
+  examination of the execution conditions of that run (leg availability
+  and NOT OBTAINED legs, packet or key defects, environment changes)
+  that could explain the failures without the improvement. Attribution
+  follows that examination and is recorded in the ledger with it;
+  unattributed events trigger investigation, not rollback.
 - **Reject:** an improvement whose own acceptance test (§9) fails is
   rejected at the gate; it does not enter the standard.
 - **Suspend:** an improvement in force that coincides with a regression
@@ -904,7 +1116,11 @@ ledger at adoption time. Currently deferred under this rule:
   is paywalled (Plus or paid API — both barred by the ¥0 rule); the free
   desktop-app surface is manual, weakest-tier, has no CDP control path,
   and its availability on the disposable account is UNMEASURED
-  (classification: MERELY DOCUMENTED). Revisit triggers are named in §3.3.
+  (classification: MERELY DOCUMENTED). The pricing and Free-plan
+  statements behind this bullet are themselves **UNVERIFIED** (secondary
+  summaries, not checked against current official OpenAI documentation —
+  R11) and must not be promoted until that check is done. Revisit
+  triggers are named in §3.3.
 - Any benchmark expansion beyond the §17 set size (15 tasks) — the
   set size was itself a dispositioned design choice (Entry 74).
 
@@ -990,11 +1206,26 @@ carries a reasoned disposition in the result record
 (`multi-model-integration-proposal-20261118-result.md`).
 
 **Independent audit:** the ChatGPT lane, in its standing final-audit
-role, will conduct an independent technical audit of the complete
+role, was asked to conduct an independent technical audit of the complete
 delivered proposal and classify it as one of: **ACCEPTED / ACCEPTED
 WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT
-EVIDENCE**. That audit follows delivery of the complete proposal
-(this document + lane criticism + dispositions).
+EVIDENCE**. **Audit outcome (2026-11-19, bridge round R-2026-11-19-01,
+quote-back PASS):** a first audit returned **ACCEPTED WITH CONDITIONS**
+(R1–R10); a second, fuller audit superseded it as governing with
+**REQUIRES REVISION** (R1–R12). All items were dispositioned ADOPT and
+the corrections are applied in this corrected draft (changelog at the
+head of this document). The audit&#x27;s evidence scope was the published
+packet only; it did not independently revalidate the underlying files,
+and the §1.4 classifications remain provisional accordingly.
+
+**Decision package (audit correction R12, 2026-11-19):** the complete
+criticism and disposition record — both audits, the lane criticism, the
+coordinator&#x27;s rulings on it, and every correction&#x27;s landing place —
+accompanies this proposal to the user&#x27;s decision in
+`multi-model-integration-proposal-20261118-result.md`. Anything in that
+record that is still outstanding (at this version: the Claude web lane&#x27;s
+criticism and the Gemini API leg&#x27;s criticism, both NOT OBTAINED) is
+marked outstanding there, not silently absent.
 
 **FINAL APPROVAL GATE (closing condition of this document):** after
 the proposal and the independent lane criticism are complete, the
@@ -1024,6 +1255,9 @@ the operating system.
   `~/workspace/ai-collab/packets/multi-model-integration-proposal-20261118-result.md`,
   which also records inter-lane disagreements as disagreements — they
   are not averaged into a consensus narrative.
+- The result record is part of the decision package (R12): it travels
+  with this proposal to the user&#x27;s review, and any criticism still NOT
+  OBTAINED when the package is delivered is marked outstanding in it.
 - The companion annex required by the user&#x27;s 2026-11-18 23:30
   directive is a separate document:
   `~/workspace/ai-collab/packets/autonomous-ai-communication-feasibility-20261118.md`,
@@ -1031,7 +1265,7 @@ the operating system.
 
 ---
 
-===== DOCUMENT 2 — ANNEX: AUTONOMOUS AI COMMUNICATION FEASIBILITY =====
+===== DOCUMENT 2 — FEASIBILITY ANNEX (CORRECTED DRAFT v2) =====
 
 # ANNEX — Feasibility Assessment: Autonomous Multi-AI Communication and Collaboration
 
@@ -1039,6 +1273,20 @@ Companion to `multi-model-integration-proposal-20261118.md` (cross-referenced fr
 its §14). Source directive: the user&#x27;s &quot;AUTONOMOUS MULTI-AI COMMUNICATION AND
 COLLABORATION&quot; directive, relayed 2026-11-18 23:30, with the audit conditions of
 23:33. **Proposal only. No implementation is authorised by this document.**
+**Version:** corrected draft v2, 2026-11-19 — corrections applied per the
+two independent ChatGPT audits of bridge round R-2026-11-19-01 (first:
+ACCEPTED WITH CONDITIONS, R1–R10; second, governing: REQUIRES REVISION,
+R1–R12; all items dispositioned ADOPT by the coordinator). Corrections in
+this annex: R2 (round-cap canonical wording, identical to proposal §6)
+A6; R6 (reciprocal-initiation verdict narrowed to the current
+configuration) A2; R7 (security requirements cross-reference) A8; R8
+(lane-topic captured/duplicate/deferred/lost definitions) A3; audit
+conclusion wording on discussion benefits A10. Full disposition record:
+`multi-model-integration-proposal-20261118-result.md`; improvement ledger
+Entry 110. Outstanding: the Claude web lane&#x27;s and the Gemini API leg&#x27;s
+criticism of the proposal package were NOT OBTAINED (Free limit / HTTP
+503; retry for Claude after 2026-11-19 03:10 JST) — this annex does not
+claim their input.
 
 **Objective function (governing clarification, 2026-11-18 23:33):** this system
 optimises for **useful discoveries, verified improvements, reduced errors, and
@@ -1068,7 +1316,7 @@ OPERATIONAL, unless runs evidence it.
 No other external AI system is contactable today. gpt-oss/Groq routes are
 uncallable (no keys on the PC) — class **B**, no current payoff case.
 
-## A2. Reciprocal initiation — assessed SEPARATELY, verdict: NOT FEASIBLE (class D)
+## A2. Reciprocal initiation — assessed SEPARATELY, verdict: NOT AVAILABLE IN THE CURRENT CONFIGURATION (class D, scope-limited)
 
 Question: can an external AI initiate contact with MUSE (message us first,
 push a finding, open a discussion) through any route we hold?
@@ -1080,9 +1328,15 @@ push a finding, open a discussion) through any route we hold?
 - MUSE itself has **no inbound API, webhook receiver, or external trigger
   surface** (capability audit 2026-11-16, item 1.8: NOT AVAILABLE, checked
   against the product docs). All integration direction is MUSE acting outward.
-- **Verdict: genuine reciprocal initiation is class D — not feasible in this
-  environment, and no element of this annex pretends otherwise.** Any design
-  that requires an external AI to &quot;reach out&quot; is rejected at this gate.
+- **Verdict (audit correction R6, 2026-11-19 — wording narrowed to what
+  the evidence supports): genuine reciprocal initiation is NOT AVAILABLE
+  IN THE CURRENT CONFIGURATION — no supported inbound route has been
+  identified in the mechanisms examined.** The class D label is retained
+  as a practical decision **scoped to this environment** (the routes and
+  product documentation actually checked, listed above); it is not a
+  universal claim that reciprocal initiation is impossible everywhere.
+  Any design that requires an external AI to &quot;reach out&quot; is rejected at
+  this gate unless a route change is evidenced (A11 names the trigger).
 
 ## A3. The implementable alternative: coordinator-mediated proactivity (class A, already operating)
 
@@ -1117,6 +1371,24 @@ the consult ledger&#x27;s margin and it becomes a candidate theme for the next
 §18 slot. Cost: one ledger line per occurrence. Measurable value: zero
 lane-raised topics lost. This is a recording delta, not a new channel.
 
+**Topic accounting definitions (audit correction R8, 2026-11-19)** — so
+&quot;zero lost&quot; is measurable rather than asserted. The minimal record, kept
+as a margin line in the **existing consult ledger** (no new system):
+topic, originating lane, date, round reference, disposition. Each
+lane-raised topic is exactly one of:
+- **captured** — recorded in the consult ledger with the fields above
+  and given a disposition (adopted as a §18 theme candidate, or declined
+  with a reason) at or before the next §18 slot;
+- **duplicate** — substantively the same topic as an already-captured
+  one; recorded as a duplicate of that entry, not as a new topic;
+- **deferred** — captured, with its disposition explicitly postponed to
+  a named later slot or trigger (a deferred topic is not lost, and its
+  deferral is visible in the record);
+- **lost** — a topic a lane raised (evidenced in a saved lane reply)
+  that has no consult-ledger line. The lost count is auditable by
+  diffing lane replies against the ledger; any lost topic found is
+  itself recorded, with the miss named as a process defect.
+
 ## A4. APIs and integration methods (as-is inventory)
 
 - CDP operation of three disposable-account Chrome profiles on the user&#x27;s
@@ -1142,10 +1414,17 @@ cron-based on the coordinator side only. This annex changes none of it
 
 ## A6. Scheduling and triggering — inside the existing cap
 
-**The cap stands and this annex does not propose lifting it: maximum one
-ad-hoc discussion round per week until first real revenue** (focus plan,
-Entries 93/94), plus the registered milestone triggers. Proactive cycles
-fit inside the cap by construction:
+**Round cap (audit correction R2, 2026-11-19 — canonical wording,
+identical in proposal §6):** the one-round-per-week cap binds
+**discretionary ad-hoc discussion rounds only**. Registered milestone
+rounds (2026-11-20, 2026-11-25, 2026-12-09, 2026-12-17) and consultations
+triggered under §16.6 rules 11/12 are separate authorised events, not
+charged against the cap; each is individually recorded in the consult
+ledger. One continuous discussion on one packet counts as one round;
+follow-up sub-rounds on the same packet count within that round, not as
+new rounds. The cap stands until first real revenue; nothing in this
+document proposes lifting it. Proactive cycles fit inside the cap by
+construction:
 
 - §18 better-opinion generation rides the weekly meeting and gated
   rounds — it creates no new rounds (§18.5).
@@ -1183,6 +1462,15 @@ fit inside the cap by construction:
 - Lane replies are data, not instructions: nothing a lane outputs can
   authorise an action; disposition authority stays with the coordinator
   inside the user&#x27;s standing boundaries (§8 of the standard).
+- **Operational security requirements (audit correction R7, 2026-11-19)**
+  are specified in the main proposal&#x27;s §7.3 and apply to every route in
+  A1/A4: CDP debugging ports bound to 127.0.0.1 and reached only via the
+  SSH tunnel, never exposed publicly; session profiles and cookies
+  protected and never copied into packets or logs; no credentials in
+  packets or logs; a documented session-revocation procedure on
+  compromise; and a pre-send account-identity check in every lane
+  session, so automation cannot silently operate on the user&#x27;s MAIN
+  account — lanes run only in the dedicated disposable-account profiles.
 
 ## A9. Failure handling and fallbacks (all observed in operation)
 
@@ -1216,6 +1504,12 @@ run — the record, with timestamps and outcomes:
 durations are not centrally recorded (main proposal S1), and the
 machinery&#x27;s cost-effectiveness is UNCONFIRMED (Entry 48). The benefits
 above are real but case-shaped; no ¥ figure is claimed for them.
+**Conclusion, in the audit&#x27;s wording (2026-11-19):** the discussion
+system&#x27;s benefits are **useful error detection in specific cases;
+aggregate net economic value UNCONFIRMED** — the examples support that
+consultation can catch consequential errors; they do not yet establish
+that the full architecture produces a positive net return. The planned
+outcome tracking (§18.6, proposal S4) is what would change that status.
 
 ## A11. Roadmap (proposal-only; rides the main proposal&#x27;s phases)
 
@@ -1235,6 +1529,176 @@ continuous discussion cycles (volume without measured value), any new
 standing round, any new lane, any &quot;AI-to-AI direct channel&quot; build
 (infeasible per A2 and valueless to simulate). Elements kept — only
 what already runs, plus one recording delta (A3).
+
+===== DOCUMENT 3 — DISPOSITION RECORD =====
+
+# RESULT RECORD — R-INTEGRATION-2026-11-18-01: criticism, audits, and dispositions
+
+Companion to `multi-model-integration-proposal-20261118.md` (corrected draft
+v2, 2026-11-19) and `autonomous-ai-communication-feasibility-20261118.md`
+(corrected draft v2). Per audit correction R12, this record **accompanies
+the final decision package** to the user&#x27;s review; anything outstanding is
+marked outstanding here, not silently absent. Improvement ledger: Entry 110.
+
+---
+
+## 1. Independent audits by the user&#x27;s MAIN ChatGPT (final-audit role)
+
+Delivery route: user-relay bridge, round **R-2026-11-19-01**.
+**Quote-back verification: PASS** — the auditor&#x27;s returned ROUND_ID
+(R-2026-11-19-01) and PACKET_SHA256
+(33c4a4443c8499775d1eb332f01c4612bb7d62b63a35a156127432065cdad7a2) match
+the published page exactly; VALID_UNTIL 2026-11-21T00:26:20+09:00. (An
+earlier fetch attempt reached the stale prior round R-2026-11-18-01 and
+returned INSUFFICIENT EVIDENCE on that basis; the auditor itself flagged
+the mismatch, the page was re-verified, and the successful audit ran on
+the correct round.)
+
+| Audit | Date | Classification | Items |
+|---|---|---|---|
+| First audit | 2026-11-19 | **ACCEPTED WITH CONDITIONS** | R1–R10 |
+| Second audit (fuller) — **GOVERNING** | 2026-11-19 | **REQUIRES REVISION** | R1–R12 (subsumes the first list, renumbered, plus new R5, R9, R11, R12) |
+
+The auditor&#x27;s evidence scope was the published packet only; it could not
+inspect the underlying local files, and it said so. Its classifications
+of our capability claims are therefore not independent revalidations
+(§1.4 of the corrected proposal now labels them provisional).
+
+**Coordinator disposition of the union: ALL items ADOPTED.** Every item
+was a concrete, checkable defect or a wording tightening; none expanded
+scope or cost money. Corrections are document-only. **No implementation
+of anything in the proposal is authorised by these dispositions** — the
+corrected draft goes to the user, and the §13 approval gate stands.
+
+### 1.1 Union disposition table (keyed to the GOVERNING audit&#x27;s numbering)
+
+| # | Requirement (substance) | Disposition | Correction landed |
+|---|---|---|---|
+| R1 | Gemini API cap conflict (§6 global ≤4/week vs Phase 1 ≤6 vs Phase 3 ≤8) | ADOPT | Proposal §6: single hierarchy — provider 20/day (governs) &gt; project weekly cap 4 &gt; phase figures restated as **phase totals** consumed within the weekly cap; Phase 1/2/3 lane-budget lines rewritten accordingly |
+| R2 | Round-cap interpretation undefined; multi-stage discussion counting undefined | ADOPT | Canonical wording, **identical** in proposal §6 and annex A6: cap binds discretionary ad-hoc rounds only; registered milestone rounds and §16.6 rule-11/12 triggered consultations are separate authorised events, individually recorded; one continuous discussion on one packet = one round; follow-up sub-rounds on the same packet count within that round |
+| R3 | Revenue protection lacks an operational stop rule | ADOPT | Proposal §6 revenue-first stop rule (machinery postponed whenever it would displace an active revenue-producing/enabling task; caps are ceilings not targets; unused hours do not transfer; increases need prior user approval); weekly machinery-vs-revenue reporting (hours, outcomes, displacement flag) folded into the existing §9 metrics mechanism via §2 S1 — no new ledger |
+| R4 | Priority-score arithmetic ambiguous (components vs weights) | ADOPT (first audit&#x27;s R8) | Proposal §10 preamble: scale stated (raw component maxima 40/25/20/15, plain sum, max 100) + worked calculation (S1: 15+20+20+15 = 70) |
+| R5 | **NEW** — Phase 0 &quot;three consecutive rounds&quot; acceptance could incentivise manufactured rounds | ADOPT | Proposal §6 Phase 0 + §9: the test counts only rounds occurring for their own registered reasons; if qualifying rounds do not occur, Phase 0 remains INCOMPLETE and is reported as such; rounds must not be manufactured, split, or re-labelled to satisfy the metric |
+| R6 | Reciprocal-initiation class-D wording categorical beyond the evidence | ADOPT (first audit&#x27;s R5) | Annex A2 verdict + proposal §7.2: &quot;NOT AVAILABLE IN THE CURRENT CONFIGURATION — no supported inbound route identified in the mechanisms examined&quot;; class D retained, explicitly scope-limited to the current environment |
+| R7 | Security requirements for CDP/session surfaces missing; second audit adds: automation must not silently operate on the MAIN account | ADOPT (first audit&#x27;s R6, extended) | New proposal §7.3: ports bound to 127.0.0.1, SSH-tunnel access only, never publicly exposed; profiles/cookies protected, never copied into packets/logs; no credentials in packets/logs; documented session-revocation procedure on compromise; **pre-send account-identity check in every lane session** (disposable account verified; anything else stops the lane). Annex A8 carries the cross-reference |
+| R8 | Lane-topic queue unmeasurable (&quot;zero lost&quot; undefined) | ADOPT (first audit&#x27;s R7) | Annex A3: definitions of captured / duplicate / deferred / lost + the minimal record (topic, originating lane, date, round reference, disposition) as margin lines in the **existing** consult ledger; lost count auditable by diffing lane replies against the ledger |
+| R9 | **NEW** — regression thresholds read as statistical proof | ADOPT | Proposal §10.3: thresholds are **operational triggers, not statistical proof**; before attribution to a specific improvement, the record must show task-level failure identification + examination of execution conditions (leg availability, packet/key defects, environment); unattributed events trigger investigation, not rollback |
+| R10 | B1 baseline integrity (expanded from first audit&#x27;s R9) | ADOPT | Proposal §8: four preconditions for run #2 — (1) ROUND_ID key/header alignment, (2) B5 HYPOTHESIS-vs-UNCONFIRMED marking ruling issued **before** run #2, (3) failure evidence preserved (non-empty raw artefacts or an explicit failure record replacing the empty JSONs, §11 E-1), (4) run manifest (§11 E-2) + execution-condition cross-references (E-3); §9 Phase 1 updated to match |
+| R11 | **NEW** — Codex pricing/Free-plan statements risk promotion from secondary summaries | ADOPT | Proposal §3.3: the pricing/Free-plan statements are classified **UNVERIFIED** (secondary summaries, Oct 2026) until checked against current official OpenAI documentation; §10.4 defer bullet carries the same label; nothing in the corrected text promotes them |
+| R12 | **NEW** — criticism/disposition record must accompany the decision package | ADOPT | This file is designated as part of the decision package (proposal §13 + §14 amended); outstanding items are marked outstanding (§3 below) |
+
+### 1.2 First-audit items folded into the union
+
+First-audit R3 (revenue stop) = governing R3. First-audit R4 (benchmark
+claims: describe B1/Phase 0 as limited task-specific measurements, no
+general-superiority inference, baseline defects stay attached) — ADOPT:
+proposal §1.4 provisional/scope note, §8 claim-metadata requirement, §8
+defects paragraph retained and expanded by R10. First-audit R10
+(approval gate preserved) — ADOPT: §13 gate text unchanged and in force.
+
+### 1.3 Additional accepted points from the audit bodies
+
+| Point | Disposition | Landed |
+|---|---|---|
+| Benchmark claims carry metadata (test-set size/composition, runs, scoring method, evaluator, limitations, generalisation scope) | ADOPT | Proposal §8 design |
+| Four-state capability classifications are provisional (not independently revalidated by this audit) | ADOPT | Proposal §1.4 + §13 |
+| Duplication taxonomy: tag each improvement new capability / implementation of adopted capability / enforcement of existing rule / measurement of existing capability | ADOPT | Proposal §10.1 kind tags (NEW / IMPL / ENF / MEAS) on every row |
+| Compression canary cannot detect unlisted omissions; reviewer must name at least one potentially important omitted fact for high-impact decisions | ADOPT | Proposal §3.5 (rides the existing §16.6 rule 9 frame challenge; no new machinery) |
+| §3.4 math procedure: preserve source figures + formula + units + recomputation + source verification of material inputs | ADOPT | Proposal §3.4 step (5) |
+| §5 knowledge architecture: self-detection / retrieval-at-action metrics visible alongside record volume; a larger ledger is not evidence of reliability | ADOPT | Proposal §5.3 new bullet |
+| Queue-wait time and processing time measured separately (§9.3 of the second audit) | ADOPT | Proposal §2 S1 recording refinement (i) |
+| Annex conclusion wording: discussion benefits = &quot;useful error detection in specific cases; aggregate net economic value UNCONFIRMED&quot; | ADOPT (wording used verbatim) | Annex A10 |
+
+---
+
+## 2. Lane criticism of the draft (rally round) — coordinator rulings
+
+Obtained: ChatGPT web and Gemini web (records:
+`multi-model-integration-proposal-20261118-rally-chatgpt.md`,
+`…-rally-gemini-web.md`). The inter-lane disagreement on the A+ verdict
+(&quot;partially operational&quot; vs &quot;largely documented&quot;) is resolved by ruling
+5 below and is recorded here as a disagreement, not averaged.
+
+1. **ChatGPT: &quot;MUSE has built a sophisticated review process around an
+   inadequately measured coordinator&quot;; the four-arm comparison has never
+   been run; Adobe/StreetLib are anecdotes with selection bias.**
+   → **ADOPT.** Adjudication accuracy stays UNMEASURED until the
+   four-arm / §17 measurement exists; case evidence is labelled as cases
+   (proposal §1.3, §12 R-4 already carry this; the corrected draft keeps
+   the label wherever the cases are cited).
+2. **ChatGPT on the coordinator&#x27;s §2 self-assessment: the COMBINED cost
+   of the accepted package was never assessed.**
+   → **ADOPT** (conceded; the corrected draft states the combined 36 h
+   ceiling — 6+8+12+10, 14 h of it before 2026-12-17 — under the revenue
+   stop rule, proposal §6). **The further claim, that some requirements
+   should have been rejected rather than costed, is DECLINED**, with
+   reason: the requirements restated the user&#x27;s own recorded decisions
+   and audit discipline; accepting process discipline is not a defect.
+   The costing omission was the defect, and that part is adopted.
+3. **ChatGPT&#x27;s A+ verdict: &quot;PARTIALLY OPERATIONAL; system-wide
+   operational verification not established.&quot;**
+   → **ADOPT** as the standing label. Per-mechanism classification
+   governs; no global &quot;operational&quot; claim is made anywhere in the
+   corrected draft.
+4. **Gemini web: the wholesale acceptance was &quot;sycophantic compliance.&quot;**
+   → The **characterisation is DECLINED**; the **underlying defect is
+   ADOPTED**: acceptance was issued without a cost estimate or a
+   cap-interaction check at acceptance time. Recorded as a coordinator
+   process defect (already conceded in the coordinator&#x27;s rally position
+   paper); the correction is R1/R3 above plus ruling 2&#x27;s combined-cost
+   statement.
+5. **Gemini web: &quot;A+ is largely DOCUMENTED, not operational.&quot;**
+   → **ADOPT-MODIFIED.** Resolved via per-mechanism labels per ruling 3;
+   the disagreement between the two lanes&#x27; verdicts is recorded above
+   and stands as recorded.
+6. **Gemini web: &quot;lane independence is an illusion — every lane reads
+   the same coordinator-framed packet.&quot;**
+   → **ADOPT** as a standing limitation. Mitigation: §18 blind
+   independent proposals before cross-exposure where the design allows;
+   unanimity under shared framing is never treated as independence
+   (already the Entry 109 D8 caution; proposal §4 carries the same
+   warning).
+7. **Both lanes converge: mechanical firing of gates is the single
+   mechanism that would most reduce coordinator error.**
+   → **ADOPT.** This is the proposal&#x27;s A1/S2 direction; the convergence
+   is recorded here as the lanes&#x27; joint answer to the rally&#x27;s §4
+   question.
+8. **Codex: ChatGPT DEFAULT-DEFER (agrees with the draft); Gemini web:
+   &quot;permanently out of scope unless a free API/CLI tier appears.&quot;**
+   → **ADOPT-MODIFIED.** Defer, with the named, checkable revisit
+   triggers in proposal §3.3 (a ¥0 automatable surface appears, or
+   script-defect costs rise measurably); **not** permanent. The pricing
+   statements behind both lanes&#x27; answers are UNVERIFIED per R11.
+
+---
+
+## 3. OUTSTANDING — criticism NOT OBTAINED
+
+- **Claude web lane criticism of this proposal: NOT OBTAINED.** The Free
+  5-hour message limit was hit during circulation (composer cleared, tab
+  closed; retry material preserved in
+  `~/workspace/ai-collab/logs/integration-circulation-20261118/`).
+  **Retry after 2026-11-19 03:10 JST.** Until that reply is obtained and
+  dispositioned, this record is incomplete in that one respect, and the
+  corrected draft must not — and does not — claim Claude&#x27;s input.
+- **Gemini API leg criticism: NOT OBTAINED** (single permitted call
+  returned HTTP 503). Same standing: not claimed anywhere.
+
+If either late reply materially disagrees with a disposition above, the
+disposition is amended in this file and the amendment is reported with
+the package.
+
+---
+
+## 4. Approval gate (unchanged, in force)
+
+No implementation, configuration change, account change, or
+architectural modification is authorised until the user has reviewed
+this corrected final proposal (proposal + annex + this record) and
+explicitly approved it. The audits&#x27; classifications — first ACCEPTED
+WITH CONDITIONS, governing REQUIRES REVISION with all conditions now
+corrected in the draft — are inputs to the user&#x27;s decision, not
+approvals.
 <!-- PACKET-END -->
 </pre>
 
