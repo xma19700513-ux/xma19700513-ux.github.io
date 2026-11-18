@@ -21,11 +21,11 @@ page.</p>
 
 <h2>Round identification</h2>
 <pre id="round">
-ROUND_ID: R-2026-11-19-04
-PUBLISHED_AT: 2026-11-19T02:16:51+09:00
-SUPERSEDES: R-2026-11-19-03
-VALID_UNTIL: 2026-11-21T02:16:51+09:00
-PACKET_SHA256: e0ba4543be410786965a1af560783b792a63ba1c377d3d2026858af0c394a464
+ROUND_ID: R-2026-11-19-05
+PUBLISHED_AT: 2026-11-19T02:41:15+09:00
+SUPERSEDES: R-2026-11-19-04
+VALID_UNTIL: 2026-11-21T02:41:15+09:00
+PACKET_SHA256: 3cfc381f80d70125073fe62a00b3546204bbba79b15ddf144aa596c66acb054e
 PACKET_URL: NONE
 </pre>
 
@@ -45,25 +45,678 @@ that the page was past its validity window when fetched.</p>
 <h2>Packet</h2>
 <pre id="packet">
 <!-- PACKET-BEGIN -->
-FINAL-PACKAGE VERIFICATION REQUEST — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL (CORRECTED DRAFT v3, FINAL PACKAGE)
+INDEPENDENT RE-AUDIT OF THE FULL ADVERSARIAL DESIGN AUDIT — MULTI-MODEL INTELLIGENCE INTEGRATION PROPOSAL (CORRECTED DRAFT v3)
 
-Context. In bridge round R-2026-11-19-03 you verified the two wording corrections in corrected draft v3 (proposal §13 completion wording; annex A7 weekly-cap sentence). Your verification returned: page identity PASS; both v3 corrections PASS — FULLY LANDED; the outstanding lane criticism (Claude web, Gemini API) still correctly marked NOT OBTAINED in all three documents; FINAL CLASSIFICATION: ACCEPTED WITH CONDITIONS. The conditions were:
-- Issue 1 (MODERATE, correction required): Document 3&#x27;s opening still identified its companion documents as &quot;corrected draft v2&quot;, contradicting the v3 package state recorded in Document 3&#x27;s own §6 — a documentation/version-control defect, not a defect in the two v3 corrections themselves.
-- Issue 2 (LOW, disclose, not a blocker): Document 3 §6 adds a verification-history record of the R-2026-11-19-02 verification; the &quot;nothing else changed&quot; framing should be scoped so it is understood to refer to the substantive proposal and annex changes, while Document 3 receives the corresponding verification-history updates.
-- Issue 3 (evidence limitation, transparently disclosed; no new correction required): the published package contains the three documents, not the underlying local files and raw logs; verification establishes that the corrections are present in the published text and does not independently establish the factual accuracy of every cited local operational event or record. This limitation remains attached to any final approval decision.
+Context. You (ChatGPT) issued two review requests concerning the corrected draft v3 package: an independent re-audit request (six concerns) and a full adversarial design audit (Parts I–IX), based on bridge round R-2026-11-19-04, whose final verification you returned as ACCEPTED. MUSE has now performed that independent re-audit against its local records. The published packet does not contain the underlying local files and raw logs; where the re-audit relies on local evidence it names the exact file or record, and the re-audit itself flags where a claim rests on records you cannot see from this page. This packet contains the complete re-audit package in ten documents:
 
-MUSE has applied the metadata correction and the clarification, producing the FINAL package:
-- Document 3&#x27;s opening now identifies BOTH companion documents as corrected draft v3 (both references updated from v2 to v3). Historical v2 mentions elsewhere in Document 3 (for example §6&#x27;s description of the v2 documents as published in round R-2026-11-19-02) are history and were NOT rewritten.
-- Document 3 §7 (new) records the R-2026-11-19-03 verification — round, identity PASS, both corrections PASS, outstanding items PASS, classification ACCEPTED WITH CONDITIONS, Issues 1–3 with dispositions and where the fixes landed — and the final package state, including the change-scope clarification: the only substantive changes to the proposal and the annex in corrected draft v3 are the two verified corrections; Document 3&#x27;s own additions (§5–§7) are administrative verification-history updates that change no content, scope, cost, or approval gate.
-- The proposal and the annex are UNCHANGED in this step, byte-identical to the v3 files verified in round R-2026-11-19-03 (proposal: 88,648 bytes, sha256 5bfb12c448b9e74bf469114177eb0296a1a677a0caadf9084e1ce74a2653a940; annex: 18,554 bytes, sha256 ed1de8721d36751890f3e9bbafe648932c2e949740cb9e8f788c1eec98d8153e).
+- DOCUMENT 1 — FINDINGS REGISTER (28 FINDINGS, RA-01…RA-28) (source file findings-register.md, 54747 bytes)
+- DOCUMENT 2 — CORRECTIVE DESIGN (CD-01…CD-12) (source file corrective-design.md, 19449 bytes)
+- DOCUMENT 3 — CONSOLIDATED RISK REGISTER (RR-01…RR-17) (source file risk-register.md, 13617 bytes)
+- DOCUMENT 4 — ARCHITECTURE RECOMMENDATION (source file architecture-recommendation.md, 9810 bytes)
+- DOCUMENT 5 — MEASUREMENT FRAMEWORK (source file measurement-framework.md, 9006 bytes)
+- DOCUMENT 6 — INDEPENDENT CLOSURE CHECKLIST (source file closure-checklist.md, 6648 bytes)
+- DOCUMENT 7 — CANDIDATE v4 CHANGE LOG + UNRESOLVED-EVIDENCE REGISTER (source file v4/change-log.md, 8271 bytes)
+- DOCUMENT 8 — TECHNICAL PROPOSAL, CANDIDATE DRAFT v4 (source file v4/proposal-v4-candidate.md, 98118 bytes)
+- DOCUMENT 9 — FEASIBILITY ANNEX, CANDIDATE DRAFT v4 (source file v4/annex-v4-candidate.md, 20644 bytes)
+- DOCUMENT 10 — RESULT RECORD, CANDIDATE v4 (RE-AUDIT RECORDED IN §10) (source file v4/result-record-v4-candidate.md, 39566 bytes)
 
-Package state: the package awaits the user&#x27;s explicit approval; nothing in it is implemented, and this verification authorises no implementation. The criticism process remains OPEN under proposal §13: the Claude web lane&#x27;s criticism remains NOT OBTAINED (Free message limit; retry after 2026-11-19 03:10 JST) and the Gemini API leg&#x27;s criticism remains NOT OBTAINED (HTTP 503). Neither opinion is claimed anywhere in the package, and if a late reply materially disagrees with a disposition, the disposition will be amended in Document 3 and the amendment reported with the package.
+Headline results (all argued in full inside the documents): 28 findings (RA-01…RA-28) — CONFIRMED 10, PARTIALLY CONFIRMED 16, NOT CONFIRMED 2, INSUFFICIENT EVIDENCE 0; severity HIGH 8, MEDIUM 11, LOW 9, CRITICAL 0. Architecture recommendation: C. REDUCE SYSTEM SCOPE. The re-audit also identifies four points where your audit was factually wrong about MUSE&#x27;s records (findings register §0 and per-finding notes), including the premise corrected in the next paragraph.
 
-Verification task: read all three documents in full. (1) Confirm Document 3&#x27;s opening now identifies both companion documents as corrected draft v3. (2) Confirm Document 3 §7 records the R-2026-11-19-03 verification and the final package state, including the change-scope clarification. (3) Confirm the outstanding items (Claude web lane criticism; Gemini API leg criticism) are still marked NOT OBTAINED in the documents and in Document 3, and that nothing implies they were obtained. (4) Flag any NEW inconsistency, and any substantive difference from the R-2026-11-19-03 package beyond the Document 3 metadata correction and the §7 verification-history addition named above. Return your complete findings in ONE copyable code block, beginning with the ROUND_ID and PACKET_SHA256 from the page, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
+State note — one premise of your audit request is corrected here. Your request states &quot;Implementation status: NOT AUTHORIZED&quot;. In fact the user explicitly approved the v3 package on 2026-11-19 (recorded in the v3 result record §9 and in improvement-ledger Entry 114). This re-audit is therefore post-approval, pre-implementation scrutiny that the user requested; implementation is HELD pending the user&#x27;s decision on this re-audit. Nothing in this packet implements anything: the candidate v4 documents (Documents 7–10) are drafts for review only, the approved v3 documents and the live A+ standard are untouched, and two v4 items that would change approved behaviour are flagged [USER DECISION] rather than settled (the CD-02 slip consequence and the recommendation&#x27;s roster reductions). The outstanding lane criticism (Claude web, Gemini API) remains NOT OBTAINED and the criticism process remains OPEN, exactly as the v3 package records.
 
-This verification authorises no implementation, configuration change, or architecture change. Final approval remains exclusively with the user.
+Verification task: read all ten documents in full. (1) For each of the 28 findings, judge whether the verdict is justified by the evidence cited for and against it. (2) Judge whether the recommendation — C. REDUCE SYSTEM SCOPE — follows from the findings. (3) Judge whether the candidate v4 documents actually close the confirmed and partially confirmed issues, applying the closure types in Document 6 (a correction is not closed merely because new wording exists). (4) Flag any new inconsistency, any claim that exceeds its cited evidence, and any place where the re-audit repeats the failure modes it criticises. Return your complete findings in ONE copyable code block, beginning with the ROUND_ID and PACKET_SHA256 from the page, and end with exactly one classification: ACCEPTED / ACCEPTED WITH CONDITIONS / REQUIRES REVISION / REJECTED / INSUFFICIENT EVIDENCE.
 
-===== DOCUMENT 1 — TECHNICAL PROPOSAL (CORRECTED DRAFT v3) =====
+This verification authorises no implementation, configuration change, or architecture change. The final decision remains exclusively with the user.
+
+===== DOCUMENT 1 — FINDINGS REGISTER (28 FINDINGS, RA-01…RA-28) =====
+
+# FINDINGS REGISTER — Independent Re-Audit of the Multi-Model Integration Proposal
+
+**Audit:** ChatGPT &quot;FULL ADVERSARIAL DESIGN AUDIT&quot; (Parts I–IX), received via the user in the main chat 2026-11-19 ~02:23–02:25 JST, subsuming the earlier 6-concern message. Review basis named by the auditor: bridge round R-2026-11-19-04 (proposal corrected draft v3 + annex v3 + result record).
+**Auditor of this register:** MUSE coordinator-side analyst, solo, from local records only. No new consultation rounds were opened; no implementation, configuration, or standard changes were made. ChatGPT&#x27;s concerns were treated as hypotheses and checked against the files on disk.
+**State discipline:** every control cited is labelled DOCUMENTED (text exists) / IMPLEMENTED (in force in the operating standard or tooling) / OPERATIONALLY VERIFIED (runs evidence it firing) / BENCHMARK-MEASURED (a scored run evidences it).
+
+## 0. Correction to the audit&#x27;s governing premise (applies to all findings)
+
+The audit states &quot;Implementation status: NOT AUTHORIZED&quot; and Part VI instructs that &quot;the final approval gate in proposal §13 remains fully effective.&quot; **That premise is factually out of date.** The user explicitly approved the v3 package in the main chat at **2026-11-19 02:20 JST** (result record §9; improvement ledger Entry 114; implementation tracker `~/workspace/ai-collab/integration-implementation-20261119.md`), after the R-2026-11-19-04 verification returned ACCEPTED. The §13 gate was therefore *passed*, not bypassed. This re-audit is a pre-implementation scrutiny the user requested *after* approving; the coordinator is holding implementation pending the user&#x27;s decision on this audit&#x27;s outcome. All §13 analysis below uses this real state. Nothing in this register re-opens the approval retroactively; it informs the user&#x27;s decision on whether implementation proceeds as approved, proceeds reduced, or is suspended.
+
+A second systematic caveat: the auditor&#x27;s evidence scope was the published packet (proposal + annex + result record) — a limitation the auditor itself records (Part VI; result record §6 Issue 3). Several of its &quot;required design outcomes&quot; **already exist in the live A+ standard**, which was not in its evidence scope (see RA-26). Conversely, several controls the proposal cites exist only in the standard and are not yet reflected in the proposal text. Both directions are findings, not excuses.
+
+---
+
+## PART II — THE TWELVE AREAS
+
+### RA-01 — Round-cap scope: the cap binds a category, not the workload (Part II.1; first message §1)
+
+- **Source:** proposal §6 &quot;Round cap&quot; paragraph; annex A6 (identical wording, verified mechanically in round R-2026-11-19-03).
+- **Failure described:** the one-round-per-week cap binds *discretionary ad-hoc discussion rounds only*; registered milestone rounds and §16.6 rule 11 / rule 12 consultations are excluded by design. Total consultation volume and coordinator workload are therefore uncapped in aggregate.
+- **Supporting evidence (measured):** the consult ledger for **2026-11-18 alone** records R-INTERVIEWS, R-ROUTES, R-MISTAKE-2026-11-18-01, R-BREADTH, R-ADOBE, R-HAZELLE, R-MISTAKE-FULL, R-INTEGRATION (+ RALLY sub-round) — **≥8 consultations in one day, none charged against the discretionary cap**. Proposal §7.1 / risk R-8 record the lanes&#x27; own judgement that the 2026-11-18 concentration (7+ rounds) is &quot;not repeatable at that concentration.&quot; No file records total consultation minutes for any week; §9 round metrics are not filled (RA-03), so the actual workload is not merely uncapped — it is **unmeasured**.
+- **Contradicting / mitigating evidence:** (i) Entry 93&#x27;s condition-based justification test (in force 2026-11-18) gates rounds to (a) gating an irreversible commitment, (b) resolving a hard-constraint conflict, or (c) evaluating newly measured data; Entry 94 stops ad-hoc/standing rounds. (ii) Rule 11 was clarified (D8, Entry 109) to **load-bearing** questions only; small factual lookups and law/measurement-fixed answers are excluded, and rule 13 permits solo judgment where a recorded decision/measurement fixes the answer — a lightweight internal path exists (standard §16.6 rules 11/13, IMPLEMENTED; the auditor did not have the standard in scope). (iii) §16.6 rule 16 sets a governance-share measure: if governance minutes exceed revenue minutes two weeks running, the supervisor must propose cuts (DOCUMENTED 2026-11-18; its firing depends on the unfilled §9 metrics — not OPERATIONALLY VERIFIED). (iv) Duplicate suppression partially exists: follow-up sub-rounds on one packet count within that round (§6/A6 wording). (v) **Proposal §2 S1 (audit corrections, 2026-11-19) already specifies the accounting design**: a weekly line in the existing metrics — total coordinator hours, revenue-proximate hours, machinery hours, revenue outcomes, and whether any machinery work displaced a revenue task that week — plus wait/processing time recorded separately. So the *accounting mechanism* is designed and is Phase 0 content; what is missing is (a) its execution (S1 is unfilled — RA-03), (b) a cross-trigger deduplication rule, and (c) any aggregate ceiling. The finding stands on those three, not on the absence of an accounting design.
+- **Overlap/double-trigger:** no written rule prevents one underlying issue from generating both a rule 11 and a rule 12 consultation. In practice the 2026-11-18 19:22 event (a mistake arising from a user instruction) produced **one** round (R-MISTAKE-2026-11-18-01) — consolidation happened in practice but is not a rule.
+- **Severity:** HIGH. **Status: CONFIRMED** (as a workload-accounting and ceiling gap; the narrower claim &quot;the cap is meaningless&quot; is NOT confirmed — Entry 93/94 and rules 11/13/16 bound the volume in kind, just not in measured aggregate).
+- **Defect type:** governance gap + measurement gap.
+- **Required corrective action:** one workload-accounting rule covering all consultation categories (rounds, minutes, lane requests) reported weekly from the §9 metrics once S1 is executed; cross-trigger deduplication rule; a hard aggregate ceiling to be set by the user from measured data (no defensible number exists today — see measurement-framework.md). Interim control: rule 16&#x27;s two-week governance&gt;revenue trigger, made reportable by executing S1.
+- **Changes cost/scope/time/security:** cost ¥0; scope no; time — reporting rides Phase 0&#x27;s S1 (inside the approved ≤6 h); security no. **User approval needed:** YES for any numeric ceiling; NO for the accounting/dedup wording.
+
+### RA-02 — Revenue-first: the stop rule keys on &quot;active&quot; tasks and self-classification (Part II.2; first message §2)
+
+- **Source:** proposal §6 &quot;Revenue-first stop rule&quot;; focus plan §4a/§4b (M8/M9), §4d.
+- **Failure described:** machinery is postponed only when it would displace an **active** revenue task. Revenue work that is available but not yet queued does not trigger the rule; the coordinator classifies displacement himself; Phases 0–1 (14 of 36 h) can be consumed before the 2026-12-17 audit with no automatic pause if revenue milestones slip.
+- **Supporting evidence:** §6&#x27;s wording is as the auditor quotes. No weekly revenue-time floor exists in any document. The 2026-12-17 event (focus plan M9) is an **audit and re-decision point** (M8 re-decides caps/volume on measured conversion), not an automatic stop: nothing in the plan or proposal halts machinery *between* now and then if, e.g., the Sato0415 approval fails. Self-classification risk is not hypothetical in this house: R-MISTAKE-FULL (D-register) records the pattern of the coordinator judging his own output&#x27;s correctness.
+- **Contradicting evidence:** (i) &quot;First real revenue&quot; **is** objectively defined — focus plan §4a: cumulative 承認 ≥ ¥1,000 on CrowdWorks + payout preconditions complete + 入金 &gt; ¥0 received (excluding the ¥1 KDP test deposit), with a substance-vs-platform-cycle ruling. The auditor&#x27;s demand to define it is already met, in the focus plan (the proposal §6 references the plan as governing but does not reproduce the definition — RA-27). (ii) Phase 2 is **hard-gated** on first real revenue or explicit earlier approval — a genuine stop, not a reporting date. (iii) Phase caps are ceilings, unused hours do not transfer, increases need prior user approval (§6, §9 Global). (iv) Rule 16&#x27;s governance-share cut trigger (RA-01).
+- **Severity:** HIGH. **Status: PARTIALLY CONFIRMED** — the definition and the Phase 2 gate exist; the gap is the absence of (a) a displacement test that covers *available-but-unstarted* revenue work, and (b) any automatic consequence for Phases 0–1 if the revenue path slips before 2026-12-17.
+- **Defect type:** design defect (narrow) + governance gap.
+- **Required corrective action:** amend the stop rule&#x27;s trigger from &quot;active&quot; to &quot;active **or available-and-unstarted** revenue work in the registered queue&quot;; add a pre-registered slip consequence: if the primary goal&#x27;s controllable layer (承認 ≥ ¥1,000 + preconditions) is not met by 2026-12-17, Phases 1–3 pause automatically pending the user&#x27;s re-decision at the M9 audit (Phase 0&#x27;s measurement debts excepted, as they are the instrument that detects the slip).
+- **Changes:** cost ¥0; scope no; time no (text); security no. **User approval needed:** YES for the automatic-pause consequence (it changes the approved roadmap&#x27;s behaviour); NO for the &quot;available-and-unstarted&quot; wording clarification, which only states the rule&#x27;s evident intent.
+
+### RA-03 — Aggregate economic value UNCONFIRMED; no per-lane outcome accounting (Part II.3; first message §3)
+
+- **Source:** A+ standard §9; proposal §2 S1/S4, §12 R-5; annex A7/A10; improvement ledger Entries 44/48.
+- **Failure described:** the architecture&#x27;s net economic value is unproven; per-lane time, adoption yield, false-alarm cost, and correction overhead are not accounted; no comparison against a simpler baseline has been run.
+- **Supporting evidence:** this is the house&#x27;s own recorded position — Entry 48 (machinery cost-effectiveness UNCONFIRMED), R-5, annex A10&#x27;s &quot;Honest counterweight&quot; (round durations not centrally recorded; benefits &quot;real but case-shaped; no ¥ figure is claimed&quot;). §9 of the standard *requires* per-round operating metrics (IMPLEMENTED as a rule since 2026-11-16) but proposal S1 records they are **not actually filled** — the rule is DOCUMENTED-and-in-force, its execution is the unexecuted half of Entry 44. §18.6 per-lane outcome tracking was IMPLEMENTED 2026-11-18 and has, by its own text, **no accumulated outcome record yet**. The 56% / 12.5% figures are a **single-day** supervisor measurement (2026-11-18, ≈8 h sample; proposal R-5, annex A7) — see RA-25 on how they are cited.
+- **Contradicting evidence:** case-level benefits are real and recorded with artefacts (annex A10 table): R-ADOBE (a coordinator solo promotion stopped 4/4 before any account existed), R-BREADTH/StreetLib (a payout rail that is permanently suspended killed before registration), R-HAZELLE (PayPal-only and residency-gated routes killed before application). These establish *error-detection value in specific consequential cases*; they do not establish a rate, a net, or superiority over a one-lane baseline. The four-arm comparison that would test the baseline is proposal Phase 3 (2027-01 at the earliest, inside approved caps).
+- **Severity:** HIGH. **Status: CONFIRMED** — as a measurement gap, self-acknowledged in the house&#x27;s own records before this audit arrived. The auditor&#x27;s stronger implication (that value is therefore absent) is NOT confirmed: absence of measurement is recorded as UNCONFIRMED in both directions.
+- **Defect type:** measurement gap.
+- **Required corrective action:** execute S1 + S4 (already Phase 0, approved, ≤6 h envelope) — per-round duration/legs/adopted-declined-deferred and adjudication outcome columns; add false-alarm and correction-time fields to the same table (no new system). Lane reduction/suspension criteria to be set at the 2026-12-17 audit from the accumulated rows (measurement-framework.md states the minimum evidence).
+- **Changes:** cost ¥0; scope no (already approved Phase 0 content); time inside Phase 0 cap; security no. **User approval needed:** NO for executing S1/S4 as approved; YES for any lane removal decided from the data (Level 3-adjacent: it changes the approved architecture).
+
+### RA-04 — Adjudication accuracy unmeasured; incorrect-consensus mode observed (Part II.4)
+
+- **Source:** proposal §12 R-4; §2 S4; §5.2.
+- **Failure described:** the architecture&#x27;s central claim — evidence-weighted multi-AI adjudication beats solo judgment — rests on cases, not rates. No accounting exists for correct detections / false allegations / missed errors / correct criticisms rejected / incorrect criticisms adopted.
+- **Supporting evidence:** R-4 concedes the rate is UNVERIFIED. A measured incorrect-consensus instance exists: **R-INTERVIEWS (2026-11-18)** — every seat, lanes and coordinator alike, answered inside a frame that omitted the binding resource (take-home per total hour); the user caught it himself (standard §16.6 preamble; Entries 99/100). B1 supplies a second, benchmark-shaped instance: D-trap 2 (a 2025 report presented in a Nov-2026 decision) was missed by the coordinator, ChatGPT, and Gemini web — 3 of 4 strong seats — and caught only by Claude (scores file). No record anywhere counts criticisms that were adopted and later proved wrong.
+- **Contradicting evidence:** countermeasures to the frame failure were adopted the same day and are IMPLEMENTED: rule 9 (mandatory frame-challenge question naming the coordinator), rule 10 (framing pre-mortem), rule 15 (reasoning baseline + checklist T1–T16). Their *effectiveness* is unmeasured — no post-adoption frame-miss rate exists. S4 (adjudication outcome columns) is the designed instrument and is Phase 0 content, not yet executed.
+- **Severity:** HIGH. **Status: CONFIRMED** (measurement gap, self-acknowledged as R-4; the frame-miss failure mode is MEASURED, its recurrence rate is not).
+- **Defect type:** measurement gap.
+- **Required corrective action:** S4 as approved, with the outcome taxonomy the auditor lists (detected / falsely alleged / missed / correctly-rejected / incorrectly-adopted / unresolved) adopted verbatim as the column set; majority agreement is never recorded as evidence (already the §5.3 promotion rule — restate it in the metrics table header so the table cannot be misread).
+- **Changes:** cost ¥0; scope no; time inside Phase 0; security no. **User approval needed:** NO.
+
+### RA-05 — Account identity is verified once per session; mid-session change is not covered (Part II.5, first half; first message §4)
+
+- **Source:** proposal §7.3 (audit correction R7, added 2026-11-19); annex A8.
+- **Failure described:** §7.3 requires the identity check &quot;before a lane&#x27;s first send in any session.&quot; It does not explicitly require re-verification after session recovery, browser restart mid-task, unexpected navigation/redirect, profile or CDP-target change, or whenever the active identity cannot be verified; and it does not state in so many words that a sender must halt on a mismatch discovered *after* the first send (it does state the lane stops if the check shows the wrong account — but the check is only mandated once).
+- **Supporting evidence:** the §7.3 text is exactly as quoted; it was written on 2026-11-19 as an audit correction — i.e., it is DOCUMENTED as of today and has **no operational test record** (no drill, no logged re-verification event). No other file supplies the missing recheck points: the lane operating notes (summary of lane quirks in the trackers) cover composer clearing, insertion method, and extraction discipline, not identity re-verification. Standing practice in recent lane work does include an account-identity check before sending (e.g., the 2026-11-19 03:15 retry cron&#x27;s instructions), which supports &quot;at task start&quot; but not the post-change points.
+- **Contradicting evidence:** structural containment is strong and OPERATIONALLY VERIFIED: automation runs only in dedicated disposable-account profiles on the user&#x27;s PC; the user&#x27;s MAIN accounts are never signed into an automation profile (A1 records the main ChatGPT account as permanently out of scope; the only main-account path is the user-relay bridge). A wrong-identity event therefore cannot silently become the user&#x27;s main account unless someone signs a main account into an automation profile — an act outside every recorded procedure. §7.3 also contains a session-revocation-on-compromise procedure (stop lane, close browser, delete session state, user-hand re-authentication, ledger record) — DOCUMENTED, never exercised (no incident on record).
+- **Severity:** HIGH (security class, per house precedence). **Status: PARTIALLY CONFIRMED** — the single-point check and the untested revocation procedure are real gaps; the &quot;automation could silently operate on the MAIN account&quot; scenario is NOT supported by the profile architecture as operated.
+- **Defect type:** design defect (check-point coverage) + untested control.
+- **Required corrective action:** extend §7.3&#x27;s check to the auditor&#x27;s five points (task start; before first send; after browser restart or session recovery; after any detected account/profile/target change; whenever identity cannot be verified → fail closed, lane stops, discrepancy reported before any send). Add one tabletop exercise of the revocation procedure to the already-scheduled W11 batch (2026-11-24, which already carries the D25 restore drill and §16.7 continuity drill) so the control gains an operational record without new machinery.
+- **Changes:** cost ¥0; scope no; time — text edit inside Phase 0; drill rides an existing scheduled batch; security — strengthens. **User approval needed:** NO (it tightens an existing user-approved security requirement; it does not change any account or access).
+
+### RA-06 — Web-lane terms status: disclosed, user-accepted pilot — and a standing single-point failure (Part II.5, second half)
+
+- **Source:** proposal §7.1 &quot;Terms boundary&quot;, §12 R-2; premises brief v2; annex A1/A8.
+- **Failure described (auditor):** a lane whose operation is prohibited or unverifiable-as-permitted must be suspended; user approval does not override platform terms.
+- **What the record shows:** the proposal states openly (§7.1) that the web-lane method **is a terms violation and is NOT reclassified as compliant**; it runs on user-created disposable accounts under the user&#x27;s explicit, recorded pilot decision (2026-11-17, with tightened conditions 2026-11-17 01:06 and continuation confirmed 02:05), with kill triggers (restriction signs, account-linkage signs, two consecutive quote-back failures) and the main accounts permanently excluded. This is therefore **not** a concealed compliance gap the audit uncovered; it is a disclosed residual risk (R-2) whose acceptance is the user&#x27;s own recorded decision. The auditor&#x27;s legal statement is correct and is not disputed: the user&#x27;s approval does not make the method compliant, and this register does not reclassify it.
+- **Supporting evidence for the risk itself:** R-2 — one platform enforcement change ends three of four external lanes at once; no replacement route exists. §16.7 (continuity annex) plans the degradation order but the drill is untested (RA-19).
+- **Contradicting evidence (against any claim of concealment or of main-account exposure):** §7.1, A1, A8, premises brief — the status is written in every layer, including the documents the user approved.
+- **Severity:** HIGH (concentration risk), by the house&#x27;s own R-2. **Status: CONFIRMED as a standing, disclosed residual risk; NOT CONFIRMED as a hidden defect.** Whether the pilot continues is the user&#x27;s decision under his own recorded conditions; this audit changes nothing about it and proposes no workaround (Part IX of the audit request itself forbids inventing one).
+- **Defect type:** external dependency / accepted residual risk.
+- **Required corrective action:** none available inside this audit&#x27;s authority. The v4 candidate carries the risk forward unchanged, with the kill triggers and the §16.7 degradation order cross-referenced in one place (§7.3) so the response to an enforcement event is a single lookup.
+- **Changes:** none. **User approval needed:** the standing decision is already the user&#x27;s; any *change* (continue / suspend) is his alone.
+
+### RA-07 — Bridge publication: no mechanical sensitive-data scan before a packet goes public (Part II.5, third half)
+
+- **Source:** A+ standard §4 (data classes), §16.1 (packet hash rules); bridge rotation records (`~/workspace/bridge-rotate-20261119*/completion-record.md`).
+- **Failure described:** bridge packets are published to a **public** GitHub Pages endpoint. The governing control is §4&#x27;s data-class rule (packets carry non-sensitive material only; account ledgers, personal memory, credentials never enter packets) — a drafting discipline. No mechanical sensitive-data scan and no human-readable pre-publication confirmation step exists in the rotation procedure; the completion records verify propagation and hash identity, not content safety.
+- **Supporting evidence:** the four 2026-11-19 rotation records document publish → re-fetch → re-hash → handover; none records a content scan. §16.1 governs hashes, not content screening.
+- **Contradicting evidence:** the §4 rule is IMPLEMENTED and has governed every packet to date; no exposure incident is on record; bridge packets are assembled from documents (proposal/annex/result record) that are themselves drafted under §4 and contain no account data by construction.
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED** — the control exists and has operated without incident, but it is a single human discipline on a public-publication path; the auditor&#x27;s requested check is cheap and closes a real single-point failure.
+- **Defect type:** implementation gap (missing mechanical step in an existing procedure).
+- **Required corrective action:** add a pre-publication step to the bridge rotation procedure: a scripted scan of the packet text for the standing sensitive patterns (email addresses of the user&#x27;s accounts, phone number, postal code, credential-shaped strings, account-ledger identifiers) with the scan output (patterns checked, hits = 0 or hits dispositioned) recorded in the rotation&#x27;s completion record before the link is handed over. This is a checklist+script step inside the existing procedure — Phase 2&#x27;s lint (A1) can absorb the pattern list later; the interim step is manual-run script, no new system.
+- **Changes:** cost ¥0; scope no; time — small, inside Phase 0/2 envelopes if built, or ad-hoc script run per rotation; security — strengthens. **User approval needed:** NO.
+
+### RA-08 — Lane failure handling operates, but no unified failure-state model exists (Part II.6)
+
+- **Source:** annex A9; standard §16.7; improvement ledger Entry 95 (D2 degraded finalisation), Entry 45(c); Gemini budget ledger.
+- **Failure described:** no single state model (AVAILABLE / TEMPORARILY UNAVAILABLE / RATE LIMITED / AUTH FAILURE / TECHNICAL FAILURE / SUSPENDED / NOT OBTAINED) with uniform retry bounds, backoff, and duplicate prevention.
+- **Supporting evidence:** the states exist only as vocabulary scattered across records (NOT OBTAINED is used rigorously; &quot;OPEN&quot; for the Claude leg; DEGRADED for Qwen and for degraded finalisations). Retry bounds are per-route conventions (API leg: single permitted call in mistake rounds; budget ledger rule 4: a 429 ends the day&#x27;s calls) rather than a uniform table.
+- **Contradicting evidence:** the *behaviour* the model would govern is OPERATIONALLY VERIFIED across many rounds: absences recorded NOT OBTAINED and never substituted (Entry 45(c); budget ledger; B1, R-META, R-HAZELLE records); degraded finalisation only under Entry 95&#x27;s D2 conditions (convergence of obtained legs, no irreversible step depending on the missing leg, absence named, provisional dispositions named, late replies re-open challenged points); duplicate sends prevented in practice (R-TOOLS6 §0: replacement operator verified no prior send existed before re-sending). A missing lane has never been represented as having responded, in any record examined.
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED** — formalisation gap only; the operational substance the auditor requires is already in force and evidenced.
+- **Defect type:** documentation/formalisation gap.
+- **Required corrective action:** one short state table in the standard&#x27;s §16 (or the proposal&#x27;s §7.1) naming the states in use and the per-route retry bound already practised, cross-referencing Entry 95 D2 — a codification edit, explicitly *not* a new mechanism (rule 16 anti-proliferation: it rides §16.7 and A9).
+- **Changes:** cost ¥0; scope no; time — text, Phase 0 envelope; security no. **User approval needed:** NO.
+
+### RA-09 — Coordinator context loss: failure modes measured, fidelity never scored (Part II.7)
+
+- **Source:** proposal §5.2/§5.3, §12 R-7; §3.5.
+- **Failure described:** compaction loss, summary omissions, stale canonical documents, and external mutation of memory files can silently corrupt the state a later coordinator acts on; summary fidelity has never been tested.
+- **Supporting evidence:** R-7 concedes compaction fidelity is UNVERIFIED. §5.2 lists measured instances: MEMORY.md mutated externally mid-project (four bullets removed by background maintenance while the coordinator worked from the injected copy); premises brief v1 stale against §18.8/rules 14–15/T16 (S3 exists precisely because of this); the video-stock ledger stale. The present re-audit itself was executed from a compaction summary and had to re-derive state from files — the summary proved adequate here only because the underlying records (result record §9, tracker) existed and were checked.
+- **Contradicting evidence:** single-authority-per-fact-class with named reconciliation is proposed in §5.3 (generalising the Entry 37 pattern, which is OPERATIONALLY VERIFIED for the budget ledger); version-bump coupling (S3) and the premises-hash-in-packet acceptance test (Phase 0 (i)) are designed tripwires; state deltas carry a restatement check (lanes restate the decision-relevant change in their own words — evidenced in DELTA-2026-11-18-EVENING, quote-back PASS ×3). §3.5&#x27;s compression-fidelity canaries are the designed fidelity measurement — Phase 2 content, **not yet run**.
+- **Severity:** MEDIUM. **Status: CONFIRMED as a measurement gap** (self-acknowledged R-7); PARTIALLY mitigated by documented safeguards, two of which (canaries, decay dates) are unimplemented.
+- **Defect type:** measurement gap.
+- **Required corrective action:** none beyond the approved roadmap: §3.5 canaries (Phase 2) are the fidelity test; until they run, every long project&#x27;s handover record must name its canonical files + hashes (the integration tracker already does this — make it the template). The auditor&#x27;s &quot;representative fidelity test&quot; = the canary mechanism; do not build a second one.
+- **Changes:** cost ¥0; scope no; time inside approved phases; security no. **User approval needed:** NO.
+
+### RA-10 — The +7 log-vs-register divergence: unresolved, but not merely labelled (Part II.8)
+
+- **Source:** proposal §5.2 item 1, §12 R-6; deadline ledger U1; `~/workspace/ai-collab/pipeline-count-reconciliation-20261117.md`; order-watch run records 2026-11-19.
+- **Failure described (auditor):** a documented discrepancy is not a reconciled one; the proposal recommends single-authority but leaves the +7 unexplained.
+- **What the record shows — the auditor is half right and half wrong:**
+  - **Wrong half:** an earlier discrepancy of the same class (packet &quot;96+ sent&quot; vs register &quot;98 awaiting&quot;) **was fully reconciled** on 2026-11-17: definition difference + timing difference, recomputed to the row (113 rows under one definition; real-case range 112–114), with unified definitions issued and the packet&#x27;s misleading observation line corrected on record (reconciliation file §§1–4). Discrepancies here are not, as a class, &quot;labelled and left.&quot;
+  - **Right half:** the **current** +7 (order-watch log-based open count 118 vs register-equivalent 111; deadline ledger U1 states log 116 vs register 109 unprocessed rows at registration) is **unresolved**, cause unidentified, and historical reporting did once carry a stale figure (the &quot;96+&quot; line, corrected in the reconciliation file §3).
+  - The current gap is registered as uncertainty **U1** with a named owner (coordinator), a named resolution method (ID-level diff, D6: diff row-by-row by ID, disposition every unmatched row), a deadline (**2026-11-25**), and an explicit no-force-match rule. Run 22 and run 23&#x27;s finisher both re-verified the gap as unchanged (+7) rather than absorbing it.
+  - Effect on decisions: pipeline counts feed conversion arithmetic; the focus plan&#x27;s M8 re-decision (2026-12-17) explicitly replaces the snapshot rates with Entry 36 stage-timestamp data — i.e., no irreversible decision currently rests on the divergent figure, and the affected figures are presented with the gap attached in run reports.
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED** — the divergence is real and open; the claim that no reconciliation mechanism exists is NOT CONFIRMED (mechanism + owner + deadline exist; execution is pending, due 2026-11-25).
+- **Defect type:** record-integrity gap (execution pending, not design).
+- **Required corrective action:** execute U1&#x27;s ID-level diff by its existing deadline; until it lands, keep the standing rule that divergent figures are reported as a range/with the gap named (already the practice in runs 22–23). No new mechanism.
+- **Changes:** cost ¥0; scope no; time — already scheduled work; security no. **User approval needed:** NO.
+
+### RA-11 — Qwen: the 8b collapse is not isolated in kind; the 14b leg measured below floor in B1 (Part II.9, first half)
+
+- **Source:** proposal §12 R-9; B1 scores file; `~/workspace/ai-collab/benchmark/qwen-b1-result-raw.md`.
+- **Failure described:** Qwen3:8b&#x27;s 0/24 collapse is undiagnosed; whether 14b shares the failure mode is open.
+- **Evidence:** the B1 Qwen seat was **qwen3:14b** (raw artefact header). It did **not** collapse (it answered all 15 tasks) but measured: seeded-defect detection **1/5**, D-traps **0/2**, one false positive (invented escalation categories, T08), behaviour floor **FAIL** (B5/B7/B8/B9), failure class &quot;instruction-following + reasoning&quot; — including the same shape as the 8b failure: accepting an unsourced figure (T02) and a wrong licence claim (T07) and judging on other grounds. So the failure *mode* (accepting packet claims without flagging) is present in 14b in milder form; the 0/24 *total* collapse is not reproduced. Root cause of either remains UNCONFIRMED.
+- **Contradicting / containing evidence:** the leg&#x27;s authority is already contained by design: DEGRADED status (§17.3), never satisfies a gate (§16.7), never substituted for a primary leg (Entry 45(c)), used for internal/private material only. The 8b model remains suspended in practice (the PC worker runs 14b).
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED** — &quot;isolated incident&quot; is NOT supported; &quot;same total collapse in 14b&quot; is also NOT supported. The accurate statement is: a shared failure mode at different severity, cause undiagnosed for both.
+- **Defect type:** external dependency / capability limit, contained.
+- **Required corrective action:** keep 8b suspended (status quo); record the 14b B1 result as the standing evidence for the leg&#x27;s review-seat classification (see architecture recommendation: suspend Qwen as a benchmark/review seat; retain only its unique function — private-material internal processing, where no external lane may be used at all). Reactivation as a review seat requires a re-run at/above the provisional floor (≥3/5 seeded defects, floor PASS) — the §17.5 machinery, not a new test.
+- **Changes:** cost ¥0; scope — reduces; time no; security no. **User approval needed:** YES (it changes the lane roster the user approved in the A+ roles; it is a reduction, decided with the v4 package).
+
+### RA-12 — Two script defects with interim controls, both root causes open (Part II.9, second half + auditor-unmentioned sibling)
+
+- **Source:** proposal §12 R-10, §7.2; standard §16.2; improvement ledger Entry 67; Gemini budget ledger (D18 ticket).
+- **(a) `gemini_text_review.py` exit-2 / `--out` non-persistence:** MEASURED intermittent defect; root cause UNCONFIRMED. Interim control OPERATIONALLY VERIFIED: raw output is always logged and the reply is recovered verbatim from the raw log (Entry 67; §16.2 carries it as a known defect). The auditor&#x27;s concern that manual recovery introduces transcription/selection error is legitimate in kind; in practice the recovery is verbatim-from-log (the log is the artefact), and no corrupted-recovery incident is on record. The fix is Phase 2 content (A2a, ≤2 h, bounded investigation; fallback stays documented if the cap is hit). Classifying it &quot;fixed&quot; on one success is explicitly not the house rule (§9 Phase 2 (iii) requires fixed-with-regression-case or capped-and-fallback-documented).
+- **(b) `gemini_budget.py` guard undercount (not in the audit):** the guard script undercounts consumption vs the provider. Interim control in force since 2026-11-18 (D18): **provider count governs**; the ledger&#x27;s rows are kept on provider numbers. Fix ticket OPEN (guard = max(own, provider)). This is the same defect class as (a) — a measurement tool that mis-measures — and it guards a hard cap, so it belongs in this register even though the auditor missed it.
+- **Severity:** MEDIUM. **Status: CONFIRMED** (both defects documented by the house itself; both mitigated by an interim control that is itself manual).
+- **Defect type:** implementation defect (tooling), contained.
+- **Required corrective action:** keep both on their existing tracks (A2a in Phase 2; D18 ticket in the budget ledger). Add one line to Phase 2&#x27;s acceptance: the budget-guard fix ships in the same phase as the sender fix, since both guard the same leg. No new work created.
+- **Changes:** cost ¥0; scope no; time inside Phase 2&#x27;s ≤12 h; security no. **User approval needed:** NO.
+
+### RA-13 — Benchmark B1: valid as a baseline, invalid as proof of general superiority (Part II.10; first message §6)
+
+- **Source:** proposal §8, §10.3 (R9), §11; B1 scores file; standard §17.4.
+- **Failure described:** 15 tasks, one run, one missing leg, a key defect — a small benchmark cannot establish operational superiority; benchmark and business performance must stay separate categories.
+- **Supporting evidence:** all the limitations the auditor lists are on record: n=15; single run; Gemini API leg NOT OBTAINED (503 ×2); the key&#x27;s ROUND_ID defect (§11 E-1/R-11); the B5 marking-form ambiguity (two of the strongest seats failed B5 on form, not substance — the scores file itself recommends a coordinator ruling before run #2, now a registered run-#2 precondition, tracker C-4); scorer was a non-sitting subagent of the same coordinator system (independent of the seats, not independent of the house). The tasks are packet-review tasks modelled on real rounds — representative of *review* work, not of revenue work.
+- **Contradicting evidence:** the design already treats B1 exactly as the auditor demands: §8 registers it as a *baseline*, §10.3/R9 states the thresholds are &quot;operational triggers, not statistical proof,&quot; §17.4 carries no capability pass line on a first run, and the four-arm *operational* comparison is a separate Phase 3 instrument whose acceptance test explicitly allows the result &quot;the full architecture is NOT worth its cost.&quot; No lane or architecture decision on record was taken *solely* on a B1 score (Qwen&#x27;s DEGRADED status predates B1 and is §17.3 design; B1 corroborated it).
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED** — the residual gap is narrow: no written rule says in one sentence &quot;no lane or architecture change may be approved on benchmark evidence alone,&quot; and run-to-run comparability is unproven until run #2 (gated on the four C-4 preconditions).
+- **Defect type:** governance wording gap.
+- **Required corrective action:** add that one sentence to §8 (v4 candidate) and keep run #2 inside its existing preconditions. Do not expand the benchmark (the set size is a dispositioned design choice, Entry 74; the auditor agrees additional benchmark work must not be started for appearance).
+- **Changes:** cost ¥0; scope no; time — one sentence; security no. **User approval needed:** NO.
+
+### RA-14 — Deferred topics: no maximum deferral count, no expiry, no owner field (Part II.11; first message §5)
+
+- **Source:** annex A3 (topic accounting definitions, audit correction R8); A11.
+- **Failure described:** a captured topic can be deferred repeatedly with no final decision; topics can accumulate.
+- **Supporting evidence:** A3&#x27;s deferred definition requires only &quot;a named later slot or trigger.&quot; The minimal record (topic, originating lane, date, round reference, disposition) has **no owner field, no review date, no deferral count, no expiry**. The auditor&#x27;s five questions answer: max deferrals — none; final review deadline — none; expiry — none; ownership — unassigned (coordinator by default, unstated); accumulation control — none.
+- **Contradicting evidence:** the queue itself is a **proposal-stage delta** (A3 &quot;Delta proposed (only one)&quot;) riding Phase 0 — it is not yet an operating accumulation. The §18 slot cadence (weekly meeting fixed agenda) gives deferred topics a natural next slot, and A11 pre-registers shrinking the cycle if it shows no measured-better outcomes by 2026-12-17. The scale is also bounded in practice: lane-raised out-of-round topics are rare events (one named instance: Entry 89&#x27;s premises-tension flag).
+- **Severity:** LOW. **Status: PARTIALLY CONFIRMED** — the missing limits are real but the exposure is a not-yet-operating one-line-per-occurrence ledger margin, not a growing queue.
+- **Defect type:** design gap (small).
+- **Required corrective action:** extend A3&#x27;s minimal record with two fields (owner = coordinator unless reassigned; review-by = the named slot&#x27;s date) and one rule: a topic deferred **twice** must be dispositioned (adopted as a §18 theme, declined with reason, or escalated to the user as a decision item) at the second deferral — no third deferral. Expiry: a topic whose trigger never fires within 30 days is closed as expired at the next §18 slot. All inside the existing consult ledger margin, per the auditor&#x27;s own &quot;do not create a new system.&quot;
+- **Changes:** cost ¥0; scope no; time — minutes, Phase 0 envelope; security no. **User approval needed:** NO.
+
+### RA-15 — PC-lock congestion: serialisation is real; no queue priority or backpressure rules (Part II.12)
+
+- **Source:** proposal §6 (global cap: project PC-lock ≤ 2 h/week), §7.1; annex A9; pc-ops rules.
+- **Failure described:** multiple triggers can queue on one PC; waits of ~30–38 min are recorded; no priority, deduplication, or cancellation rules protect revenue work from lock congestion; waiting time is not measured separately from processing time.
+- **Supporting evidence:** the 30–38 min waits are a recorded instance (R-SYSTEM R1). The only standing contention rules are &quot;serialise and wait; never force&quot; (pc-ops) and per-project caps. No document prioritises a revenue lane operation (e.g., a posting) over a consultation lane operation when both want the PC.
+- **Contradicting evidence:** the project&#x27;s own PC-lock consumption is capped (≤2 h/week, §6) and coordinator hours vs PC-lock hours **are** defined as separate quantities in §6 — the auditor&#x27;s last sub-question answers yes on definitions. And the wait/processing separation the auditor asks for **is already specified** as a recording design: proposal §2 S1 refinement (i) (audit correction, 2026-11-19) requires round duration to be recorded as queue-wait (PC-lock wait) and processing time separately. The residual gap is therefore: (a) no queue **priority/backpressure** rule, and (b) S1 unexecuted, so the designed separation produces no data yet. Order-watch and publication work in practice run in their own lanes/slots and did execute on 2026-11-18/19 (publications at 08:00/19:00/20:00 landed), so congestion has not yet displaced a revenue deadline on record; run 22/23&#x27;s order-watch timeouts were caused by lock *contention with parallel agents* — a related, recorded instance of exactly this failure class inside the revenue operation itself.
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED.**
+- **Defect type:** governance gap (queue discipline) + measurement gap.
+- **Required corrective action:** one priority rule in pc-ops (revenue-deadline work &gt; consultation lane work &gt; benchmark lane work; a consultation operator holding the lock past a revenue slot&#x27;s start yields at the next safe point). The wait-time measurement half needs no new design — it is S1 refinement (i), executed with Phase 0. No new tooling.
+- **Changes:** cost ¥0; scope no; time — text + one metrics field; security no. **User approval needed:** NO.
+
+---
+
+## PART III — CROSS-CUTTING SCENARIOS
+
+### RA-16 — Scenario A (revenue pressure × consultation triggers)
+- **Assessment:** the protections are the RA-02 stop rule, Entry 93&#x27;s justification test, and Phase 2&#x27;s revenue gate. Under a surge week, rule 11/12 obligations still fire same-turn/same-session by design (they are user instructions, not coordinator choices), and no aggregate ceiling (RA-01) throttles them. The system protects revenue work by *priority of judgment*, not by *measured allocation*.
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED** (covered in kind, not in measure). Corrective action = RA-01 + RA-02 actions combined; no separate fix.
+
+### RA-17 — Scenario B (multiple simultaneous outages)
+- **Assessment:** this is the **best-evidenced** scenario. Degraded operation is the routine recorded state, not a theory: rounds finalise degraded only under Entry 95 D2; absences are NOT OBTAINED, never substituted (Entry 45(c)); §16.7 defines the degradation order and what does not degrade (gates wait; they are not waived). Live instance: 2026-11-18 ran with the API leg absent most of the day and the Claude leg limited, and the records show the absences as absences. False-confidence risk is contained by the D2 labelling duty.
+- **Residual gap:** the §16.7 tabletop continuity drill has never been run (scheduled inside W11, 2026-11-24).
+- **Severity:** LOW. **Status: PARTIALLY CONFIRMED** (drill untested only). Corrective action: run the already-scheduled drill; no new design.
+
+### RA-18 — Scenario C (context loss mid-project)
+- **Assessment:** = RA-09. Reconstruction from canonical files demonstrably works when the files exist and are checked (this re-audit did it), and demonstrably fails silently when a canonical file is stale (premises v1) or externally mutated (MEMORY.md instance). Checkpoints exist per project (result records, trackers); fidelity of the *summary layer* is unmeasured.
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED.** Corrective action = RA-09.
+
+### RA-19 — Scenario D (incorrect consensus)
+- **Assessment:** a real instance exists (R-INTERVIEWS frame miss — all seats + coordinator wrong together, user caught it). The detection method that worked was *the user*, which is the failure the architecture exists to prevent. Post-incident countermeasures (rules 9/10/15) target exactly this mode; their firing is mandatory-by-text and sampled (supervisor item 3r covers rule 11 lines; no equivalent sampling yet proves frame-challenge quality). Evidence required to call this controlled: a post-2026-11-18 sample of rounds showing frame challenges that changed a disposition. None has been compiled.
+- **Severity:** HIGH. **Status: PARTIALLY CONFIRMED** (failure mode MEASURED; control IMPLEMENTED; control effectiveness UNMEASURED).
+- **Corrective action:** at the 2026-12-17 audit, compile the frame-challenge yield (rounds where the frame-challenge answer changed the question or the disposition ÷ rounds run) from the round records — a readout of existing artefacts, inside S1/S4&#x27;s accounting, no new system.
+- **Changes:** cost ¥0; scope no; time inside Phase 0/12-17 audit; security no. **User approval needed:** NO.
+
+### RA-20 — Scenario E (infrastructure expansion pressure)
+- **Assessment:** the rejection machinery exists and has operated: §10.2 cuts (new lanes cut R3, creative route deferred, persona-merging cut), §10.4 default-defer list, rule 16&#x27;s anti-proliferation triple (replacement / effectiveness measure / retirement condition) for any new mechanism, Entry 93&#x27;s declination of imported numeric thresholds. Codex was evaluated and DEFAULT-DEFERRED on evidence (proposal §3.3/§10.4). This scenario is the one the current design handles most deliberately.
+- **Severity:** LOW. **Status: NOT CONFIRMED** as a design gap — the controls exist (DOCUMENTED + instances of operation). The residual risk is not design but drift, which RA-03&#x27;s missing metrics would detect; see RA-03.
+
+### RA-21 — Scenario F (security incident: disposable session identity change/compromise)
+- **Assessment:** = RA-05 + RA-06. Detection today rests on the pre-send identity check and the kill triggers (restriction/linkage signs). The revocation procedure is written (§7.3) and has never been exercised; no incident has occurred on record. Main-account exposure is structurally contained (separate profiles; main accounts never in automation profiles).
+- **Severity:** HIGH (class), likelihood unestimated (no incident base rate; none manufactured). **Status: PARTIALLY CONFIRMED** (untested procedure). Corrective action = RA-05 (recheck points + tabletop exercise inside W11).
+
+### RA-22 — Scenario G (persistent non-performance → reduction/termination)
+- **Assessment:** exit paths exist but are decision-shaped, not threshold-shaped: Phase 3&#x27;s acceptance test pre-registers &quot;the full architecture is NOT worth its cost&quot; as a valid reportable result; annex A11 pre-registers shrinking the §18 cycle at 2026-12-17 if per-lane records show no measured-better outcomes; the focus plan&#x27;s M8/M9 re-decisions revisit caps and volume on measured data; rule 16 forces cut proposals if governance minutes exceed revenue minutes two weeks running. What does **not** exist: a pre-registered termination criterion for the whole architecture (e.g., &quot;if by date X the S4 table shows adjudication yield below Y, the multi-lane default ends&quot;). Per the audit&#x27;s own Part V rule, no threshold may be invented — the honest gap is that the *evidence minimum* for setting one (accumulated S1/S4 rows through 2026-12-17) is only now being created by Phase 0.
+- **Severity:** MEDIUM. **Status: PARTIALLY CONFIRMED.**
+- **Corrective action:** pre-register the *decision event*, not a number: at the 2026-12-17 primary-goal audit, the S1/S4/§18.6 records are the agenda for a keep/reduce/terminate decision on the consultation architecture, taken by the user with the numbers in front of him; if the records are too thin to decide, that thinness is itself reported as a Phase 0 failure (per §6 R5&#x27;s no-manufactured-rounds rule, the same honesty applies to metrics).
+- **Changes:** cost ¥0; scope no; time — agenda item on an existing milestone; security no. **User approval needed:** the decision itself is the user&#x27;s (that is the point of the corrective action).
+
+---
+
+## PART VI — DOCUMENT &amp; GOVERNANCE CONSISTENCY
+
+### RA-23 — Proposal §13&#x27;s gate text is stale relative to the recorded state
+- §13 (v3) closes with &quot;No implementation… is authorised… until the user gives explicit approval.&quot; Approval was given 2026-11-19 02:20 JST and recorded in result record §9 and the tracker — but a reader of the proposal alone sees a pre-approval document. This is a versioning artefact, not a breach (the result record is part of the package, R12), yet Part VI&#x27;s &quot;historical figures presented as current&quot; test catches it.
+- **Severity:** LOW. **Status: CONFIRMED.** Corrective action: v4 candidate annotates §13 with the approval record (date, hashes, pointer to result §9) **without altering the v3 text&#x27;s history** — an appended approval-state note, clearly dated. **User approval needed:** NO (records his own act).
+
+### RA-24 — Result record §4 vs §9 tension
+- §4 (&quot;Approval gate (unchanged, in force)&quot;) retains pre-approval wording (&quot;No implementation… is authorised until the user has reviewed… and explicitly approved it&quot;) while §9 records that approval as given. §4 is history (it states the gate as it stood); §9 is the current state. A skim reader can misread the package as unapproved — which is, in fact, what the auditor&#x27;s premise did (see §0 of this register), though the auditor&#x27;s copy predated §9.
+- **Severity:** LOW. **Status: CONFIRMED.** Corrective action: v4&#x27;s result-record copy adds a one-line status pointer at §4 (&quot;Gate satisfied 2026-11-19 02:20 JST — see §9&quot;) leaving the historical text intact. **User approval needed:** NO.
+
+### RA-25 — The 56% / 12.5% figures are cited without their sample basis
+- Annex A7 calls the machinery ≈56% vs revenue-proximate ≈12.5% &quot;the standing warning&quot; and proposal R-5 cites them as the one available signal. Both trace to a **single day&#x27;s** supervisor measurement (2026-11-18, ≈8 h of coordinator time) — and that day was exceptional by construction: 7+ user-triggered consultation rounds (RA-01&#x27;s ledger count) on the day the user ordered the machinery built and audited. Neither document states the sample basis next to the figure. The figure is honestly labelled &quot;supervisor-measured (2026-11-18)&quot; in A7, so this is a caveat omission, not a fabrication — but a reader (including the auditor, Part II.3) naturally treats it as a standing ratio.
+- **Severity:** LOW. **Status: CONFIRMED** (caveat omission). Corrective action: v4 annotates both citations with &quot;(single-day sample, 2026-11-18, ≈8 h; an exceptional consultation-concentration day; not a trend)&quot;. **User approval needed:** NO.
+
+### RA-26 — The proposal understates controls that exist in the live standard (audit-evidence asymmetry)
+- The proposal §6/A6 present the round cap without citing Entry 93&#x27;s justification test, rule 11&#x27;s load-bearing clarification, rule 13&#x27;s solo-judgment allowances, rule 16&#x27;s governance-share measure, §16.7&#x27;s continuity annex, or Entry 95&#x27;s D2 rule — all in force in the standard. The auditor, working from the packet (its declared scope), consequently demanded several controls that exist. This cuts both ways and is recorded neutrally: (i) the audit&#x27;s findings RA-01/RA-02/RA-08 are *narrower* than the audit states, because the standard supplies part of the demanded design; (ii) the proposal as a decision document is incomplete — a user reading only the package cannot see the full control set his approval engages.
+- **Severity:** LOW. **Status: CONFIRMED** (documentation completeness). Corrective action: v4 adds a cross-reference paragraph to §6 listing the standard&#x27;s governing controls by section, without importing their text (single-authority rule, §5.3). **User approval needed:** NO.
+
+### RA-27 — &quot;First real revenue&quot; is used in the proposal but defined only in the focus plan
+- Proposal §6 invokes &quot;the first-revenue target&quot; and Phase 2&#x27;s gate (&quot;only after first real revenue&quot;) without reproducing the §4a definition (承認 ≥ ¥1,000 + preconditions + 入金 &gt; ¥0 excl. the ¥1 test deposit, with the platform-cycle ruling). §6 does name the focus plan as governing, so the definition is one hop away — but a gate whose trigger is defined in another document is a Part VI &quot;caps/definitions that differ across documents&quot; risk in embryo.
+- **Severity:** LOW. **Status: PARTIALLY CONFIRMED.** Corrective action: v4 §6 quotes the §4a definition verbatim at the Phase 2 gate and the stop rule, attributed to the focus plan. **User approval needed:** NO.
+
+### RA-28 — Checked and NOT found: cap conflicts between proposal and annex
+- The Gemini API cap hierarchy (proposal §6 R1) and annex A7&#x27;s v3 sentence agree (verified in round R-2026-11-19-03 by mechanical comparison); the round-cap wording in §6 and A6 is identical (same verification). Phase totals (6/8/12/10 = 36; 14 pre-audit) are arithmetically consistent across §6, §9, and the tracker. No conflicting cap was found in the three package documents.
+- **Status: NOT CONFIRMED** (no defect). Recorded so the check itself is on record.
+
+---
+
+## ANNEX TO THIS REGISTER — the first message&#x27;s format additions
+
+The first (6-concern) message additionally demanded, per concern: estimated implementation time/cost and whether the correction fits inside existing scope. Summary (details in corrective-design.md):
+
+| Concern (first msg) | Register ID | Correction cost (cash) | Coordinator time | Inside existing scope? |
+|---|---|---|---|---|
+| §1 round-cap loophole | RA-01 | ¥0 | Accounting rides S1 (Phase 0 ≤6 h envelope); a numeric ceiling cannot be costed until 4 weeks of §9 data exist | Accounting/dedup YES; ceiling NO — needs user-set number from measured data |
+| §2 revenue-first | RA-02 | ¥0 | Text edit &lt;0.5 h (Phase 0 envelope) | Wording YES; automatic-pause consequence changes approved roadmap behaviour — user decision |
+| §3 economic value | RA-03/RA-04 | ¥0 | S1+S4 execution is Phase 0 as approved | YES (already approved content) |
+| §4 identity/session | RA-05 | ¥0 | Text edit + tabletop inside W11 batch (2026-11-24) | YES |
+| §5 deferred topics | RA-14 | ¥0 | Minutes (ledger margin fields) | YES |
+| §6 benchmark validity | RA-13 | ¥0 | One sentence + existing run-#2 preconditions | YES |
+
+**Verdict distribution (28 findings, RA-01–RA-28):**
+- **CONFIRMED: 10** — RA-01, RA-03, RA-04, RA-06*, RA-09, RA-12, RA-23, RA-24, RA-25, RA-26. (*RA-06 is confirmed as a standing, disclosed residual risk — not as a hidden defect.)
+- **PARTIALLY CONFIRMED: 16** — RA-02, RA-05, RA-07, RA-08, RA-10, RA-11, RA-13, RA-14, RA-15, RA-16, RA-17, RA-18, RA-19, RA-21, RA-22, RA-27.
+- **NOT CONFIRMED: 2** — RA-20, RA-28.
+- **Severity: HIGH 8** (RA-01, 02, 03, 04, 05, 06, 19, 21) · **MEDIUM 11** (RA-07, 08, 09, 10, 11, 12, 13, 15, 16, 18, 22) · **LOW 9** (RA-14, 17, 20, 23, 24, 25, 26, 27, 28).
+
+===== DOCUMENT 2 — CORRECTIVE DESIGN (CD-01…CD-12) =====
+
+# CORRECTIVE DESIGN — candidate wording for every CONFIRMED / PARTIALLY CONFIRMED finding
+
+Companion to findings-register.md. Every wording block below is a **candidate** for the v4 package (see `v4/`). Items marked **[USER DECISION]** change approved behaviour and are included in v4 as clearly-flagged proposals, not as settled text. Nothing here amends the live A+ standard; standard amendments, if the user adopts this package, are separate edits recorded in the improvement ledger at adoption time (the proposal&#x27;s own §13 discipline).
+
+---
+
+## CD-01 (RA-01) — Unified consultation workload accounting + cross-trigger deduplication
+
+**Where:** proposal §6, immediately after the &quot;Round cap&quot; paragraph; mirror sentence in annex A6.
+**Proposed wording (new paragraph):**
+
+&gt; **Workload accounting (all categories).** The cap above binds the discretionary category only; it is not a workload ceiling. Total consultation load is accounted weekly, across **all** categories (discretionary rounds, registered milestone rounds, rule 11 consultations, rule 12 consultations, §18/§18.8 cycles), through the mechanism §2 S1 already specifies: the weekly line (total coordinator hours, revenue-proximate hours, machinery hours, revenue outcomes, displacement flag) plus per-round duration split into queue-wait and processing time, plus Gemini API requests consumed (budget ledger). The weekly line is reported in the supervisor&#x27;s weekly cycle alongside the D15 governance-share line. **Deduplication:** one underlying issue generates one consultation: where a rule 11 question and a rule 12 mistake concern the same event, they are run as one round with both triggers recorded in the consult ledger (precedent: R-MISTAKE-2026-11-18-01). **Ceiling:** no numeric aggregate ceiling is set by this document; the evidence to set one (four consecutive weeks of complete §9 metrics) does not yet exist. Until the user sets a ceiling from that data, the interim control is §16.6 rule 16&#x27;s trigger: governance minutes exceeding revenue minutes two weeks running obliges the supervisor to propose cuts.
+
+**Cross-references to update:** annex A6 (mirror); standard §16.6 rule 16 (citation only — no text change proposed here); Phase 0 acceptance (the accounting line is a §9-metrics output, so it inherits S1&#x27;s execution).
+**How it closes the failure mode in operation:** the workload becomes a *reported number every week*, in minutes, across the categories the cap used to hide. A busy week like 2026-11-18 would show up as a minutes figure the supervisor must print, and rule 16&#x27;s cut trigger gains the data it needs to fire.
+**New failure mode it might introduce:** minutes become a target and get gamed (rounds split or under-recorded). **Control:** the R5 rule already forbids manufacturing/splitting/re-labelling rounds for metrics; the consult ledger&#x27;s per-question lines are the independent count the supervisor samples (item 3r), so rounds cannot quietly vanish from the accounting.
+
+## CD-02 (RA-02) — Stop rule: &quot;available-and-unstarted&quot; + pre-registered slip consequence
+
+**Where:** proposal §6, &quot;Revenue-first stop rule&quot; paragraph.
+**Proposed wording (replacement of the first sentence; addition of a second paragraph):**
+
+&gt; Machinery work under this roadmap is **postponed whenever it would displace a revenue-producing or revenue-enabling task that is active, or that is available and unstarted in the registered queue** (the order-watch register, the focus plan&#x27;s dated action table, or a publication slot). &quot;We were working on machinery because no revenue task had been formally started&quot; is not a non-displacement finding.
+&gt;
+&gt; **Slip consequence [USER DECISION]:** if the primary goal&#x27;s controllable layer — cumulative 承認 ≥ ¥1,000 on CrowdWorks with payout preconditions complete (focus plan §4a) — is not met by the 2026-12-17 audit, Phases 1–3 pause automatically and resume only on the user&#x27;s re-decision at that audit. Phase 0&#x27;s measurement debts are excepted: they are the instrument that detects the slip, and pausing them would blind the audit itself.
+
+**Cross-references:** focus plan §4a (definition, quoted in CD-10); §9 Global acceptance (cap breach rule unchanged).
+**How it closes the failure mode:** displacement is tested against the queue that exists, not the queue the coordinator happened to start; and the 2026-12-17 date becomes a genuine stop for the machinery phases, with the exception scoped to the measurement work itself.
+**New failure mode:** an automatic pause could strand a nearly-complete Phase 1 benchmark whose value decays. **Control:** the pause is a pause, not a cancellation; the M9 audit is the same event at which the user re-decides, so the strand is at most the audit&#x27;s own agenda gap. The alternative (no consequence) is the audited defect.
+
+## CD-03 (RA-03 + RA-04) — Round-metrics table: full outcome taxonomy
+
+**Where:** proposal §2 S4 description and §9 Phase 0 (ii)/(iv); the table itself lives in the standard&#x27;s §9 operating records.
+**Proposed wording (S4 column set, extending §2 S4&#x27;s existing &quot;points adopted / later confirmed / later refuted&quot; with the false-alarm and rejected-correct categories the v3 columns cannot express):**
+
+&gt; The round-metrics row for every round records, per lane and in total: points raised; **correctly detected errors** (adopted, later verified); **incorrectly alleged errors** (declined, later verified as non-errors); **missed errors** (found later by anyone, incl. the user — the self-detection feed); **correct criticisms rejected** (declined, later shown correct); **incorrect criticisms adopted** (adopted, later shown wrong); **unresolved disagreements** carried open. Plus: round duration (wall + coordinator minutes), lane requests consumed, coordinator correction/rework minutes attributable to lane output, and PC-lock wait minutes (CD-08). Majority agreement between lanes is never entered as evidence in any column (promotion rule, §5.3).
+
+**Cross-references:** annex A10 (the &quot;honest counterweight&quot; paragraph gains a pointer: the table above is where its UNCONFIRMED will be resolved); §18.6 (per-lane track record reads from this table — one source, two views).
+**How it closes the failure mode:** adjudication quality and per-lane economics become the same dataset, accumulated by doing the already-approved Phase 0 work — no new system, no extra rounds.
+**New failure mode:** &quot;later verified&quot; judgements are themselves coordinator calls and can drift generous. **Control:** the missed-errors column is fed by the supervisor&#x27;s self-detection count (an existing, separately-kept metric with a declining trend nobody has flattered), and any column entry can be challenged by a lane in a later round and amended in the ledger, per the standing late-reply amendment rule.
+
+## CD-04 (RA-05 + RA-21) — Identity verification at five points; revocation tabletop
+
+**Where:** proposal §7.3, bullet &quot;Main-account check before every lane run.&quot;
+**Proposed wording (replacement bullet):**
+
+&gt; **Account-identity verification — five points, fail closed.** Automation runs only in the dedicated disposable-account profiles. The operator verifies the signed-in account identity in the profile is the expected disposable account for that lane: **(1)** at task start; **(2)** before the lane&#x27;s first send in any session; **(3)** after any browser restart or session recovery; **(4)** after any detected account, profile, or CDP-target change, or any unexpected navigation to an account page; **(5)** whenever the active identity cannot be verified. On any mismatch or non-verifiability: the lane stops immediately, nothing is sent, and the discrepancy is reported and recorded in the consult ledger before work resumes. The user&#x27;s MAIN accounts are never signed into an automation profile.
+
+**Cross-references:** annex A8 (one-line pointer to §7.3, replacing its summary phrase &quot;a pre-send account-identity check&quot;); §16.7 drill (the revocation procedure is exercised tabletop in the W11 batch, 2026-11-24, alongside the D25 restore drill — an addition to an existing scheduled batch, not a new event).
+**How it closes the failure mode:** the check moves from a single point in time to the exact state-change events the audit named; fail-closed is stated as the default, not implied.
+**New failure mode:** check fatigue — five ritual checks that get pencil-whipped. **Control:** points (3)–(5) are event-triggered, not per-send, so the marginal cost is small; the W11 tabletop gives the procedure one supervised run; a mismatch event, if it ever occurs, is a rule 12 mistake-consultation trigger, which keeps the check load-bearing.
+
+## CD-05 (RA-07) — Bridge pre-publication sensitive-data scan
+
+**Where:** bridge rotation procedure (operating procedure, recorded in each rotation&#x27;s completion record; referenced from proposal §7.3 by one added sentence).
+**Proposed wording (new §7.3 sentence + procedure step):**
+
+&gt; **Bridge publication check.** Before a bridge packet link is handed over, the packet text is scanned for the standing sensitive patterns — the user&#x27;s account email addresses, phone number, postal code, credential-shaped strings, and account-ledger identifiers — and the scan result (patterns checked; hits, or zero hits) is recorded in the rotation&#x27;s completion record. A hit stops publication until the content is removed or the hit is dispositioned as a false positive in the record. (Data-class rule: A+ standard §4.)
+
+**Cross-references:** standard §4 (source rule, unchanged); Phase 2 A1 lint (the pattern list is written so the lint can absorb it later — one list, two uses).
+**How it closes the failure mode:** publication to a public endpoint gains a mechanical step with a written result, replacing sole reliance on drafting discipline.
+**New failure mode:** a false sense of completeness — the scan catches patterns, not context (e.g., a narrative detail that identifies the user). **Control:** the scan is additive; §4&#x27;s drafting discipline remains the primary control and the completion record must state both were applied.
+
+## CD-06 (RA-08) — Lane failure-state codification
+
+**Where:** proposal §7.1 (one short table appended) — codification of annex A9 + Entry 95 D2 practice.
+**Proposed wording (table, abbreviated here to its rule lines):**
+
+&gt; Lane states, as used in all records: AVAILABLE / TEMPORARILY UNAVAILABLE (transient provider failure) / RATE LIMITED (quota exhausted; reset time recorded if known) / AUTHENTICATION FAILURE / TECHNICAL FAILURE (our tooling) / SUSPENDED (by kill trigger or user decision) / NOT OBTAINED (a round closed without this leg; an outcome, not a lane property). Retry bounds are per-route and already in force: Gemini API — budget-ledger rules (a 429 ends the day&#x27;s calls; mistake rounds: one permitted call); web lanes — retry at the measured limit reset, never by hammering; sender defects — raw log first, recovery verbatim. A leg in any non-AVAILABLE state is recorded as absent; it is never substituted and never represented as having responded (Entry 45(c); degraded finalisation only under Entry 95 D2).
+
+**Cross-references:** annex A9 (pointer); standard §16.7 (pointer). Explicitly *not* a new mechanism (rule 16: it rides A9/§16.7 and retires no parallel structure because none is created).
+**How it closes the failure mode:** one vocabulary and one lookup for &quot;what happens when a lane fails,&quot; so a future operator (or a post-compaction coordinator) applies the practised behaviour instead of improvising it.
+**New failure mode:** codification drift — the table freezes while practice evolves. **Control:** the table cites its sources (A9, Entry 95, budget ledger) rather than restating their full text; where table and source disagree, the source governs (single-authority rule).
+
+## CD-07 (RA-14) — Deferred-topic limits inside the existing ledger margin
+
+**Where:** annex A3, topic-accounting definitions.
+**Proposed wording (additions to the &quot;deferred&quot; definition and the minimal record):**
+
+&gt; The minimal record gains two fields: **owner** (the coordinator, unless reassigned in the line) and **review-by** (the date of the named slot or the trigger&#x27;s expected window). A topic may be deferred **at most twice**: at the second deferral it must be dispositioned — adopted as a §18 theme, declined with a reason, or escalated to the user as a decision item. A topic whose named trigger has not fired within **30 days** of capture is closed as **expired** at the next §18 slot, with the closure recorded in its line. &quot;Deferred&quot; remains a visible state, never a deletion.
+
+**Cross-references:** §18.5 (slot cadence — the review vehicle); consult ledger header (the margin lives there).
+**How it closes the failure mode:** every deferred topic now carries a date and a two-strike limit; accumulation becomes visible as a count of open margin lines, reviewable in the weekly cycle.
+**New failure mode:** premature closure of a slow-moving but valuable topic to satisfy the limit. **Control:** escalation to the user is one of the three permitted dispositions, so a topic that matters has a legitimate exit that is not deletion.
+
+## CD-08 (RA-15) — PC-lock priority rule (the wait-time half already exists as S1 refinement (i))
+
+**Where:** pc-ops rules (operating procedure); referenced from proposal §7.1 by one sentence.
+**Proposed wording:**
+
+&gt; **Lock priority.** When PC-lock demand conflicts, priority is: (1) revenue-deadline work (publications, client sends, interview support), (2) consultation lane work, (3) benchmark lane work. A lower-priority holder yields at its next safe point (between sends, never mid-send) when a higher-priority task is waiting on a deadline. (Wait time vs processing time is already recorded separately under §2 S1 refinement (i); this rule adds the contention behaviour, not the measurement.)
+
+**Cross-references:** proposal §6 global caps (the project&#x27;s ≤2 h/week PC-lock cap is unchanged and is a consumption cap, not a priority rule — the two are now explicitly distinguished).
+**How it closes the failure mode:** the recorded failure instance (order-watch timeouts under lock contention) gets a rule aimed at its actual shape — contention resolution — rather than only a consumption cap.
+**New failure mode:** priority inversion complaints / starvation of long benchmark runs. **Control:** yielding happens at safe points and benchmark work is milestone-scheduled (known windows), so starvation shows up as a slipped milestone with a recorded cause — visible, dispositionable.
+
+## CD-09 (RA-13) — Benchmark-evidence limitation sentence
+
+**Where:** proposal §8, after the baseline paragraph.
+**Proposed wording:**
+
+&gt; **Limitation.** Benchmark scores are one evidence category (proposal §1.4: BENCHMARK-MEASURED). No lane change, architecture change, or capability claim may be approved on benchmark evidence alone; an operational record (round outcomes, §18.6 track record, or a measured business result) must concur. A single run of a 15-task set establishes a baseline and operational triggers (§10.3), never statistical proof.
+
+**Cross-references:** §10.3 R9 (consistent restatement); §17.4 of the standard (unchanged).
+**How it closes the failure mode:** the category separation the audit demands becomes a decision rule at the exact place benchmark results are consumed.
+**New failure mode:** none material — the sentence restricts, it does not enable. Control: n/a.
+
+## CD-10 (RA-02/RA-27) — Quote the revenue definition at the gate
+
+**Where:** proposal §6, Phase 2 header and the stop rule.
+**Proposed wording (inserted, attributed):**
+
+&gt; &quot;First real revenue&quot; in this roadmap means the focus plan&#x27;s primary goal (§4a, governing): cumulative 承認 ≥ ¥1,000 on CrowdWorks, with CrowdWorks payout preconditions (identity verification + bank registration) complete, and the resulting payout received in the bank (入金 &gt; ¥0, excluding the ¥1 KDP test deposit); if the controllable layer is met by 2026-12-17 but the platform&#x27;s cycle pays later, the goal is recorded as &quot;substance met, receipt pending platform cycle.&quot;
+
+**Cross-references:** focus plan §4a (source; single authority — if the plan&#x27;s definition is ever amended, this quotation must be re-checked, per §5.3&#x27;s version-coupling rule).
+**How it closes the failure mode:** the Phase 2 gate&#x27;s trigger is defined inside the document that operates the gate.
+**New failure mode:** quotation drift if the focus plan is amended. **Control:** named in the wording&#x27;s cross-reference (version-coupling, S3&#x27;s rule applied to this pair).
+
+## CD-11 (RA-23/RA-24/RA-25/RA-26) — State and cross-reference annotations (v4 only)
+
+- §13 gains an appended, dated **approval-state note** (text in the v4 candidate): approval recorded 2026-11-19 02:20 JST, hashes, pointer to result record §9; the v3 gate text is preserved verbatim above it as history.
+- Result record §4 gains a one-line status pointer to §9.
+- Annex A7 and proposal R-5 citations of 56%/12.5% gain the sample-basis annotation: &quot;(single-day supervisor sample, 2026-11-18, ≈8 h of coordinator time, on a day of exceptional consultation concentration — 7+ rounds; a warning signal, not a trend).&quot;
+- §6 gains a **governing-controls cross-reference paragraph**: &quot;The consultation system this roadmap funds is governed day-to-day by the A+ standard: Entry 93&#x27;s justification test and Entry 94&#x27;s stops (via the focus plan), §16.6 rules 11–16, §16.7 (continuity), §17 (benchmark floor), §18 (better-opinion cycle), and Entry 95&#x27;s degraded-finalisation rule. Where this proposal and the standard differ in wording, the standard&#x27;s operative text governs until both are amended together (version-coupling, §5.3).&quot;
+**New failure mode:** annotation clutter making v4 harder to read than v3. **Control:** annotations are dated, bracketed, and confined to the points above; the change log lists every one.
+
+## CD-12 (RA-19/RA-22) — Two readouts pre-registered for the 2026-12-17 audit
+
+**Where:** proposal §6 (Phase 1 milestone note) — no new event is created; both ride the registered 2026-12-17 milestone.
+**Proposed wording:**
+
+&gt; The 2026-12-17 audit&#x27;s agenda includes, from records that will exist by then: (i) the **frame-challenge yield** — rounds in which the mandatory frame-challenge answer changed the question or a disposition, over rounds run (compiled from round records); (ii) the **keep / reduce / terminate decision** on the consultation architecture, taken by the user on the S1/S4/§18.6 records. If those records are too thin to support (i) or (ii), the thinness is reported as a Phase 0 shortfall, not filled by impression.
+
+**New failure mode:** the audit becomes a second project. **Control:** both items are readouts of records Phase 0 already creates; the audit is an existing milestone with an existing owner.
+
+---
+
+**Items with NO corrective wording proposed:** RA-06 (terms pilot — the user&#x27;s standing decision; no wording can cure a terms status, and none is invented), RA-10 (execution of the already-registered U1 diff by 2026-11-25 — a task, not a text), RA-20 (no defect found), RA-28 (no defect found). RA-09/RA-11/RA-12/RA-17/RA-18 corrections are executions of already-approved content (canaries, W11 drill, Phase 2 fixes, B1-based lane classification) and are carried in the architecture recommendation and closure checklist rather than as new text.
+
+===== DOCUMENT 3 — CONSOLIDATED RISK REGISTER (RR-01…RR-17) =====
+
+# CONSOLIDATED RISK REGISTER — Multi-Model Integration (re-audit consolidation, 2026-11-19)
+
+Consolidates proposal §12 (R-1–R-12) with the re-audit findings (RA-xx). **Likelihood is stated only where a measured base rate exists; otherwise it is recorded as UNESTIMATED — no probabilities were manufactured.** &quot;Control state&quot; uses the four-state discipline: DOCUMENTED / IMPLEMENTED / OPERATIONALLY VERIFIED / BENCHMARK-MEASURED. Owner for every risk is the coordinator unless a row says otherwise; review dates ride existing milestones.
+
+| ID | Risk | Likelihood (evidence) | Impact | Existing controls | Control effectiveness evidence | Residual risk | Detection trigger | Mitigation | Contingency | Review date | User approval required |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| RR-01 (=R-1) | Gemini API leg absent when needed (503/quota) | MEASURED: 7 recorded availability absences; budget ledger shows repeated 503/429 | Rounds finalise degraded; first-review role unfilled | NOT OBTAINED discipline (Entry 45(c)); Entry 95 D2 degraded finalisation; budget ledger + provider-count-governs rule | OPERATIONALLY VERIFIED across B1/R-META/R-HAZELLE/focus rounds — absences recorded, never substituted | Accepted: degraded operation is the normal state | 503/429 in the leg&#x27;s response; budget ledger rows | Single-call rules; retry at reset only | Round proceeds degraded under D2 or stays open | 2026-12-17 audit | No |
+| RR-02 (=R-2, RA-06) | Platform enforcement ends the web-lane layer at once (terms-exception pilot) | UNESTIMATED (no enforcement event on record; likelihood UNVERIFIED per §12) | 3 of 4 external lanes end simultaneously | Disposable accounts only; main accounts structurally excluded; kill triggers (restriction signs, linkage signs, 2 consecutive quote-back failures); §16.7 degradation order | Containment OPERATIONALLY VERIFIED (profile separation); kill triggers DOCUMENTED, never fired; continuity drill NOT YET RUN (W11, 2026-11-24) | **HIGH and standing** — disclosed to and accepted by the user (2026-11-17 decision); not curable by wording | Restriction/limitation notice on any disposable account; linkage sign | None available inside the rules (no workaround is proposed or permitted) | §16.7 degradation: API leg → remaining web lanes → Qwen internal-only → user relay for audit role | Standing; next formal look 2026-12-17 | The pilot&#x27;s continuation is the user&#x27;s standing decision; any change is his |
+| RR-03 (=R-3) | Self-detection keeps declining while record volume grows (system records better, fires worse) | MEASURED trend: 71% → 55% (supervisor) | Defects reach the user instead of being caught internally | Supervisor daily review incl. items 3j/3k/3r; §5.3 &quot;volume is not reliability&quot; rule (report firing metrics beside volume) | Measurement OPERATIONALLY VERIFIED; the *reversal* of the trend is UNVERIFIED | Open — the trend is the risk | Supervisor weekly self-detection count | Recurrence-prevention 4-point set; W11 recurrence tests (2026-11-24) | Escalate to a mistake-consultation round (rule 12) on continued decline | Weekly (supervisor) | No |
+| RR-04 (=R-4, RA-04) | Adjudication is wrong at an unknown rate; incorrect consensus passes as validation | UNESTIMATED as a rate; failure mode MEASURED (R-INTERVIEWS frame miss; B1 D-trap 2: 3/4 strong seats missed) | Load-bearing decisions taken on false confidence | Rules 9/10/15 (frame challenge, pre-mortem, reasoning checklist); §5.3 promotion rule (consensus ≠ verification); S4 outcome columns (Phase 0, unexecuted) | Countermeasures IMPLEMENTED 2026-11-18; effectiveness UNMEASURED (no post-adoption yield compiled) | Open until S4 + frame-challenge yield exist (2026-12-17 readouts, CD-12) | A lane/user catch of a coordinator error post-decision; frame-challenge yield readout | S4 taxonomy (CD-03); never record agreement as evidence | A wrong adopted decision is dispositioned as a mistake (rule 12 round) when found | 2026-12-17 | No |
+| RR-05 (=R-5, RA-03) | Machinery consumes the majority of coordinator time without proven net value | MEASURED single-day signal: ≈56% machinery vs ≈12.5% revenue-proximate (2026-11-18, ≈8 h sample — RA-25 caveat) | Revenue work displaced; the ¥100k/1-month goal (deadline 2026-12-18) slips | Entry 93 justification test; Entry 94 stops; §6 stop rule + caps; rule 16 governance-share cut trigger; Phase 2 revenue gate | Gating IMPLEMENTED; the minutes data to prove firing does not exist until S1 executes | Open — the central economic risk of the project | Weekly workload accounting (CD-01); D15 governance-share line | CD-01 accounting; CD-02 slip consequence [user decision] | Reduce/pause machinery at the 2026-12-17 audit (RA-22 decision event) | Weekly + 2026-12-17 | Yes — for ceiling numbers and for the slip consequence |
+| RR-06 (=R-6, RA-10) | Revenue pipeline records diverge (+7) and a divergent figure drives a decision | MEASURED: gap open since registration; unchanged through runs 22–23 | Conversion arithmetic and volume decisions rest on a wrong base | U1 registration (owner, ID-diff method, deadline 2026-11-25, no-force-match rule); figures reported with the gap attached | Practice OPERATIONALLY VERIFIED (runs 22–23 re-verified, did not absorb); reconciliation itself PENDING | Open until the ID-level diff lands | Run-over-run register/log count comparison (every order-watch run) | Execute U1 diff by 2026-11-25; report ranges meanwhile | If the diff cannot reconcile a row, it stays an uncertainty entry with the affected figures flagged | 2026-11-25 | No |
+| RR-07 (=R-7, RA-09/18) | Coordinator acts on corrupted/stale context after compaction or external file mutation | UNESTIMATED as a rate; instances MEASURED (§5.2: MEMORY.md external mutation; premises v1 staleness) | Wrong-state decisions; repeated instructions to the user | Single-authority rule (§5.3, proposed generalisation; Entry 37 instance verified); version-bump coupling (S3); premises hash in packet (Phase 0 test); delta restatement checks | Mixed: budget-ledger instance OPERATIONALLY VERIFIED; canary fidelity test NOT YET RUN (Phase 2) | Open | Hash mismatch at packet build; lane restatement failure; stale-date sweep | §3.5 canaries (Phase 2); canonical-file + hash naming in handover records | Rebuild state from canonical files before acting (the method this re-audit used) | 2026-12-17 | No |
+| RR-08 (=R-8, RA-01) | Free-tier limits make same-day multi-round work fragile; consultation volume concentrates | MEASURED: 2026-11-18 concentration (7+ rounds) judged not repeatable by the lanes themselves | Rounds stall mid-flight; legs close OPEN; user questions wait | Round cap (discretionary); Entry 93 gating; milestone spreading (11-20/11-25/12-09/12-17) | Gating IMPLEMENTED; aggregate workload UNMEASURED (RA-01) | Open until CD-01 accounting exists | Consult ledger weekly count; limit-hit records | CD-01 accounting + dedup; milestone cadence | Defer non-load-bearing consultations to the next milestone (never by promising the user a future round — rule 11 sub-note) | Weekly | No |
+| RR-09 (=R-9, RA-11) | Local Qwen leg fails silently in a review role (8b 0/24 collapse; 14b below floor in B1) | MEASURED events (8b collapse; 14b 1/5 detection, floor FAIL) | A gate or review rests on a leg that accepts claims uncritically | DEGRADED status (§17.3); never satisfies a gate (§16.7); never substituted (Entry 45(c)) | Containment OPERATIONALLY VERIFIED (no gate has rested on Qwen); capability BENCHMARK-MEASURED (B1) | Contained for gates; residual only if its internal-processing output is over-trusted | Benchmark re-runs; any Qwen output entering a decision record | Suspend Qwen as a review/benchmark seat (architecture recommendation); retain internal private-material processing only, labelled DEGRADED | Remove the leg entirely if a DEGRADED-labelled output is ever found load-bearing in a decision | 2026-12-17 (run #2 gate) | Yes — roster change decided with the v4 package |
+| RR-10 (=R-10, RA-12a) | `gemini_text_review.py` exit-2 / output non-persistence loses a leg&#x27;s reply | MEASURED intermittent defect; root cause UNCONFIRMED | Manual recovery step in every API-leg round; recovery error opportunity | Raw output always logged; verbatim recovery from raw log (Entry 67; §16.2 known-defect note) | OPERATIONALLY VERIFIED (recoveries on record, none corrupted) | Open until Phase 2 A2a fix or capped-and-fallback outcome | Non-zero exit / missing --out file | Phase 2 bounded fix (≤2 h) with regression case required (§9 Phase 2 (iii)) | Fallback stays the documented procedure permanently if the cap is hit | Phase 2 window | No |
+| RR-11 (RA-12b) | `gemini_budget.py` guard undercounts consumption vs the provider cap | MEASURED defect (D18) | The 20/day hard cap is breached by trusting the guard | Provider count governs (D18 interim rule, in force 2026-11-18); ledger kept on provider numbers | OPERATIONALLY VERIFIED as a manual discipline; the guard itself remains defective | Open until the guard fix (max(own, provider)) ships — proposed to ride Phase 2 with RR-10 | Any guard/provider count mismatch | D18 fix ticket (OPEN in the budget ledger) | Manual provider-count check before every API dispatch (current practice) | Phase 2 window | No |
+| RR-12 (=R-11) | B1 baseline imperfections (key ROUND_ID defect; empty API-leg raw artefacts) distort run #2 comparisons | MEASURED (§11 E-1/E-2) | Run #2 deltas misread as capability change | Four run-#2 preconditions (tracker C-4): key/header alignment, B5 ruling, preserved failure evidence, run manifest | DOCUMENTED as gates; run #2 has not occurred | Open until run #2 (2026-12-17) | Pre-run checklist against C-4 | Close all four preconditions before the run (§9 Phase 1 (iii)) | If a precondition cannot close, run #2 is postponed and the postponement recorded — comparisons are not run on a defective baseline | 2026-12-17 | No |
+| RR-13 (=R-12) | Free tiers change price/access terms industry-wide | UNESTIMATED (outside our control, unhedged — §12&#x27;s own statement) | Lane roster collapses to Qwen + user relay | None available at ¥0 | — | Standing, accepted by the design&#x27;s class-D ruling (no SLA is feasible, §7.2) | Provider announcements; sudden limit changes | §16.7 degradation order | User relay for the audit role; coordinator-only operation with rule 13&#x27;s solo-judgment labelling | Standing | Yes — any paid replacement is a ¥0-rule decision for the user alone |
+| RR-14 (RA-05/21) | Disposable-account session identity changes mid-task; automation acts on the wrong account | UNESTIMATED (no incident on record) | Sends from an unintended account; in the worst case, a main account touched | §7.3 pre-send identity check (DOCUMENTED 2026-11-19); profile separation (main accounts never in automation profiles); revocation procedure (DOCUMENTED, untested) | Profile separation OPERATIONALLY VERIFIED; check + revocation NOT YET TESTED | Open until CD-04 wording + W11 tabletop land | Identity mismatch at any check; restriction sign | CD-04 five-point fail-closed verification | Revocation procedure: stop lane, close browser, delete session state, user-hand re-authentication, ledger record | W11 (2026-11-24) | No |
+| RR-15 (RA-07) | A bridge packet publishes sensitive content to a public endpoint | UNESTIMATED (no incident on record) | User&#x27;s operational/personal data becomes public | §4 data-class rule (packets non-sensitive only) — drafting discipline | IMPLEMENTED without incident across all rounds to date; no mechanical check exists | Open until CD-05 scan step is in the rotation procedure | Pre-publication scan (once CD-05 lands); any user/lane spot of exposed content | CD-05 scripted pattern scan recorded in the completion record | Takedown + rotation of the endpoint; incident recorded; rule 12 consultation if coordinator-caused | Next bridge rotation | No |
+| RR-16 (RA-15) | PC-lock contention delays revenue-deadline work | MEASURED instance (waits ~30–38 min, R-SYSTEM R1; order-watch runs 22–23 timeouts under contention) | Publication/client deadlines slip behind consultation or parallel work | PC lock serialisation (never force); project PC-lock cap ≤2 h/week; per-run locks | Serialisation OPERATIONALLY VERIFIED; no priority rule exists | Open until CD-08 priority rule + wait-time field land | A revenue task waiting on the lock past its slot | CD-08 priority + yield-at-safe-point | Coordinator re-sequences the day&#x27;s lane work manually (current practice) | 2026-12-17 | No |
+| RR-17 (RA-14) | Deferred lane topics accumulate undecided | UNESTIMATED (queue not yet operating; one named instance to date) | Attention debt; a valuable topic silently ages out | A3 definitions (captured/duplicate/deferred/lost) with named-slot deferral | DOCUMENTED (proposal-stage delta) | Low; bounded by rarity | Consult-ledger margin count at the weekly cycle | CD-07 (owner + review-by + two-deferral limit + 30-day expiry) | Expired topics close as expired — visible, not deleted | Weekly | No |
+
+**Register notes.** (1) No risk in this register carries an invented probability; where the house had previously written a likelihood (e.g., R-2 &quot;likelihood UNVERIFIED&quot;), it is carried as UNESTIMATED. (2) Risks RR-02 and RR-13 are the two that can end the architecture from outside; both are standing and user-visible by design. (3) This register is a candidate consolidation for the v4 package; the live risk ownership remains where the underlying records put it (proposal §12, deadline ledger, budget ledger) until the user adopts v4.
+
+===== DOCUMENT 4 — ARCHITECTURE RECOMMENDATION =====
+
+# REVISED ARCHITECTURE RECOMMENDATION — Re-Audit of R-INTEGRATION-2026-11-18-01
+
+## Recommendation: **C. REDUCE SYSTEM SCOPE**
+
+Not B, because &quot;retain with corrections&quot; would leave standing a consultation apparatus whose *aggregate* value is unmeasured (RA-03), whose adjudication accuracy is unmeasured (RA-04), and two of whose five legs are, on measurement, either routinely absent (Gemini API, RR-01) or below the behaviour floor (Qwen, RA-11). Not E, because the measured record contains real, consequential error detection that a solo coordinator demonstrably missed (R-ADOBE: the coordinator&#x27;s solo promotion stopped 4/4; StreetLib&#x27;s dead payout rail; the Hazelle route kills) — suspending the whole system would discard a verified-in-cases capability and would also contradict the user&#x27;s own standing instructions (rules 11–13: load-bearing judgments are consulted, not solo). Not D, because no evidence supports a different architecture — only a smaller dose of this one. Not A, for the reasons in the findings register.
+
+The reduction is of **dose and roster**, not of discipline: every safeguard that produced the measured value (packet discipline, quote-back, premises brief, disposition ledger, degraded-finalisation rule) is retained. What shrinks is (1) how many lanes a routine consultation uses, and (2) which legs hold standing roles.
+
+## Per-lane classification (Part IV)
+
+| Lane / route | Classification | Evidence |
+|---|---|---|
+| **ChatGPT — final audit** (disposable lane + user-relay main-account audit path) | **ESSENTIAL** | B1: substance 15/15 tasks, 5/5 seeded defects (floor FAIL on B5 marking *form* only). The R1–R12 audit chain on this very proposal: two full audits + three verifications, every correction landed and re-verified. Adobe: PARK verdict against the coordinator. This is the leg with the deepest measured track record. |
+| **Claude — second opinion** | **ESSENTIAL** (for load-bearing / high-risk judgments) | B1: the **only** seat with a clean behaviour floor **and** both D-traps (incl. the staleness trap 3 of 4 strong seats missed). Repeated completeness catches (R-UPDATE-ALL Q3 omission; the 65-char hash defect). Constraint: Free 5-hour limit — availability is episodic, so it cannot be the *routine* leg. |
+| **Gemini API — routine first review** | **USEFUL BUT OPTIONAL** | Designated first-review leg; on fixed sets its value is recorded as highest — but 7 measured availability absences make it the least reliable leg (RR-01). Its role already forbids it satisfying the final-audit gate (§14.2). Keep the role; never let a decision *wait* on it outside Entry 95 D2&#x27;s terms. |
+| **Gemini web — disposable lane** | **USEFUL BUT OPTIONAL** | B1 substance equal-best (15/15 tasks D except the T15 weighted-total arithmetic error — the imported-number failure mode), but floor FAIL on three protocol items (B1 quote-back normalisation, B5, B9) and the highest operating cost of any lane (31,999-char splitting, scroll-into-view extraction, PC-lock time). Its marginal value over API + Claude is **unmeasured**; that — not its quality — is why it is not ESSENTIAL. Demote from standing participant to on-demand (rule-changing rounds, disagreements needing a third independent leg). |
+| **NotebookLM — source checking** | **USEFUL BUT OPTIONAL** (narrow) | Pilot-verified on its subset (fixed-question test 5/5, zero fabricated citations, 2026-11-17/18). Did not sit B1 by design. Its function (citation/source verification) is unique and cheap; it is not a general reviewer and should never be counted as an independent *judgment* leg. |
+| **Local Qwen (qwen3:14b) — internal leg** | **SHOULD BE SUSPENDED as a review/benchmark seat; retained ONLY as internal private-material processor** | B1 BENCHMARK-MEASURED: 1/5 seeded defects, 0/2 D-traps, 1 false positive, floor FAIL (instruction-following + reasoning). The 8b sibling collapsed 0/24 (cause undiagnosed). Its one irreplaceable function is data-class: it is the **only** leg permitted private/internal material (§4/A8) — a privacy property, not a judgment capability. All its outputs stay labelled DEGRADED and gate-barred (§16.7/§17.3) — that part is unchanged. Reactivation as a seat requires a benchmark re-run at/above the provisional floor (≥3/5, floor PASS) under §17.5. |
+| Qwen3:8b | **SHOULD REMAIN SUSPENDED** (already is) | 0/24 collapse, undiagnosed (R-9). |
+
+## Per-mechanism classification
+
+| Mechanism | Classification | Note |
+|---|---|---|
+| Packet discipline (ROUND_ID + PACKET_SHA256, quote-back, byte-identical double extraction) | **ESSENTIAL** | OPERATIONALLY VERIFIED catches: the 65-char hash defect, the ROUND_ID two-copies defect (found *by* the discipline in B1), stale-page bridge fetches caught 4 times on 2026-11-19. This is the cheapest high-yield machinery in the system. |
+| Premises brief + state deltas with restatement check | **ESSENTIAL** | The lanes&#x27; judgement quality is visibly premise-bound (R-INTERVIEWS happened *inside* a bad frame); version-coupling (S3) fixes the measured staleness failure. |
+| Improvement-decision ledger (per-point dispositions) | **ESSENTIAL** | The single record that makes adjudication auditable at all; S4 extends it rather than replacing it. |
+| Entry 95 D2 degraded finalisation | **ESSENTIAL** | The rule that lets the system work honestly with absent legs; repeatedly exercised. |
+| §16.6 rules 9/10/15 (frame challenge, pre-mortem, reasoning checklist) | **USEFUL BUT OPTIONAL→ trending ESSENTIAL, unproven** | Adopted from a measured failure (R-INTERVIEWS); effectiveness unmeasured until the CD-12 yield readout. Keep — cost is packet text, not rounds. |
+| §18 better-opinion cycle | **NOT YET JUSTIFIED** | Implemented 2026-11-18; by its own §18.6, no accumulated outcome record exists. Annex A11 already pre-registers shrinking it at 2026-12-17 if per-lane records show no measured-better outcomes. Hold it to that pre-registration exactly. |
+| §18.8 discovery pipeline | **USEFUL BUT OPTIONAL** | One full application (R-HAZELLE) with measured kills (PayPal-only/residency-gated routes). Event-driven, creates no standing rounds. |
+| Discussion phase (cross-lane debate) | **USEFUL BUT OPTIONAL** | One run (R-MISTAKE-FULL) produced D24–D27 — real yield, once. Reserve for rule-changing / root-cause rounds; not a default phase. |
+| Benchmark programme (§17/B1) | **USEFUL BUT OPTIONAL** | Baseline value is real (it produced RA-11&#x27;s evidence). Run #2 proceeds only through the C-4 preconditions; no expansion (Entry 74 set size stands). |
+| Entry 68 packet-builder lint; queue-guard | **NOT YET JUSTIFIED as builds** | Already default-deferred by the focus plan past 2026-12-02 and gated to Phase 2 (post-revenue). The re-audit adds nothing; the deferral is the correct state. (CD-05&#x27;s bridge scan is a script *step*, not this build.) |
+| §3.2 creative-intelligence route; §3.3 coding route beyond gate code | **NOT YET JUSTIFIED** | Already on the §10.4 default-defer list on value grounds. Unchanged. |
+| Multi-lane-every-round as the default consultation shape | **SHOULD BE REMOVED as the default** (replaced by the tiered shape below) | A+ §3 already says &quot;not all lanes every time&quot;; practice on heavy days drifted to all-lane rounds (2026-11-18). The measured benefits came from consultation on *consequential* questions, not from lane count per round; adjudication value of the 3rd/4th leg is exactly what S4 has never measured. |
+
+## The smallest viable architecture
+
+**Coordinator + two standing external legs + two on-demand services + one internal processor, with consultation tiered by stakes:**
+
+1. **Tier 0 — coordinator solo** (unchanged): answers fixed by law, recorded measurement, or the user&#x27;s recorded decision; small, urgent, reversible actions. Labelled solo per rule 14.
+2. **Tier 1 — coordinator + ONE external leg** (the default for load-bearing judgments, rule 13&#x27;s existing minimum): the leg chosen by task type from the §14.3 routing table — Gemini API for routine first review when available, Claude when available for high-risk, ChatGPT web otherwise. One leg, one packet, full disposition discipline.
+3. **Tier 2 — multi-lane round** (reserved, Entry 93 test applies): rule changes, money commitments, mistake root-cause (rule 12), architecture decisions, and any Tier 1 outcome the coordinator intends to *override*. This is where the Adobe-class catches live; the tier exists for them.
+4. **Final audit — ChatGPT** (user-relay or disposable lane) for packages that go to the user for a decision, as tonight&#x27;s chain demonstrated.
+5. **NotebookLM** on demand for source/citation verification only. **Qwen** for private-material internal processing only, DEGRADED-labelled. **Gemini web** joins Tier 2 rounds when a third independent leg is needed or the API leg is absent *and* the round cannot wait.
+
+Everything else in the approved proposal survives the reduction untouched: Phase 0 in full (it is measurement, the thing the reduction itself needs), the caps, the stop rule (with CD-02), the security requirements (with CD-04/CD-05), and the 2026-12-17 decision event (CD-12) — at which the user, with S1/S4/§18.6 records in hand, decides whether Tier 2&#x27;s breadth and the §18 cycle have earned their cost, or whether the system shrinks again.
+
+**What this recommendation asks of the user:** adopt v4 as &quot;approved v3 **as reduced above**&quot; — specifically: (a) Tier 1 as the default consultation shape (a practice rule, no cost); (b) Qwen suspended as a review/benchmark seat (roster change); (c) Gemini web demoted to on-demand (roster change); (d) CD-02&#x27;s slip consequence. Items (a)–(d) are the only scope changes; every other v4 change is wording, accounting, or codification inside the approved envelope.
+
+===== DOCUMENT 5 — MEASUREMENT FRAMEWORK =====
+
+# CONSOLIDATED MEASUREMENT FRAMEWORK (Part V) — candidate, 2026-11-19
+
+One framework, fourteen metric families. For each: definition / data source / collection method / frequency / owner / known limitations / status (**OPERATIONAL** = collected today, **PROPOSED** = defined here or in the approved proposal but not yet collected). Owner is the coordinator unless a row names the supervisor (whose daily/weekly review is the collection vehicle — no new jobs are created by this framework).
+
+| # | Metric | Definition | Source | Collection | Frequency | Owner | Limitations | Status |
+|---|---|---|---|---|---|---|---|---|
+| M1 | Business outcomes | Received revenue (入金 &gt; ¥0, by platform, excl. test deposits); 承認 amounts; contracts; deliverable approvals | Cash ledger; CW platform records; pipeline register | Ledger entries at each event; register reconciliation each order-watch run | Per event; audited 2026-12-17 (M9) | Coordinator | Platform payout cycles lag 承認； the +7 register gap (U1) attaches to pipeline-derived figures until 2026-11-25 | OPERATIONAL |
+| M2 | Decision accuracy | Share of load-bearing decisions later shown wrong (by lane catch, user catch, or outcome), over load-bearing decisions taken | Improvement ledger dispositions + mistake records | Retrospective tagging when an error surfaces; compiled at milestone audits | Per milestone (next: 2026-12-17) | Coordinator | Only *detected* errors count — the denominator of undetected errors is unknowable; this is a floor, not a rate of truth | PROPOSED (S4 feeds it) |
+| M3 | Useful errors detected | Lane/coordinator catches that changed a decision or a deliverable, counted by who caught them and at what stage | Round records; S4 columns (CD-03) | Per round, in the round-metrics row | Per round; weekly roll-up | Coordinator | Requires the S4 table to exist; pre-S4 history is case-shaped only (annex A10) | PROPOSED (Phase 0 S1/S4) |
+| M4 | False positives | Criticisms alleged, investigated, and shown to be non-errors; plus coordinator time spent on them | S4 columns (CD-03) | Per round | Per round | Coordinator | &quot;Shown&quot; requires a later verification event; unresolved items stay in M6, not M4 | PROPOSED |
+| M5 | Missed errors | Errors found by anyone *after* the decision/delivery they belonged to (incl. user-detected — the self-detection feed) | Supervisor self-detection counts; production-lessons L-entries | Supervisor daily review (existing items 3j/3k) | Daily count; weekly trend | Supervisor | Detection depends on someone looking; the 71%→55% trend measures our looking, not the true error population | OPERATIONAL |
+| M6 | Unresolved disagreements | Points carried open past their round, with age | Improvement ledger; result records&#x27; OUTSTANDING sections | Per round; aged at milestones | Per round | Coordinator | — | PROPOSED (column exists in CD-03 taxonomy) |
+| M7 | Coordinator time | Minutes by work class: revenue execution / delivery / machinery (consultation, standards, governance) / reporting | §9 round metrics (rounds) + supervisor time sampling (the 2026-11-18 measurement&#x27;s method) | Per round for machinery; sampled days for the whole | Weekly share line (D15) | Supervisor | The 2026-11-18 figures are a one-day sample (RA-25); sampling method is not yet standardised — S1 fixes the round half only | PARTIALLY OPERATIONAL |
+| M8 | PC-lock time | Lock hold minutes and **wait** minutes, by work class | PC lock logs; §9 round metrics | Per lane operation | Weekly | Coordinator | Separation of wait vs processing is already specified as a recording design (proposal §2 S1 refinement (i)); it produces no data until S1 executes (RA-15) | PROPOSED (design exists in S1; execution pending) |
+| M9 | API &amp; lane usage | Requests by lane vs caps (Gemini API: provider count; web lanes: sends/rounds) | Budget ledger (API); consult ledger (rounds) | Per dispatch (API — existing discipline); per round (web) | Daily (API); weekly (web) | Coordinator | Guard script undercounts (D18) — provider count governs until fixed | OPERATIONAL (API) / PROPOSED (web roll-up = CD-01) |
+| M10 | Waiting time | User-question → consultation launch lag; lane reply latency; lock waits (M8) | Consult ledger timestamps; round records | Per round | Weekly | Coordinator | Launch lag is recorded implicitly (ledger line vs round start); no compiled series exists | PROPOSED |
+| M11 | Recovery overhead | Coordinator minutes spent recovering from defects (script exit-2 recoveries, stale-page re-fetches, re-sends after silent termination) | Round records; S4 correction-minutes field (CD-03) | Per incident | Per round | Coordinator | Currently narrated, not totalled | PROPOSED |
+| M12 | Revenue-task displacement | Count of occasions machinery work proceeded while a revenue task was active **or available-and-unstarted** (CD-02 definition) | Focus plan action table + register queue vs coordinator&#x27;s daily work record | Supervisor weekly check | Weekly | Supervisor | Depends on an honest daily work record; the R-INTERVIEWS-class risk is self-classification — mitigated by the queue being a file, not a memory | PROPOSED |
+| M13 | Security incidents | Identity mismatches, restriction signs, kill-trigger firings, bridge scan hits | Consult ledger; bridge completion records (CD-05) | Per event | Per event; nil-report at milestones | Coordinator | Zero-incident history to date — absence of incidents is recorded, never read as proof of safety | PARTIALLY OPERATIONAL (events recordable today; scan feed starts with CD-05) |
+| M14 | Context / record-integrity failures | Divergences found between records of the same fact (count gaps, stale canonical files, hash mismatches), with age-to-detection | Deadline ledger uncertainty register (U1–U3 pattern); §5.2 failure-mode list | Per discovery; uncertainty register review | Weekly | Coordinator | Detection is opportunistic until the §5.3 decay audit is implemented (proposed in §5.3, not yet operating) | PARTIALLY OPERATIONAL |
+| M15 | Net value vs simpler baseline | Four-arm comparison: coordinator alone / one lane / coordinator + one module / full architecture — scored outcomes **and** time per arm on identical cases | Proposal Phase 3 instrument (§8) | One run, first monthly benchmark slot after Phase 1 (2027-01 earliest), inside the approved ≤10 h | Once (then per milestone if the user extends it) | Coordinator | Case-shaped, not a continuous measure; a single run&#x27;s result is a disposition input, not a proof (§10.3 R9 discipline applies) | PROPOSED (approved as Phase 3) |
+
+## Decision levels
+
+**CONTINUE** — the architecture operates as (reduced-)approved while: M1&#x27;s primary goal is on its registered path **or** its slip has triggered CD-02&#x27;s pause-and-re-decide (i.e., the system responded to the slip); M3 shows catches on load-bearing items in the period; M5&#x27;s trend is not falling for two consecutive supervisor weeks; no M13 event is open.
+
+**REDUCE / PAUSE** — any of: (i) governance minutes exceed revenue minutes two weeks running (rule 16&#x27;s existing trigger → supervisor must propose cuts; this framework makes the proposal mandatory, not discretionary); (ii) the 2026-12-17 controllable layer (承認 ≥ ¥1,000 + preconditions) is unmet → Phases 1–3 pause per CD-02 [user decision]; (iii) a lane&#x27;s M3 contribution is zero across two consecutive milestone windows while its M7/M9 cost is non-zero → the lane drops to on-demand (the §18.6 weighting rule, given a concrete trigger); (iv) M5 falls below the 2026-11-18 reading (55%) for two further consecutive weeks → new consultation rounds pause except rule 12 (mistakes) and user-decision gates, until the supervisor&#x27;s recurrence review reports.
+
+**TERMINATE (a lane)** — a lane is removed when: it fails a re-run benchmark below the provisional floor after a DEGRADED period (the Qwen path, §17.5), **or** its terms/availability state changes so that operation is no longer possible inside the rules (RR-13), **or** the user so decides at a milestone audit on the M3/M7 record. Termination of the **whole architecture** has **no numeric threshold that the current evidence can justify** — the honest minimum evidence is: complete S1/S4 rows for every round from approval to 2026-12-17, the §18.6 per-lane record, the frame-challenge yield (CD-12), and the Phase 3 four-arm result (2027-01). The 2026-12-17 audit is pre-registered as the decision event at which the user sees the first four of those five; if they are too thin to decide, the thinness is itself the Phase 0 failure report (RA-22).
+
+**Threshold honesty note.** Every numeric trigger above is either (a) already in force in the house&#x27;s records (rule 16&#x27;s two-week rule; the 55% self-detection reading as a *floor reference*, not an invented target; the §17.4 provisional benchmark floor, itself labelled a hypothesis with a review date), or (b) explicitly marked as a user decision. No new number has been manufactured for this framework.
+
+===== DOCUMENT 6 — INDEPENDENT CLOSURE CHECKLIST =====
+
+# INDEPENDENT CLOSURE CHECKLIST — Re-Audit RA-01…RA-28
+
+For an independent reviewer. A correction is **not** closed because wording exists. Each item names the closure type required: **DOC** = documentary consistency verified · **OPS** = operational behaviour tested · **MEAS** = measurement collected · **EXT** = external dependency verified · **RESID** = residual risk explicitly accepted by the user. An item is closed only when its named type&#x27;s evidence exists at the cited location.
+
+| ID | Issue (short) | Closure type | Evidence that closes it | Where it will live |
+|---|---|---|---|---|
+| RA-01 | No unified workload ceiling/accounting | MEAS | 4 consecutive weekly accounting lines (rounds + minutes + API) in the supervisor cycle, complete against the consult ledger | Supervisor weekly records; §9 metrics |
+| RA-02 | Stop rule keys on &quot;active&quot;; no slip consequence | DOC + user decision record | v4 wording adopted (CD-02) **and** the slip consequence either adopted or declined *in writing* by the user; the 2026-12-17 audit agenda names the test | Improvement ledger entry for v4 adoption; focus plan M9 record |
+| RA-03 | Aggregate value UNCONFIRMED | MEAS | S1 rows complete for every round from adoption; §18.6 per-lane record populated; a net-value statement (even if still UNCONFIRMED) issued at 2026-12-17 from those rows | §9 metrics; lane capability map |
+| RA-04 | Adjudication accuracy unmeasured | MEAS | S4 taxonomy columns populated for ≥3 consecutive rounds; frame-challenge yield compiled (CD-12) | §9 metrics; 2026-12-17 audit record |
+| RA-05 | Identity check single-point | DOC + OPS | CD-04 wording in force **and** one tabletop exercise of the revocation procedure executed and recorded (W11 batch, 2026-11-24) | Standard/proposal text; W11 batch record |
+| RA-06 | Web-lane terms pilot (standing risk) | RESID | The user re-confirms or changes the pilot decision **with this register in front of him**; the decision and date recorded | Consult ledger / improvement ledger |
+| RA-07 | No bridge pre-publication scan | OPS | One bridge rotation whose completion record contains a scan result (patterns + hits) before handover | Next rotation&#x27;s completion record |
+| RA-08 | No unified failure-state model | DOC | CD-06 table present in the operative document and consistent with A9/Entry 95/budget-ledger practice (spot-check 3 recent rounds against it) | Proposal §7.1 (v4) |
+| RA-09 | Compaction fidelity unmeasured | MEAS | §3.5 canary results recorded for two consecutive state deltas (Phase 2 acceptance (iv) analogue) | Phase 2 records |
+| RA-10 | +7 divergence | MEAS (reconciliation) | U1&#x27;s ID-level diff executed; every unmatched row dispositioned or carried as a named uncertainty with affected figures flagged | Deadline ledger U1 closure line; pipeline register |
+| RA-11 | Qwen failure mode | DOC + MEAS | Roster classification recorded (suspended as a seat); any reactivation preceded by a re-run at/above the provisional floor | Improvement ledger; benchmark records |
+| RA-12 | Two script defects | OPS | Each defect closed as fixed-with-regression-case **or** capped-and-fallback-documented (§9 Phase 2 (iii) standard); D18 ticket closed in the budget ledger | Phase 2 records; budget ledger |
+| RA-13 | Benchmark generalisation | DOC | CD-09 sentence present; run #2 executed only with all four C-4 preconditions evidenced | Proposal §8 (v4); run #2 scores file |
+| RA-14 | Deferred-topic limits | DOC + OPS | CD-07 fields + two-deferral rule in A3; first weekly cycle shows margin lines carrying owner/review-by | Annex A3 (v4); consult ledger |
+| RA-15 | PC-lock queue discipline | DOC + MEAS | CD-08 priority rule in pc-ops; S1 refinement (i) executed — wait vs processing minutes recorded for ≥3 rounds | pc-ops rules; §9 metrics |
+| RA-16 | Scenario A (revenue pressure) | MEAS | Closed jointly with RA-01 + RA-02: one surge week (if any) whose accounting shows revenue work protected, or the CD-02 pause firing | Supervisor weekly records |
+| RA-17 | Scenario B (outages) | OPS | §16.7 tabletop continuity drill executed and recorded (W11, 2026-11-24) | W11 batch record |
+| RA-18 | Scenario C (context loss) | MEAS | = RA-09 | = RA-09 |
+| RA-19 | Scenario D (incorrect consensus) | MEAS | Frame-challenge yield compiled at 2026-12-17 (CD-12 (i)); a yield of zero is a valid closure *of the measurement*, and re-opens the design question | 2026-12-17 audit record |
+| RA-20 | Scenario E (expansion pressure) | — | No defect found; no closure required. Re-test at each milestone audit | — |
+| RA-21 | Scenario F (security incident) | OPS | = RA-05 (tabletop) — an actual incident is **not** required for closure; if one occurs first, its handling record closes it instead | W11 batch record |
+| RA-22 | Scenario G (non-performance exit) | DOC + user decision record | The 2026-12-17 audit agenda contains the keep/reduce/terminate item with the RA-22 evidence list; the user&#x27;s decision recorded either way | 2026-12-17 audit record; improvement ledger |
+| RA-23 | §13 stale gate text | DOC | v4 §13 carries the dated approval-state note; v3 text preserved above it | v4 proposal §13 |
+| RA-24 | Result record §4/§9 tension | DOC | v4 result record §4 carries the one-line pointer to §9 | v4 result record |
+| RA-25 | 56%/12.5% sample caveat | DOC | Both citations annotated with the sample basis in v4 | v4 proposal R-5; v4 annex A7 |
+| RA-26 | Proposal understates standard&#x27;s controls | DOC | §6 cross-reference paragraph present in v4; spot-check that each cited control exists at the cited section | v4 proposal §6 |
+| RA-27 | Revenue definition not at the gate | DOC | §4a definition quoted at §6&#x27;s Phase 2 gate and stop rule in v4 | v4 proposal §6 |
+| RA-28 | Cap conflicts proposal↔annex | — | Checked, none found; re-check mechanically at any future version bump | This checklist (re-run note) |
+
+**Acceptance-state separation (Part VIII).** On adoption of v4, the package may claim: **DOCUMENT COMPLETE** (all wording above present) — yes, verifiable by diff. **DESIGN CLOSED** — only for the DOC items; RA-01/03/04/09/10/19 remain open by design until their measurements exist. **OPERATIONALLY VERIFIED** — only RA-05/07/12/17 after their tests run (earliest: W11, 2026-11-24). **ECONOMICALLY JUSTIFIED** — not claimable before the 2026-12-17 readouts, and fully only after Phase 3 (2027-01). **READY FOR USER DECISION** — the state of *this re-audit package* now: findings, corrections, and residual risks are on the table with their evidence; the decision (proceed as approved / proceed as reduced / suspend) is the user&#x27;s.
+
+===== DOCUMENT 7 — CANDIDATE v4 CHANGE LOG + UNRESOLVED-EVIDENCE REGISTER =====
+
+# V4 CANDIDATE — CHANGE LOG, UNRESOLVED-EVIDENCE REGISTER, UNIMPLEMENTED LIST
+
+Package: `proposal-v4-candidate.md`, `annex-v4-candidate.md`, `result-record-v4-candidate.md` in this folder. Base: the user-approved v3 package (2026-11-19 02:20 JST; hashes in result record §9). The v3 files are **untouched**; v4 exists only here. Every change is tagged: **[STATE]** = records a fact (the approval) · **[WORDING]** = clarification/codification inside the approved envelope · **[CONTROL]** = a new or extended control, inside the approved envelope · **[USER DECISION]** = changes approved behaviour — included as a flagged proposal, NOT settled text.
+
+## Change log — proposal
+
+| # | Location | Change | Tag | Source |
+|---|---|---|---|---|
+| P-1 | Header | Candidate banner: provenance, state (v3 approved 2026-11-19 02:20 JST; implementation held), outstanding criticisms NOT OBTAINED | [STATE] | RA-23 |
+| P-2 | §2 S1 | Sample-basis annotation on the 56%/12.5% figures | [WORDING] | RA-25 |
+| P-3 | §2 S4 | Extended adjudication column taxonomy (false alarms, rejected-correct, adopted-incorrect, unresolved; lane requests; correction minutes; agreement ≠ evidence) | [CONTROL] | CD-03 / RA-03, RA-04 |
+| P-4 | §6 after Round cap | Workload-accounting paragraph (all categories; S1 mechanism; dedup rule; ceiling deferred to measured data; rule 16 interim trigger) | [CONTROL] | CD-01 / RA-01 |
+| P-5 | §6 after Round cap | Governing-controls cross-reference paragraph (Entry 93/94, §16.6, §16.7, §17, §18, Entry 95) | [WORDING] | CD-11 / RA-26 |
+| P-6 | §6 Stop rule | Trigger extended: &quot;active, **or available and unstarted in the registered queue**&quot; + named queues | [WORDING] | CD-02 / RA-02 |
+| P-7 | §6 Stop rule | Slip consequence paragraph: Phases 1–3 auto-pause if the controllable layer is unmet at 2026-12-17; Phase 0 excepted | **[USER DECISION]** | CD-02 / RA-02 |
+| P-8 | §6 Phase 1 | 2026-12-17 audit readouts: frame-challenge yield + keep/reduce/terminate decision event | [CONTROL] | CD-12 / RA-19, RA-22 |
+| P-9 | §6 Phase 2 | &quot;First real revenue&quot; definition quoted verbatim from focus plan §4a | [WORDING] | CD-10 / RA-27 |
+| P-10 | §7.1 | Lane failure-state table codified (states + per-route retry bounds + no-substitution rule) | [WORDING] | CD-06 / RA-08 |
+| P-11 | §7.1 | PC-lock priority pointer (pc-ops rule; consumption cap ≠ priority rule) | [CONTROL] | CD-08 / RA-15 |
+| P-12 | §7.3 | Identity verification replaced: five points, fail closed, ledger record on mismatch | [CONTROL] | CD-04 / RA-05 |
+| P-13 | §7.3 | Bridge publication check: sensitive-pattern scan recorded in the rotation completion record before handover | [CONTROL] | CD-05 / RA-07 |
+| P-14 | §8 | Limitation sentence: no lane/architecture change on benchmark evidence alone | [WORDING] | CD-09 / RA-13 |
+| P-15 | §12 R-5 | Sample-basis annotation (as P-2) | [WORDING] | RA-25 |
+| P-16 | §13 | Approval-state note appended (gate satisfied 2026-11-19 02:20 JST; hashes; criticism process still OPEN); v3 gate text preserved verbatim | [STATE] | CD-11 / RA-23 |
+
+## Change log — annex
+
+| # | Location | Change | Tag | Source |
+|---|---|---|---|---|
+| A-1 | Header | Candidate banner (as P-1) | [STATE] | RA-23 |
+| A-2 | A3 | Deferral limits: owner + review-by fields; max two deferrals; 30-day expiry closure | [CONTROL] | CD-07 / RA-14 |
+| A-3 | A6 | Workload-accounting mirror bullet | [WORDING] | CD-01 / RA-01 |
+| A-4 | A7 | Sample-basis annotation on 56%/12.5% | [WORDING] | RA-25 |
+| A-5 | A8 | Identity-check phrase replaced with the §7.3 five-point pointer | [WORDING] | CD-04 / RA-05 |
+
+## Change log — result record
+
+| # | Location | Change | Tag | Source |
+|---|---|---|---|---|
+| R-1 | §4 | One-line status pointer to §9 (gate satisfied); historical text intact | [STATE] | CD-11 / RA-24 |
+| R-2 | §10 (new) | Re-audit record: premise correction, outcome distribution, recommendation, disposition status = recorded-not-adopted, outstanding criticisms unchanged | [STATE] | Part VII Deliverable 5 |
+
+**Deliberately NOT changed:** the terms-pilot status (RA-06 — no wording cures it; the user&#x27;s standing decision governs); any cap number; any phase hour figure; the B1 set size; the §13 gate text itself (annotated, not rewritten); all historical dispositions in §§1–9 of the result record; the outstanding NOT OBTAINED markings (Claude web, Gemini API) — carried verbatim.
+
+## Unresolved-evidence register (what this package does NOT establish)
+
+| # | Item | State | What would resolve it | Due / gate |
+|---|---|---|---|---|
+| U-1 | Claude web lane criticism of the proposal | NOT OBTAINED (Free 5-h limit) | The 2026-11-19 03:15 JST retry (cron `claude-retries-1119`) | 2026-11-19 03:15 JST |
+| U-2 | Gemini API leg criticism (this proposal; also B1 run #1 leg; R-META leg) | NOT OBTAINED (HTTP 503 pattern) | API usable within budget; provider count governs | U3, 2026-11-24 |
+| U-3 | Aggregate net economic value of the architecture | UNCONFIRMED (Entries 44/48) | S1/S4/§18.6 records accumulated to 2026-12-17; Phase 3 four-arm run for the baseline comparison | 2026-12-17 readout; 2027-01 Phase 3 |
+| U-4 | Adjudication accuracy rate | UNVERIFIED (R-4) | S4 taxonomy populated ≥3 consecutive rounds | Phase 0 window |
+| U-5 | Compression/compaction fidelity | UNVERIFIED (R-7) | §3.5 canary results, two consecutive deltas | Phase 2 |
+| U-6 | +7 log-vs-register divergence cause | UNRESOLVED (U1) | ID-level diff, every unmatched row dispositioned | 2026-11-25 |
+| U-7 | Qwen3:8b 0/24 root cause; 14b failure-mode cause | UNCONFIRMED (R-9) | A reproducible diagnosis + repeated verification (reactivation standard) — no slot currently scheduled; the seat suspension (recommendation) makes this non-blocking | None set |
+| U-8 | `gemini_text_review.py` exit-2 root cause | UNCONFIRMED (R-10) | Phase 2 A2a bounded investigation | Phase 2 |
+| U-9 | `gemini_budget.py` guard undercount fix | OPEN ticket (D18) | Guard = max(own, provider), recorded closed in the budget ledger | Proposed: Phase 2 (with U-8) |
+| U-10 | Machinery/revenue time ratio as a trend | Single-day sample only (RA-25) | Weekly S1 lines from adoption | Weekly from Phase 0 |
+| U-11 | Frame-challenge effectiveness | UNMEASURED | Yield readout (CD-12 (i)) | 2026-12-17 |
+| U-12 | §16.7 continuity + §7.3 revocation procedures | DOCUMENTED, never exercised | W11 tabletop drills | 2026-11-24 |
+| U-13 | ChatGPT Free message limits | UNCONFIRMED (§7.1) | A measured limit event, recorded when it occurs | Opportunistic |
+| U-14 | Codex pricing/Free-surface facts behind §3.3/§10.4 | UNVERIFIED (secondary summaries; R11) | Check against current official OpenAI documentation before any promotion | Before any Codex revisit |
+
+## Explicit list of what remains UNIMPLEMENTED (as of the v4 candidate)
+
+Nothing in v4 is implemented by being written. Beyond that standing rule, the following approved-or-proposed items remain unimplemented at the time of writing, so no reader mistakes text for operation:
+
+1. **Phase 0 execution** — S1 (§9 metrics filled per round), S3&#x27;s packet-hash acceptance instance, §3.4 procedure&#x27;s first recorded application, S4 columns: tracker P0-1…P0-6, all pending or partial (tracker, 2026-11-19 state).
+2. **CD-01&#x27;s weekly accounting line** — mechanism specified (S1), zero lines produced.
+3. **CD-04&#x27;s five-point verification as practised routine** — text only; first exercise is the W11 tabletop (2026-11-24).
+4. **CD-05&#x27;s bridge scan** — no scan has been run on any rotation to date; the next rotation is the first test.
+5. **CD-07&#x27;s deferral fields** — the lane-topic queue itself (annex A3 delta) is not yet operating.
+6. **CD-08&#x27;s pc-ops priority rule** — not yet written into pc-ops (this package proposes; adoption writes it).
+7. **Entry 68 lint, queue-guard, §3.5 canaries, sender fix (A2a), budget-guard fix (D18)** — Phase 2 / deferred, per the approved roadmap and the focus plan.
+8. **B1 run #2** — gated on the four C-4 preconditions, all open; milestone 2026-12-17.
+9. **U1 ID-level diff** — scheduled, not executed; due 2026-11-25.
+10. **The architecture reduction itself** (recommendation C) — a proposal to the user; the operating roster today is unchanged.
+
+===== DOCUMENT 8 — TECHNICAL PROPOSAL, CANDIDATE DRAFT v4 =====
 
 # TECHNICAL PROPOSAL — Multi-Model Intelligence Integration (R-INTEGRATION-2026-11-18-01)
 
@@ -75,6 +728,22 @@ bridge round R-2026-11-19-02 (Issue 1: §13 completion wording; Issue 2
 landed in annex A7). See the changelog immediately below and §13. The
 draft awaits the user&#x27;s review and explicit approval; the §13 approval
 gate is unchanged and in force.
+
+&gt; **CANDIDATE v4 — prepared 2026-11-19 by the independent re-audit
+&gt; (ChatGPT full adversarial design audit, Parts I–IX; findings register
+&gt; RA-01…RA-28 in `~/workspace/ai-collab/reviews/reaudit-20261119/`).**
+&gt; This candidate is a NEW file; the approved v3 documents are untouched.
+&gt; It applies ONLY the re-audit&#x27;s corrective-design changes (CD-01…CD-12):
+&gt; wording, accounting, and codification inside the approved envelope,
+&gt; plus clearly-flagged **[USER DECISION]** items that change approved
+&gt; behaviour (CD-02&#x27;s slip consequence; the architecture recommendation&#x27;s
+&gt; roster reductions live in the recommendation document, not in this
+&gt; text). State note: the v3 package was **approved by the user on
+&gt; 2026-11-19 02:20 JST** (result record §9); implementation is held by
+&gt; the coordinator pending the user&#x27;s decision on the re-audit outcome.
+&gt; Outstanding criticism remains outstanding: the Claude web lane&#x27;s and
+&gt; the Gemini API leg&#x27;s criticism of this package are **NOT OBTAINED**,
+&gt; and the criticism process remains OPEN per §13.
 **Framing:** This is a measured gap analysis against the multi-model system this house
 already operates — the A+ standard (`~/workspace/multi-ai-review-standard-20261116.md`),
 four external lanes (ChatGPT web, Claude web, Gemini web, Gemini API) plus NotebookLM
@@ -365,7 +1034,10 @@ is flagged rather than re-proposed.**
   and the claim &quot;A+ is efficient&quot; is currently UNVERIFIED by the standard&#x27;s own rule.
   The supervisor&#x27;s 2026-11-18 metrics put AI-machinery work at ≈56% of coordinator
   time against ≈12.5% revenue-proximate work — the only cost signal we have, and it
-  is unfavourable. Fix: fill duration + legs + adopted-count for every round from
+  is unfavourable. **[v4 annotation — RA-25: single-day supervisor
+  sample, 2026-11-18, ≈8 h of coordinator time, on a day of exceptional
+  consultation concentration (7+ rounds); a warning signal, not a
+  trend.]** Fix: fill duration + legs + adopted-count for every round from
   the next round on (the columns exist); review the machinery/revenue time ratio
   monthly. No new structure. Two recording refinements (audit corrections,
   2026-11-19): (i) round duration is recorded as **queue-wait time (PC-lock
@@ -397,7 +1069,15 @@ is flagged rather than re-proposed.**
   &quot;evidence-weighted adjudication works&quot; is UNVERIFIED as a rate. Strengthen:
   add outcome columns to the existing round-metrics table (points adopted /
   later confirmed / later refuted), filled at the next related measurement —
-  no new ledger.
+  no new ledger. **[v4 extension — CD-03, re-audit RA-03/RA-04:** the
+  column set is extended so false alarms and rejected-correct criticisms
+  are countable, not only adoptions: per lane and in total — correctly
+  detected errors / incorrectly alleged errors / missed errors (found
+  later by anyone, incl. the user) / correct criticisms rejected /
+  incorrect criticisms adopted / unresolved disagreements carried open;
+  plus lane requests consumed and coordinator correction minutes.
+  Majority agreement between lanes is never entered as evidence in any
+  column (§5.3 promotion rule).**]**
 - **S5. Arithmetic verification.** MEASURED failures: Gemini web T15 weighted
   totals; ChatGPT&#x27;s 3/12 slip; register-vs-log count divergences found only by
   coordinator re-runs (focus plan §3). Claude&#x27;s pre-reader role catches some of
@@ -747,14 +1427,57 @@ discussion on one packet counts as one round; follow-up sub-rounds on the
 same packet count within that round, not as new rounds. The cap stands
 until first real revenue; nothing in this document proposes lifting it.
 
-**Revenue-first stop rule (audit correction R3, 2026-11-19):** machinery
-work under this roadmap is **postponed whenever it would displace an
-active revenue-producing or revenue-enabling task**; if the first-revenue
+**Workload accounting (all categories) [v4 — CD-01, re-audit RA-01]:**
+the cap above binds the discretionary category only; it is not a
+workload ceiling. Total consultation load is accounted weekly, across
+**all** categories (discretionary rounds, registered milestone rounds,
+rule 11 consultations, rule 12 consultations, §18/§18.8 cycles), through
+the mechanism §2 S1 already specifies: the weekly line (total
+coordinator hours, revenue-proximate hours, machinery hours, revenue
+outcomes, displacement flag) plus per-round duration split into
+queue-wait and processing time, plus Gemini API requests consumed
+(budget ledger). The weekly line is reported in the supervisor&#x27;s weekly
+cycle alongside the D15 governance-share line. **Deduplication:** one
+underlying issue generates one consultation: where a rule 11 question
+and a rule 12 mistake concern the same event, they are run as one round
+with both triggers recorded in the consult ledger (precedent:
+R-MISTAKE-2026-11-18-01). **Ceiling:** no numeric aggregate ceiling is
+set by this document; the evidence to set one (four consecutive weeks
+of complete §9 metrics) does not yet exist. Until the user sets a
+ceiling from that data, the interim control is §16.6 rule 16&#x27;s trigger:
+governance minutes exceeding revenue minutes two weeks running obliges
+the supervisor to propose cuts.
+
+**Governing controls (cross-reference) [v4 — CD-11, re-audit RA-26]:**
+the consultation system this roadmap funds is governed day-to-day by
+the A+ standard: Entry 93&#x27;s justification test and Entry 94&#x27;s stops
+(via the focus plan), §16.6 rules 11–16, §16.7 (continuity), §17
+(benchmark floor), §18 (better-opinion cycle), and Entry 95&#x27;s
+degraded-finalisation rule. Where this proposal and the standard differ
+in wording, the standard&#x27;s operative text governs until both are
+amended together (version-coupling, §5.3).
+
+**Revenue-first stop rule (audit correction R3, 2026-11-19; v4 —
+CD-02, re-audit RA-02):** machinery
+work under this roadmap is **postponed whenever it would displace a
+revenue-producing or revenue-enabling task that is active, or that is
+available and unstarted in the registered queue** (the order-watch
+register, the focus plan&#x27;s dated action table, or a publication slot);
+&quot;no revenue task had been formally started&quot; is not a non-displacement
+finding. If the first-revenue
 target is at risk, a phase&#x27;s work is reduced, postponed, or cancelled
 rather than automatically consuming its allocation. Phase caps are
 ceilings, not targets. Unused hours do not transfer between phases. No
 phase may expand its cap by coordinator discretion; any increase to any
 cap requires the user&#x27;s explicit approval beforehand (unchanged).
+**Slip consequence [v4 — CD-02, USER DECISION]:** if the primary
+goal&#x27;s controllable layer — cumulative 承認 ≥ ¥1,000 on CrowdWorks
+with payout preconditions complete (focus plan §4a; definition quoted
+at Phase 2 below) — is not met by the 2026-12-17 audit, Phases 1–3
+pause automatically and resume only on the user&#x27;s re-decision at that
+audit. Phase 0&#x27;s measurement debts are excepted: they are the
+instrument that detects the slip, and pausing them would blind the
+audit itself.
 **Combined size, stated for the first time (lane criticism, adopted
 2026-11-19):** the four phase ceilings sum to a combined maximum of
 **36 coordinator hours** (6 + 8 + 12 + 10), of which 14 hours (Phases
@@ -799,8 +1522,26 @@ citation subset.
   with cause; results are recorded against the B1 baseline (§8) with deltas
   per seat; the HYPOTHESIS-vs-UNCONFIRMED ruling for the B5 marking form is
   issued before the run (owed from run #1) so the floor is scoreable.
+- **2026-12-17 audit readouts [v4 — CD-12, re-audit RA-19/RA-22]:**
+  the milestone audit&#x27;s agenda includes, from records that will exist
+  by then: (i) the **frame-challenge yield** — rounds in which the
+  mandatory frame-challenge answer changed the question or a
+  disposition, over rounds run (compiled from round records); (ii)
+  the **keep / reduce / terminate decision** on the consultation
+  architecture, taken by the user on the S1/S4/§18.6 records. If those
+  records are too thin to support (i) or (ii), the thinness is
+  reported as a Phase 0 shortfall, not filled by impression.
 
 ### Phase 2 — Mechanical enforcement builds (only after first real revenue, or explicitly approved earlier)
+
+**&quot;First real revenue&quot; [v4 — CD-10, re-audit RA-27]** means the focus
+plan&#x27;s primary goal (§4a, governing): cumulative 承認 ≥ ¥1,000 on
+CrowdWorks, with CrowdWorks payout preconditions (identity verification
++ bank registration) complete, and the resulting payout received in the
+bank (入金 &gt; ¥0, excluding the ¥1 KDP test deposit); if the
+controllable layer is met by 2026-12-17 but the platform&#x27;s cycle pays
+later, the goal is recorded as &quot;substance met, receipt pending platform
+cycle.&quot;
 
 Content: Entry 68 packet-builder lint + retrospective test on the four known
 bad drafts (A1); `gemini_text_review.py` exit-2 fix (A2, bounded: root-cause
@@ -872,6 +1613,27 @@ existing capability (user requirement, 2026-11-18 23:25).
   Large rounds are a real cost in this currency even at ¥0 cash.
 - **Costs:** cash ¥0 in all phases (constraint). Real costs are
   coordinator-hours and lane requests, capped per phase in §6.
+- **Lane failure states (codified) [v4 — CD-06, re-audit RA-08]:**
+  lane states, as used in all records: AVAILABLE / TEMPORARILY
+  UNAVAILABLE (transient provider failure) / RATE LIMITED (quota
+  exhausted; reset time recorded if known) / AUTHENTICATION FAILURE /
+  TECHNICAL FAILURE (our tooling) / SUSPENDED (by kill trigger or user
+  decision) / NOT OBTAINED (a round closed without this leg; an
+  outcome, not a lane property). Retry bounds are per-route and already
+  in force: Gemini API — budget-ledger rules (a 429 ends the day&#x27;s
+  calls; mistake rounds: one permitted call); web lanes — retry at the
+  measured limit reset, never by hammering; sender defects — raw log
+  first, recovery verbatim. A leg in any non-AVAILABLE state is
+  recorded as absent; it is never substituted and never represented as
+  having responded (Entry 45(c); degraded finalisation only under
+  Entry 95 D2). This table codifies annex A9 + Entry 95 + the budget
+  ledger; where it and a source differ, the source governs.
+- **PC-lock priority [v4 — CD-08, re-audit RA-15]:** lock contention
+  is resolved by the pc-ops priority rule (revenue-deadline work &gt;
+  consultation lane work &gt; benchmark lane work; yield at the next safe
+  point, never mid-send). The ≤2 h/week project cap in §6 is a
+  consumption cap; this priority rule is the contention behaviour —
+  the two are distinct controls.
 
 ### 7.2 Feasibility classification (brief&#x27;s Phase 6 scheme)
 
@@ -910,21 +1672,36 @@ requirements, not aspirations:
   never enter a packet, a round record, or a log file; credential values
   move only through the approved secure store (standing rule, restated
   here because lane tooling writes logs by default).
-- **Main-account check before every lane run.** Automation runs only in
-  the dedicated disposable-account profiles. Before a lane&#x27;s first send
-  in any session, the operator verifies the signed-in account identity
-  in that profile is the disposable account for that lane. The user&#x27;s
-  MAIN accounts are never signed into an automation profile, and
-  automation must not be able to silently operate on a main account: if
-  the identity check shows anything other than the expected disposable
-  account, the lane stops and the discrepancy is reported before any
-  send.
+- **Account-identity verification — five points, fail closed [v4 —
+  CD-04, re-audit RA-05; replaces the v3 single-point check].**
+  Automation runs only in the dedicated disposable-account profiles.
+  The operator verifies the signed-in account identity in the profile
+  is the expected disposable account for that lane: **(1)** at task
+  start; **(2)** before the lane&#x27;s first send in any session; **(3)**
+  after any browser restart or session recovery; **(4)** after any
+  detected account, profile, or CDP-target change, or any unexpected
+  navigation to an account page; **(5)** whenever the active identity
+  cannot be verified. On any mismatch or non-verifiability: the lane
+  stops immediately, nothing is sent, and the discrepancy is reported
+  and recorded in the consult ledger before work resumes. The user&#x27;s
+  MAIN accounts are never signed into an automation profile.
 - **Session revocation on compromise.** If a profile or session is
   suspected compromised: stop the lane immediately, close its browser,
   delete the affected profile&#x27;s session state, and re-authenticate only
   through the user-hand step (the user signs in himself); the incident
   and the revocation are recorded in the consult ledger. A revoked
   session is never silently reused.
+- **Bridge publication check [v4 — CD-05, re-audit RA-07].** Before a
+  bridge packet link is handed over, the packet text is scanned for
+  the standing sensitive patterns — the user&#x27;s account email
+  addresses, phone number, postal code, credential-shaped strings,
+  and account-ledger identifiers — and the scan result (patterns
+  checked; hits, or zero hits) is recorded in the rotation&#x27;s
+  completion record. A hit stops publication until the content is
+  removed or the hit is dispositioned as a false positive in the
+  record. (Data-class rule: A+ standard §4. The scan is additive; the
+  §4 drafting discipline remains the primary control, and the
+  completion record states both were applied.)
 
 ---
 
@@ -937,6 +1714,14 @@ baseline for all future comparisons, per the user&#x27;s instruction
 cf53bd8e045b7d61 — full hash in §11) is the reference record. The Phase 0
 baseline (2026-11-16) remains the historical baseline for the fixed
 B1–B7 key set; the two are not interchangeable and must not be mixed.
+
+**Limitation [v4 — CD-09, re-audit RA-13].** Benchmark scores are one
+evidence category (§1.4: BENCHMARK-MEASURED). No lane change,
+architecture change, or capability claim may be approved on benchmark
+evidence alone; an operational record (round outcomes, §18.6 track
+record, or a measured business result) must concur. A single run of a
+15-task set establishes a baseline and operational triggers (§10.3),
+never statistical proof.
 
 **Design (extends §17.4, unchanged in its rules):**
 - Identical test cases across arms and seats wherever the comparison
@@ -1205,7 +1990,7 @@ today; full hashes are reproducible from the files.
 | R-2 | The whole web-lane layer rests on disposable accounts under a user-approved terms-exception pilot; a platform enforcement change ends three of four lanes at once. Kill triggers exist; no replacement route exists | Documented in premises brief; likelihood UNVERIFIED |
 | R-3 | Self-detection is declining (71% → 55%) while record volume grows — the knowledge system may be getting better at recording and worse at firing | MEASURED (supervisor metrics, 2026-11-18) |
 | R-4 | Adjudication accuracy is unmeasured (S4); the central claim of the architecture — evidence-weighted adjudication beats solo judgement — rests on cases (Adobe) not rates | UNVERIFIED as a rate |
-| R-5 | §9 cost-effectiveness of the machinery is UNCONFIRMED (Entries 44/48) and the one available signal (machinery ≈56% of coordinator time vs ≈12.5% revenue-proximate) is unfavourable | Partially measured |
+| R-5 | §9 cost-effectiveness of the machinery is UNCONFIRMED (Entries 44/48) and the one available signal (machinery ≈56% of coordinator time vs ≈12.5% revenue-proximate — single-day sample, 2026-11-18, ≈8 h, an exceptional consultation-concentration day; not a trend [v4 — RA-25]) is unfavourable | Partially measured |
 | R-6 | Log-vs-register divergence (+7) in the revenue pipeline records, cause unidentified; two records of the same pipeline disagree with no reconciliation mechanism yet | MEASURED (register reconciliation notes) |
 | R-7 | Context compaction loss in the coordinator is unmeasured; long projects (this one included) are executed across compactions by an agent whose summary fidelity has never been scored | UNVERIFIED |
 | R-8 | Claude Free&#x27;s 5-hour limit and Gemini&#x27;s 20/day cap make same-day multi-round work fragile; the 2026-11-18 round concentration (7+ rounds) is recorded by the lanes themselves as not repeatable at that concentration (Entry 93 note) | MEASURED |
@@ -1278,6 +2063,21 @@ agreement with it — until the user gives explicit approval.** Until
 then, everything in §§2–10 is a proposal, and the A+ standard as it
 stands today remains the operating system.
 
+**Approval-state note [v4 — CD-11, re-audit RA-23; appended
+2026-11-19, the gate text above is preserved verbatim as history]:**
+the gate stated above was **satisfied on 2026-11-19 02:20 JST**: the
+user explicitly approved the v3 package (proposal sha256 `5bfb12c4…`,
+annex sha256 `ed1de872…`, result record through §8 sha256
+`5a7712cb…`) in the main chat, immediately after the R-2026-11-19-04
+final verification returned ACCEPTED. Record: result record §9;
+improvement ledger Entry 114; implementation tracker
+`~/workspace/ai-collab/integration-implementation-20261119.md`.
+Implementation is held by the coordinator pending the user&#x27;s decision
+on the 2026-11-19 re-audit outcome (findings RA-01…RA-28). The
+criticism process remains **open**: the Claude web lane&#x27;s criticism
+and the Gemini API leg&#x27;s criticism are NOT OBTAINED; the §13 rule
+above — late replies amend dispositions — continues to apply.
+
 ---
 
 ## 14. Criticism record — protocol and location
@@ -1307,7 +2107,7 @@ stands today remains the operating system.
 
 ---
 
-===== DOCUMENT 2 — FEASIBILITY ANNEX (CORRECTED DRAFT v3) =====
+===== DOCUMENT 9 — FEASIBILITY ANNEX, CANDIDATE DRAFT v4 =====
 
 # ANNEX — Feasibility Assessment: Autonomous Multi-AI Communication and Collaboration
 
@@ -1333,6 +2133,17 @@ Entry 110. Outstanding: the Claude web lane&#x27;s and the Gemini API leg&#x27;s
 criticism of the proposal package were NOT OBTAINED (Free limit / HTTP
 503; retry for Claude after 2026-11-19 03:10 JST) — this annex does not
 claim their input.
+
+&gt; **CANDIDATE v4 — prepared 2026-11-19 by the independent re-audit
+&gt; (findings RA-01…RA-28; corrective design CD-01…CD-12 in
+&gt; `~/workspace/ai-collab/reviews/reaudit-20261119/`).** A NEW file; the
+&gt; approved v3 annex is untouched. Changes in this annex: A3 (deferred-
+&gt; topic limits, CD-07), A6 (workload-accounting mirror, CD-01), A7
+&gt; (sample-basis annotation, RA-25), A8 (identity-verification pointer,
+&gt; CD-04). The v3 package was approved by the user on 2026-11-19 02:20
+&gt; JST (result record §9); implementation is held pending the user&#x27;s
+&gt; decision on the re-audit outcome. The Claude web and Gemini API
+&gt; criticisms remain **NOT OBTAINED**.
 
 **Objective function (governing clarification, 2026-11-18 23:33):** this system
 optimises for **useful discoveries, verified improvements, reduced errors, and
@@ -1435,6 +2246,17 @@ lane-raised topic is exactly one of:
   diffing lane replies against the ledger; any lost topic found is
   itself recorded, with the miss named as a process defect.
 
+**Deferral limits [v4 — CD-07, re-audit RA-14]:** the minimal record
+gains two fields: **owner** (the coordinator, unless reassigned in the
+line) and **review-by** (the date of the named slot or the trigger&#x27;s
+expected window). A topic may be deferred **at most twice**: at the
+second deferral it must be dispositioned — adopted as a §18 theme,
+declined with a reason, or escalated to the user as a decision item. A
+topic whose named trigger has not fired within **30 days** of capture
+is closed as **expired** at the next §18 slot, with the closure
+recorded in its line. &quot;Deferred&quot; remains a visible state, never a
+deletion.
+
 ## A4. APIs and integration methods (as-is inventory)
 
 - CDP operation of three disposable-account Chrome profiles on the user&#x27;s
@@ -1481,6 +2303,11 @@ construction:
   polling between AIs — is **cut** under the objective function: it
   multiplies conversation volume with no measured discovery value, and
   continuous polling is already prohibited by the A+ standard.
+- **Workload accounting [v4 — CD-01 mirror]:** the cap above is a
+  category cap, not a workload ceiling; total consultation load across
+  all categories is accounted weekly in coordinator minutes and lane
+  requests (proposal §6, &quot;Workload accounting&quot;), with cross-trigger
+  deduplication (one underlying issue = one consultation).
 
 ## A7. Costs and usage limits (measured)
 
@@ -1499,7 +2326,10 @@ construction:
   share ≈56% of coordinator time vs ≈12.5% revenue-proximate
   (2026-11-18) is the standing warning against expanding discussion
   volume; the §18.6 outcome tracking exists to prove or disprove value
-  per lane over time.
+  per lane over time. **[v4 annotation — RA-25: the 56%/12.5% figures
+  are a single-day sample (2026-11-18, ≈8 h of coordinator time) taken
+  on a day of exceptional consultation concentration (7+ rounds); a
+  warning signal, not a trend.]**
 
 ## A8. Security and privacy
 
@@ -1518,9 +2348,13 @@ construction:
   SSH tunnel, never exposed publicly; session profiles and cookies
   protected and never copied into packets or logs; no credentials in
   packets or logs; a documented session-revocation procedure on
-  compromise; and a pre-send account-identity check in every lane
-  session, so automation cannot silently operate on the user&#x27;s MAIN
-  account — lanes run only in the dedicated disposable-account profiles.
+  compromise; and account-identity verification at the five points
+  specified in proposal §7.3 [v4 — CD-04: task start; before the first
+  send in any session; after browser restart or session recovery;
+  after any detected account/profile/target change; whenever identity
+  cannot be verified — fail closed], so automation cannot silently
+  operate on the user&#x27;s MAIN account — lanes run only in the dedicated
+  disposable-account profiles.
 
 ## A9. Failure handling and fallbacks (all observed in operation)
 
@@ -1580,7 +2414,7 @@ standing round, any new lane, any &quot;AI-to-AI direct channel&quot; build
 (infeasible per A2 and valueless to simulate). Elements kept — only
 what already runs, plus one recording delta (A3).
 
-===== DOCUMENT 3 — RESULT RECORD (CRITICISM, AUDITS, AND DISPOSITIONS) =====
+===== DOCUMENT 10 — RESULT RECORD, CANDIDATE v4 (RE-AUDIT RECORDED IN §10) =====
 
 # RESULT RECORD — R-INTEGRATION-2026-11-18-01: criticism, audits, and dispositions
 
@@ -1749,6 +2583,11 @@ explicitly approved it. The audits&#x27; classifications — first ACCEPTED
 WITH CONDITIONS, governing REQUIRES REVISION with all conditions now
 corrected in the draft — are inputs to the user&#x27;s decision, not
 approvals.
+
+&gt; **[v4 status pointer — CD-11, re-audit RA-24; added 2026-11-19 in
+&gt; the v4 candidate copy only:] the gate stated in this section was
+&gt; satisfied on 2026-11-19 02:20 JST — see §9 of this record. The text
+&gt; above is preserved as the historical statement of the gate.**
 
 ---
 
@@ -1921,6 +2760,191 @@ criticism NOT OBTAINED (HTTP 503). If either late reply materially
 disagrees with a disposition in this record, the disposition is amended
 here and the amendment reported with the package (§3 standing rule).
 Improvement ledger: Entry 112.
+
+## 8. Final package verification — bridge round R-2026-11-19-04 (2026-11-19 02:20 JST)
+
+Delivery route: user-relay bridge, round **R-2026-11-19-04** (published
+2026-11-19T02:16:51+09:00, VALID_UNTIL 2026-11-21T02:16:51+09:00).
+**Quote-back verification: PASS** — the auditor&#x27;s returned ROUND_ID
+(R-2026-11-19-04) and PACKET_SHA256
+(e0ba4543be410786965a1af560783b792a63ba1c377d3d2026858af0c394a464) match
+the published page exactly; all three documents (corrected proposal v3,
+corrected annex v3, this record through §7) were confirmed present in
+the retrieved page.
+
+**Findings:** this record&#x27;s opening companion metadata — **PASS,
+CORRECTED**: both companion-document references now identify corrected
+draft v3, and the historical v2 references in §5 and §6 were confirmed
+correctly left as history (they describe earlier versions and earlier
+verification events, not current package metadata). §7 of this record —
+**PASS, COMPLETE**: it records the R-2026-11-19-03 verification&#x27;s
+identity, both v3 corrections PASS, the outstanding items, the Issues
+1–3 dispositions, and the final package state, with the stated package
+hashes matching those recorded in the previous verification. Outstanding
+criticism — **PASS**: Claude web and Gemini API criticism remain marked
+NOT OBTAINED in all three documents, the §3 late-reply amendment
+procedure is preserved, and neither missing opinion is represented as
+obtained; the criticism process remains **OPEN** per proposal §13 —
+presentation of the decision package is not completion of the criticism
+process. New-inconsistency check — **no new material inconsistency
+identified** (eight specific checks PASS, including: opening metadata
+v3; historical v2 references correctly scoped; §7&#x27;s round reference and
+packet hash exact; substantive-vs-administrative change distinction;
+§13&#x27;s open-process wording; outstanding items NOT OBTAINED in all three
+documents; no implementation approval, architecture change, additional
+lane, or budget increase introduced; proposal and annex hashes unchanged
+from the verified v3 package). Evidence limitation — restated by the
+auditor: this verification establishes the contents and internal
+consistency of the published package, not the factual accuracy of the
+underlying local logs, source files, or ledger contents; the limitation
+is already disclosed (§1 of this record, proposal §1.4) and **stays
+attached to the final approval decision**.
+
+**Classification: ACCEPTED** — the first unqualified ACCEPTED in this
+chain (first audit ACCEPTED WITH CONDITIONS → governing audit REQUIRES
+REVISION → annex-only review ACCEPTED WITH CONDITIONS → R-2026-11-19-02
+verification ACCEPTED WITH CONDITIONS → R-2026-11-19-03 verification
+ACCEPTED WITH CONDITIONS → this final verification ACCEPTED). The
+auditor states the package is ready for final user review, and that
+this verification is **NOT** implementation approval; final approval
+remains exclusively with the user. **No corrections were required or
+made in this round**; the only change to this record is this §8 itself
+(an administrative verification-history update, per the §7 change-scope
+clarification).
+
+**Final package state:** corrected draft **v3**, final — proposal
+88,648 B (sha256
+5bfb12c448b9e74bf469114177eb0296a1a677a0caadf9084e1ce74a2653a940),
+annex 18,554 B (sha256
+ed1de8721d36751890f3e9bbafe648932c2e949740cb9e8f788c1eec98d8153e),
+both unchanged since the R-2026-11-19-02 verification and re-verified
+in every subsequent round. The package awaits the user&#x27;s explicit
+approval decision; the §4 gate is unchanged and **nothing is
+implemented**. The criticism process itself remains **OPEN**: Claude
+web lane criticism NOT OBTAINED (retry after 2026-11-19 03:10 JST —
+still owed) and Gemini API leg criticism NOT OBTAINED (HTTP 503; retry
+when the service recovers). If either late reply materially disagrees
+with a disposition in this record, the disposition is amended here and
+the amendment reported with the package (§3 standing rule).
+Improvement ledger: Entry 113.
+
+---
+
+## 9. USER APPROVAL — recorded 2026-11-19 02:20 JST
+
+**Approval.** The user (Kobayashi) explicitly approved this package in
+the main chat at **2026-11-19 02:20 JST** (「承認します」, selecting the
+approval option on the coordinator&#x27;s final-review presentation),
+immediately after the R-2026-11-19-04 final verification returned
+classification **ACCEPTED** (§8). The §4 / proposal-§13 approval gate
+is therefore satisfied for this package.
+
+**What was approved — the three documents at their final hashes:**
+- Proposal (corrected draft v3): 88,648 B, sha256
+  `5bfb12c448b9e74bf469114177eb0296a1a677a0caadf9084e1ce74a2653a940`
+- Annex (corrected draft v3): 18,554 B, sha256
+  `ed1de8721d36751890f3e9bbafe648932c2e949740cb9e8f788c1eec98d8153e`
+- This result record as of §8: 32,777 B, sha256
+  `5a7712cbefc5c76bb552c1f3033692efed00cab1110f53eac77cdb5cf980223e`
+
+**Audit chain summary.** First audit **ACCEPTED WITH CONDITIONS**
+(R1–R10) → governing audit **REQUIRES REVISION** (R1–R12; union all
+ADOPTED and corrected) → annex-only review **ACCEPTED WITH CONDITIONS**
+(10 conditions, 10/10 satisfied by the current text) → R-2026-11-19-02
+verification **ACCEPTED WITH CONDITIONS** (R1–R12 12/12 landed; two
+wording corrections → corrected draft v3) → R-2026-11-19-03 verification
+**ACCEPTED WITH CONDITIONS** (both v3 corrections PASS; one metadata
+fix) → R-2026-11-19-04 final verification **ACCEPTED** (unqualified; no
+new material inconsistency). Full records: §§1–8 of this file;
+improvement ledger Entries 110–113.
+
+**What the approval authorises.** Phased implementation of the proposal
+exactly as written, under the proposal&#x27;s own rules: **Phase 0 first**
+(cheap measurement debts; ≤ 6 coordinator hours; window on approval →
+2026-12-17), then Phases 1–3 on their registered milestones and
+conditions. The **revenue-first stop rule** governs all phases
+(machinery work is postponed whenever it would displace an active
+revenue-producing or revenue-enabling task); **phase caps are ceilings,
+not targets** (Phase 0 ≤ 6 h, Phase 1 ≤ 8 h, Phase 2 ≤ 12 h, Phase 3
+≤ 10 h; combined 36 h); global caps stand (cash cost ¥0; PC-lock time
+for this project ≤ 2 h/week; Gemini API hierarchy — provider 20/day
+governs &gt; project weekly cap 4 &gt; phase totals); the round cap stands
+until first real revenue.
+
+**What it does NOT authorise.** Anything outside the proposal&#x27;s text;
+any increase to any cap (coordinator hours, lane budget, API requests,
+round cap) without the user&#x27;s prior explicit approval; any new AI lane;
+any spend; and any item the proposal itself defers taken ahead of its
+condition (Phase 2 builds only after first real revenue or explicit
+earlier approval; the explicitly-not-scheduled items stay unscheduled).
+
+**Criticism process — still OPEN.** Approval of the package does not
+close the criticism process (proposal §13) and does not represent either
+outstanding opinion as obtained. Claude web lane criticism and Gemini
+API leg criticism remain **NOT OBTAINED**. Claude retries are scheduled
+for **2026-11-19 03:15 JST** (runonce cron `claude-retries-1119`, after
+the ~03:10 JST Free-limit reset), covering both this proposal&#x27;s Claude
+criticism and R-MISTAKE-FULL-2026-11-18-01 FU1 + discussion. The
+late-reply amendment rule (§3) stands: if a late reply materially
+disagrees with a disposition in this record, the disposition is amended
+here and the amendment reported with the package. The standing evidence
+limitation (§§1, 8) stays attached to this approval: the audits and
+verifications establish the package&#x27;s contents and internal consistency,
+not independent revalidation of every cited local operational fact.
+
+**Implementation tracking:** Phase 0 checklist extracted to
+`~/workspace/ai-collab/integration-implementation-20261119.md`.
+Improvement ledger: Entry 114.
+
+---
+
+## 10. INDEPENDENT RE-AUDIT — recorded 2026-11-19 (v4 candidate addition; dispositions PENDING the user&#x27;s decision)
+
+**[This section exists only in the v4 candidate copy of this record.
+§§1–9 above are the approved record, unaltered.]**
+
+After the §9 approval, the user relayed a further ChatGPT instruction —
+a &quot;FULL ADVERSARIAL DESIGN AUDIT&quot; (Parts I–IX), preceded by a shorter
+6-concern version it subsumes — directing an independent re-examination
+of the whole architecture before implementation, with candidate
+corrected documents as the deliverable and **no implementation
+authorised by the audit itself**. The coordinator held implementation
+and commissioned the re-audit as solo analytical work from the local
+records (no new rounds, no lanes contacted).
+
+**Premise correction recorded:** the audit instruction stated
+&quot;Implementation status: NOT AUTHORIZED.&quot; That was out of date when
+written: §9 of this record (approval, 2026-11-19 02:20 JST) precedes
+it. The re-audit proceeded on the real state — approved, implementation
+held pending the user&#x27;s decision on the audit&#x27;s outcome.
+
+**Outcome:** 28 findings (RA-01…RA-28): CONFIRMED 10 · PARTIALLY
+CONFIRMED 16 · NOT CONFIRMED 2. Severity HIGH 8 · MEDIUM 11 · LOW 9.
+Architecture recommendation: **C. REDUCE SYSTEM SCOPE** (tiered
+consultation shape; Qwen suspended as a review/benchmark seat; Gemini
+web demoted to on-demand; all safeguards and Phase 0 retained).
+Corrective design CD-01…CD-12 is applied in the v4 candidate proposal
+and annex; two items are flagged **[USER DECISION]** (CD-02&#x27;s slip
+consequence; the recommendation&#x27;s roster reductions). Full record:
+`~/workspace/ai-collab/reviews/reaudit-20261119/` (findings register,
+corrective design, risk register, architecture recommendation,
+measurement framework, closure checklist, change log, unresolved-
+evidence register).
+
+**Disposition status:** the re-audit&#x27;s findings are **recorded, not
+adopted**. Adoption — of the v4 candidate as a whole, of the reduction,
+or of neither (implementation of v3 as approved) — is the user&#x27;s
+decision. Until he decides, the approved v3 package and the §9
+authorisation stand exactly as recorded above, and implementation
+remains held by the coordinator&#x27;s own choice, not by any gate in the
+documents.
+
+**Outstanding, unchanged:** Claude web lane criticism — NOT OBTAINED
+(retry 2026-11-19 03:15 JST, §9). Gemini API leg criticism — NOT
+OBTAINED (U3, due 2026-11-24). The criticism process remains OPEN per
+§13; nothing in the re-audit represents either opinion as obtained,
+and the re-audit itself is a coordinator-side analysis, not a lane
+criticism.
 <!-- PACKET-END -->
 </pre>
 
