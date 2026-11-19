@@ -19,17 +19,17 @@ placed on this page.</p>
 
 <h2>Round identification</h2>
 <pre id="round">
-ROUND_ID: R-2026-11-19-07
-PUBLISHED_AT: 2026-11-19T12:33:27+09:00
-SUPERSEDES: R-2026-11-19-06
-VALID_UNTIL: 2026-11-21T12:33:27+09:00
-PACKET_SHA256: b8219188009db35401851949482ce72b8c9186292bf6a8a70317524ac3e23762
+ROUND_ID: R-2026-11-19-08
+PUBLISHED_AT: 2026-11-19T14:51:18+09:00
+SUPERSEDES: R-2026-11-19-07
+VALID_UNTIL: 2026-11-21T14:51:18+09:00
+PACKET_SHA256: 3cb0b9603d55fa89d95a0e0c92868b3c9c35a0bf177871b9684d8d73af468b66
 PACKET_URL: NONE
 </pre>
 
 <h2>Instructions for the reader</h2>
 <p>Read this page in full. The packet below is a multi-AI consultation
-packet; it carries its own ROUND_ID (R-CLIENT-REVIEW-2026-11-19-01) in its
+packet; it carries its own ROUND_ID (R-METACOGNITION-2026-11-19-01) in its
 header. Follow the packet's instructions exactly, using no other source.
 Begin your reply exactly as the packet's Answer format section requires:
 first the packet's ROUND_ID line, then a PACKET_SHA256 line quoting the
@@ -41,10 +41,10 @@ hexadecimal characters).</p>
 <!-- PACKET-BEGIN -->
 # MULTI-AI CONSULTATION PACKET
 
-ROUND_ID: R-CLIENT-REVIEW-2026-11-19-01
+ROUND_ID: R-METACOGNITION-2026-11-19-01
 Date: 2026-11-19 (JST)
-Tier: 2 (multi-lane — the proposal changes a standing workflow rule and sits next to money: paid client deliveries)
-Subject: Should client-deliverable videos get a pre-submission external AI review, fetched by the lanes from a link we create (bridge design) — feasibility, confidentiality, process design, quota cost.
+Tier: 2 (multi-lane — the subject is the design of our own mistake-detection machinery; Gemini API = first review / Claude = second opinion / ChatGPT = final audit)
+Subject: Applying metacognition research to our self-detection system. The user shared a reel about metacognition on 2026-11-19 and instructed (14:46 JST) that we study and research metacognition thoroughly and master it; at 14:48 JST he added: discuss it with the other AIs as well. A parallel academic-research worker is compiling the full literature report separately; this round asks the lanes to judge, against the metacognition literature, what our self-detection machinery is missing, how confidence calibration could be measured and improved as a system, and which blind spots survive our existing production/verification separation.
 
 The premises brief below governs this consultation. Align with it first; judge inside it; flag any conflict explicitly instead of assuming a premise away.
 
@@ -105,74 +105,58 @@ When standing rules conflict in a concrete case, they resolve in this order — 
 
 ---
 
-# CONSULTATION PACKET — R-CLIENT-REVIEW-2026-11-19-01
+## Background
 
-## The user&#x27;s question (2026-11-19 12:28 JST, translated)
+MUSE runs this operation as a coordinator dispatching bounded tasks to worker agents, with independent verifiers, a supervisor daily review, and external-AI consultation rounds like this one. The user has repeatedly identified the same weakness from outside: defects he spots in seconds (no audio, a cut-off sentence, a black frame, subtitle/narration mismatch, a physically impossible image) had passed our own production and verification. His standing instruction since 2026-11-15 is that mistakes must be recognised as mistakes by us, found by us, and fixed by us — before he sees them. That is, in the vocabulary of this round, a demand to improve our **monitoring** (detecting that something is wrong) and our **control** (acting on the detection: stopping, re-checking, escalating).
 
-The user is worried about the quality of videos we deliver to paying clients. His proposed workflow:
+This round is therefore not academic. Judge every proposal by whether it would mechanically raise the share of defects we catch ourselves, or measurably improve the calibration of the estimates and confidence claims we make to the user.
 
-1. Read the client&#x27;s brief and conditions first.
-2. Produce the video.
-3. Instead of handing the finished video to another AI directly (which he expects to hit lane limits), use the bridge design we already use for text packets: we create a link, place the deliverable there, and have the AI come and fetch it.
-4. Receive the AI&#x27;s evaluation, revise, and only then submit to the client.
+## Foundation brief — metacognition, from the primary literature
 
-His two questions: (a) can this workflow actually be run? (b) is the judgment itself correct — he has asked us to put that to the other AIs and proceed on their answers.
+(Coordinator-side summary of the established literature, included so all lanes argue from the same base. A fuller research report with sources is being compiled in parallel; treat any point here you cannot verify as UNCONFIRMED and say so.)
 
-This round is a DESIGN consultation only. No real client file is uploaded anywhere in this round.
+- **Flavell (1979)** defined metacognition as knowledge and cognition about cognitive phenomena: *metacognitive knowledge* (about person, task and strategy variables) and *metacognitive experiences*, in service of monitoring one&#x27;s own cognitive enterprises.
+- **Nelson &amp; Narens (1990)** formalised two relations between an object level and a meta level: **monitoring** (object → meta: ease-of-learning judgements, judgements of learning (JOLs), feeling-of-knowing, retrospective confidence) and **control** (meta → object: strategy selection, allocation of effort, termination of work on an item). A self-detection system is exactly a monitoring channel plus the control actions wired to it.
+- **Monitoring is inferential, not a direct read-out** (Koriat&#x27;s cue-utilisation framework): judgements are built from cues, and **processing fluency is a misleading cue** — material that feels fluent and familiar is judged better known/mastered than it is. A fluent, well-formatted artefact or report can therefore *feel* verified without having been verified.
+- **Calibration is measurable** (confidence vs outcome frequency; calibration curves, Brier scores, resolution). Robust findings: (a) overconfidence is the default across most judgement domains; (b) the best-calibrated human judges (operational weather forecasters; Murphy &amp; Winkler) reached calibration through **dense, immediate, unambiguous outcome feedback on many small recorded predictions**; (c) **postdictions calibrate better than predictions**, and **delayed JOLs are far more accurate than immediate JOLs** (Nelson &amp; Dunlosky 1991) — monitoring improves with a temporal gap and with a retrieval attempt in between; (d) calibration training works when predictions are specific, recorded before the outcome, scored, and reviewed in aggregate (Tetlock&#x27;s forecaster research programme).
+- **The planning fallacy** (Kahneman &amp; Tversky 1979; Buehler, Griffin &amp; Ross 1994): duration and cost estimates made from the inside view (the plan, the intended steps) are systematically optimistic, even when the estimator knows the relevant base rates. The standard corrective is **reference-class forecasting** — estimating from the outside view: how long did similar tasks actually take.
+- **Error detection needs an independent signal.** The same cues that produced an answer tend to re-certify it on immediate self-review; detection rates rise with (i) a delay between production and review, (ii) a changed representation (different modality, format or level of description), (iii) criteria externalised in advance (checklists fixed before the work is seen), and (iv) a different judge. A monitoring failure then becomes a **control failure** when inflated confidence terminates checking early — &quot;it feels done&quot; is the mechanism behind treating a plan, a dispatch, or a fluent draft as a completion.
 
-## Current state (measured facts, not estimates)
+## Measured facts (our operation, from internal records)
 
-- **Internal verification already exists and is measurement-based.** Production and verification are always separate agents. The verifier re-measures the FINISHED file against QC items ①–⑯: stream/duration integrity, full Whisper transcription vs script, loudness (LUFS-I ≥ −17), frame inspection (head/middle/chapter heads/end), subtitle safe-zone (bottom edge ≥25% from screen bottom) and wording identity with the narration, subtitle speed caps, physical plausibility of imagery, platform spec conformity, compliance wording (PR labels, no effect promises in fortune content), and conformity with the genre&#x27;s design spec. A pass is required ≥3 hours before a scheduled publication. This system was built for our OWN channels&#x27; videos; it has never yet been applied to a paid client delivery.
-- **Client-work track record is shallow.** First contract ever: a test script delivery (CrowdWorks, ¥110 tax incl.; inspection completed 2026-11-18, ¥86 paid after fees). Second contract: a single thumbnail image as a paid test (CrowdWorks case 13608052; contract + escrow completed 2026-11-19 10:50 JST; delivery due within 5 days of escrow, i.e. by ~2026-11-24). There is NO delivered client video yet. The first client videos are expected to be short-form edits (Shorts/Reels class) under the bounded track-record lane (one-off, ≤2 hours of work or ≤1 Short, work-in-progress ≤3).
-- **The user&#x27;s worry is therefore about a near-future, low-volume flow**: a handful of client videos per week at most, each small, each against a written client brief (length, format, captions, references, deadline).
-- **Lane limits, measured:**
-  - Claude Free (disposable lane): a 5-hour message window; ~10 messages per window observed (limit hit 2026-11-19 03:46 JST, reset 08:20 JST).
-  - Gemini API: 20 generateContent requests/day, SHARED across all work (reviews, benchmarks, everything); the budget is ledger-managed and the provider count governs.
-  - ChatGPT (disposable lane): fetching a TEXT packet from a public link is PROVEN (2026-11-16 known-answer test, 3/3 correct via normal browsing of a public link). Fetching and actually watching a VIDEO from a link is UNVERIFIED.
-  - Gemini API connector additionally offers video understanding for public YouTube URLs (connector capability, used before for public videos); it does not read arbitrary mp4 links.
-- **Confidentiality facts.** Client deliverables can include client-supplied materials (raw footage, logos, product images, unreleased campaign information). Client work is contracted inside CrowdWorks; the deliverable is the client&#x27;s property on payment. Our bridge host (GitHub Pages) is PUBLIC: anyone with the URL can fetch the page, and URLs can leak, be indexed, or be re-shared. There is no access control, no expiry enforcement, and no takedown speed guarantee.
-- **Zero spend** applies to any design proposed: no paid storage, no paid API, no paid tier of any lane.
+**M1 — Self-detection rate.** The supervisor&#x27;s daily review counts, for each defect that surfaces, whether we detected it ourselves or the user detected it first. Self-detection was **55%** around 2026-11-15 and **73%** at the 2026-11-19 review. The remaining ~27% are still found by the user — the only monitor fully outside our own premises, checklists and habits.
 
-## Binding resources (resource decomposition)
+**M2 — Mechanisms already in force** (do not propose duplicates; judge what is missing *given* these):
+- Seven execution gates passed at the moment of action, including a **self-detection gate**: before reporting &quot;complete&quot; or &quot;pass&quot;, the reporter must (1) judge from measurements of the finished artefact itself, not from the producer&#x27;s claims or a file&#x27;s existence; (2) sweep same-type work, unexecuted jobs and unpublished stock for the same defect; (3) collate against the standard in force *at reporting time*, not at production time; (4) inspect the finished work for defects that are on *no* checklist (the viewer&#x27;s-eye pass).
+- **Production/verification separation**: the verifier is always a different agent from the producer, re-measures the finished file independently, and doubt resolves to FAIL.
+- **Rule 30 (2026-11-19)**: every finished work must additionally pass an external-AI review (≥1 lane, quote-back verified, every point dispositioned) before the publication gate.
+- **Recurrence prevention**: every defect gets, the same day, a casebook entry, a checklist change, a digest update, a notice to in-progress assignees, and a same-type inventory sweep.
+- **Supervisor daily review**: counts user-detected vs self-detected mistakes (fixed items 3j/3k), sweeps unexecuted job texts and unpublished stock against current standards.
 
-Any design must be priced against these denominators, not per video alone:
+**M3 — Structural weaknesses already named by a previous round** (R-MISTAKE-FULL-2026-11-18-01, all dispositioned and in the improvement ledger): (i) the coordinator in effect decides the correctness of its own output; (ii) rules are weakly linked to the moment/condition that should fire them; (iii) plans and dispatches get treated as completions; (iv) individual cases fail to become mechanisms. This round&#x27;s question is what the metacognition literature adds *beyond* that list.
 
-1. **Lane quota units.** One external review consumes: 1 Gemini API request (of 20/day shared) and/or 1 Claude message (of ~10 per 5h window, shared with all other consultation) and/or one ChatGPT lane session (operator time on the PC lane). Revision loops multiply this.
-2. **Coordinator + PC operator time** per round-trip (publishing the artefact, driving the lane, extracting and verifying the reply, dispositioning points).
-3. **Delivery lead time.** Client deadlines are hard (the current test: 5 days from escrow). A review step that can stall on a lane limit (NOT OBTAINED) interacts with the deadline.
-4. **The user&#x27;s hours: zero by design.** Nothing in the design may require the user to upload, relay, or check anything.
-
-## Framing pre-mortem (assumptions this packet&#x27;s frame smuggles in)
-
-- **A1.** That an external AI review adds detection power beyond the internal QC for the defect classes that matter in client work (brief conformity, subjective &quot;does this look professional&quot;, client-taste fit). The internal QC is measurement-based and strong on measurable defects; the marginal value of an external pass is UNPROVEN, and this packet&#x27;s framing presumes it.
-- **A2.** That &quot;the lane fetched the link&quot; equals &quot;the lane watched the video&quot;. Text fetch is proven; video watching is not, and a fluent review can be generated from the brief + transcript + a few frames without the video ever being seen. The frame treats retrieval as observation.
-- **A3.** That an obscure public link is an acceptable container for a client&#x27;s not-yet-delivered property because it is unlikely to be found. Obscurity is not access control; the frame under-weights the confidentiality and contract side.
+**M4 — A calibration failure from today, verbatim.** At 14:39 JST the coordinator told the user that two wrong fields on a handed-over job-application form (a phone number missing its leading digit; an address with autocomplete fragments appended) would take &quot;about one minute&quot; to correct, and asked him to wait before clicking submit. The correction required rebuilding the control route to the handed-over browser session (the previous operator&#x27;s tooling had been deleted by design after it handled personal data). At 14:46 the user asked &quot;まだですか？&quot; (&quot;still not done?&quot;); the correction was still unfinished more than ten minutes after the estimate. The estimate was an inside-view judgement stated to the user as a near-fact; no reference class (how long previous handover repairs actually took) was consulted, and no uncertainty was expressed. The same coordinator had, earlier the same day, given the user similarly confident timing expectations around the same handover, which also slipped by tens of minutes due to lock contention that was already a known, measured pattern that morning.
 
 ## Questions
 
-**Q1 — Is the judgment itself correct?** Given that a measurement-based independent internal QC already exists, SHOULD an external AI evaluation be inserted before client submission? What defect classes would an external lane plausibly catch that the internal verifier structurally misses (e.g. brief-conformity judgment, subjective quality, first-impression impact)? What will the external lane structurally miss or get wrong (e.g. anything requiring actual frame-accurate measurement, loudness, subtitle timing)? Answer for client short-form video work specifically, not for our own channels.
+**Q1 — What is missing, in metacognition terms?** Using the monitoring/control distinction, calibration research, and the error-detection findings in the foundation brief: which components of a functioning metacognitive system does our machinery (M2) lack or implement only in form? Consider at least: whether our monitoring signals are independent of the production process that generated the work; whether monitoring happens immediately (weakest configuration) or with delay/representation change; whether &quot;confidence&quot; is ever expressed as a measurable quantity anywhere in our pipeline; and whether control actions (stop, re-check, escalate) are wired to monitoring outputs mechanically or left to the same agent&#x27;s judgement in the moment. For each gap: name the smallest mechanical enforcement that would close it, and the measurement that would show it working.
 
-**Q2 — Per-lane feasibility of &quot;come and fetch it&quot;.** For each lane (ChatGPT disposable web lane, Claude Free web lane, Gemini API): can it actually fetch and WATCH a video placed at a link we create? Compare three placements: (a) a direct public mp4 link; (b) a review page that places side-by-side the video + the client&#x27;s brief + the script + the transcript + representative frames; (c) an unlisted YouTube link. Which placements yield a review grounded in the actual video, and which yield a plausible review hallucinated from the surrounding text? How can we VERIFY the AI actually watched (e.g. requiring timestamped observations only obtainable from the video, seeded details, questions whose answers are not in the transcript)? State per lane what is proven, what is plausible, and what is UNCONFIRMED.
+**Q2 — Calibration as a system.** Design the smallest concrete scheme that would measure and improve the calibration of the coordinator&#x27;s (and workers&#x27;) stated expectations. Specify: which prediction types are worth logging (e.g., duration estimates given to the user; &quot;this will pass QC&quot; expectations at dispatch; lane/tool availability expectations; completion claims at handoff), the exact record format (prediction, confidence, timestamp, outcome, scored when), the scoring rule (hit-rate bands, Brier score, median ratio of actual/estimated duration — choose and justify), the review cadence, and the feedback path by which a scored miss changes the next estimate (e.g., a reference-class table that must be consulted before a duration is stated to the user). Name the scheme&#x27;s own failure modes: gaming, overhead, sample sizes too small to mean anything, and predictions so hedged they carry no information — and how the design answers each.
 
-**Q3 — Confidentiality line.** The deliverable is the client&#x27;s property and may embed client-supplied materials. What may NEVER be placed on a public link? Where is the defensible line: our own produced video only, no client raw materials? Synthetic/sample work only? Time-limited exposure? Does an unlisted YouTube link change the answer vs a public page? If the whole scheme fails this test for real client files, say so plainly and state what subset (if any) it remains usable for.
+**Q3 — Blind spots that survive separation.** Production and verification are already separated, and rule 30 adds an external lane. Assume those stay. What correlated-monitoring blind spots remain? Consider at least: the verifier shares the coordinator&#x27;s checklists, premises brief and casebook (a shared cue set — what does the literature predict about correlated judges?); the coordinator dispositions external reviews of work it coordinated (monitoring of monitoring, by the monitored); the user&#x27;s residual ~27% detection share — what class of defects is he plausibly catching that our whole stack cannot, and what would a monitoring channel with genuinely different cues look like for that class? Answer with mechanisms, not exhortations.
 
-**Q4 — Process design.** If an external review step is adopted: before or after the internal verifier&#x27;s pass? What revision-loop cap (how many external rounds per delivery before we ship on internal QC alone)? When a lane is unavailable (NOT OBTAINED — quota exhausted, 503, limit window), does submission WAIT for the external review or PROCEED on internal QC? Answer against hard client deadlines and the account-safety / no-waiver stance in the premises brief: note that the internal QC gate is non-waivable, while the external step would be new — should it be a gate at all, or advisory?
-
-**Q5 — Cost against the quotas.** Price the design per delivered video, in the binding units above: API requests, Claude window messages, ChatGPT lane sessions, coordinator minutes. At the expected near-term volume (a few client videos per week, possibly rising), does a per-delivery external review crowd out the lanes&#x27; other duties (mistake rounds, milestone audits, routine first reviews)? What frequency is sustainable — every delivery, first-delivery-per-client only, sampling, or on-demand when the internal verifier flags uncertainty?
-
-**Q6 — Frame challenge (mandatory).** What is the coordinator (Muse) missing? Which perspectives has the coordinator failed to take in framing this question — about the value of external review, about what clients actually judge, about the confidentiality exposure, or about anything else? What variable is missing, what assumption is smuggled in, and what would make this whole question the wrong question?
-
-**Q7 — Better alternatives.** If you judge the proposed design wrong or weak, propose the strongest alternative that achieves the user&#x27;s actual goal (confidence that a client video is good before submission) inside the premises: zero spend, disposable lanes only, no client material on public links if Q3 so finds, internal QC gate untouched. Name what your alternative replaces and how its effect would be observed.
+**Q4 — Frame challenge (mandatory).** What is the coordinator (Muse) missing? Name it directly: which perspectives has the coordinator failed to take in framing this round — about the facts M1–M4 (is the self-detection rate even the right metric? is it measured in a way that can be gamed or that hides severity?), about the premise that &quot;applying metacognition&quot; is a productive frame for an AI-agent operation rather than a metaphor that yields plausible but untestable proposals, or about what the user&#x27;s residual detection share actually signifies? What variable is missing, what assumption is smuggled in, and what would make this whole consultation the wrong response to the user&#x27;s instruction?
 
 ## Answer format (mandatory)
 
 - Begin your reply with exactly these two lines:
-  `ROUND_ID: R-CLIENT-REVIEW-2026-11-19-01`
+  `ROUND_ID: R-METACOGNITION-2026-11-19-01`
   `PACKET_SHA256: &lt;the 64-hex-character value supplied with this packet — in the page header if you fetched the bridge page, or in the message that carried this packet if it was pasted to you&gt;`
   (The digit count matters: the hash is exactly 64 hexadecimal characters. If you cannot see the hash value, say so instead of inventing one.)
-- Answer Q1–Q7 in order, numbered. Keep fact / inference / hypothesis / unknown visibly separate; mark anything you cannot verify UNCONFIRMED.
+- Answer Q1–Q4 in order, numbered. Keep fact / inference / hypothesis / unknown visibly separate; mark anything you cannot verify UNCONFIRMED.
+- Answer in Japanese.
 - End with a &quot;NOT REVIEWED&quot; line stating what you did not check.
-- Do not propose anything that spends money, uses the user&#x27;s main accounts, or waives the internal QC gate; if you believe a premise itself is wrong, say so explicitly and separately, with evidence.
+- Do not propose anything that spends money or uses the user&#x27;s main accounts. If you believe a premise itself is wrong, say so explicitly and separately, with evidence.
 
 <!-- PACKET-END -->
 </pre>
